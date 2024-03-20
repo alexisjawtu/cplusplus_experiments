@@ -82,8 +82,6 @@ Ritter inventó la celda voltaica seca en 1802 y, al año siguiente, un modelo
 de batería de almacenamiento eléctrico como aplicación del invento anterior.
 
 
-
-
 Michael Faraday (1791-1867). 
 ============================
 
@@ -115,6 +113,19 @@ Las Leyes de Faraday:
 
 (Fuentes: Enciclopedia Universal Salvat. Volumen 13. Editorial Salvat, S.L. (2009), Diccionario Enciclopédico El Ateneo.
 Tomo III. Editorial El Ateneo (1970).)
+
+
+James Prescott Joule (1818-1889).
+=================================
+
+Físico inglés que estableció que las diversas formas de energía (mecánica, 
+eléctrica y calórica) son básicamente la misma y pueden ser transformadas
+una en la otra. Así, formó la base de la ley de conservación de la energía,
+primera ley de la termodinámica en la física moderna.
+En un artículo publicado en 1840, Joule describió la ley que lleva su nombre
+postulando efectivamente que el calor producido en un conductor (un cable) por 
+una corriente eléctrica es proporcional al producto entre la resistencia
+del material conductor y el cuadrado de la intensidad de corriente.
 
 
 James Clerk Maxwell (1831 - 1879).
