@@ -42,6 +42,34 @@ Sus experimentos sugirieron la tesis de que la electricidad finalmente es un
 diminutas de electricidad que se mantienen en el ambiente por algún motivo). 
 
 
+Liugi Galvani (1737-1798).
+==========================
+
+Descubrió lo que llamamos la Bioelectricidad. En la Universidad de Bologna
+el cirujano Galvani estaba investigando los efectos de la electricidad en
+animales. No era un linea de investigación inusual, pues los investigadores
+sabían que los choques eléctricos producían espasmos violentos y especulaban
+que la electricidad era capaz de causar contracciones musculares.
+
+
+Alessandro Volta (1745-1827).
+=============================
+
+Físico italiano, uno de los lectores tempranos de los trabajos de Galvani y 
+también su amigo.
+Su invención de la batería eléctrica proveyó la primera fuente conocida de
+corriente directa (DC, "direct current" o corriente continua).
+Conocida como "pila voltaica" o "columna voltaica", la batería de Volta
+consistía de discos alternados de zinc y plata (o bien cobre y estaño) separados
+por papeles o telas que eran sumergidos en agua salada o en hidróxido de sodio.
+Su invento fue un recurso simple y confiable de corriente eléctrica que no
+requería ser recargada como la botella de Leyden (es decir, si no se la 
+utilizaba).
+Por otra parte sus intereses en la electricidad lo llevaron a desarrollar una
+mejora del electróforo, cierto dispositivo usado para generar electricidad
+estática.
+Volta descubrió y aisló el gas metano.
+
 Michael Faraday (1791-1867). 
 ============================
 
