@@ -29,6 +29,19 @@ los alemanes Ewald Georg von Kleist y Pieter van Musschenbroek (de la ciudad de
 Leyden y por eso el nombre del artefacto), ofrecieron un modo mucho más conveniente
 de estudiar la electricidad.
 
+
+William Watson (1715-1787).
+===========================
+
+Watson fue un físico y botánico inglés recordado fundamentalmente por sus
+estudios de la electricidad, especialmente aquellos conducidos con botellas
+de Leyden. Watson mejoró este dispositivo forrándolo con una lámina de plomo
+y utilizando vidrios más delgados. 
+Sus experimentos sugirieron la tesis de que la electricidad finalmente es un
+único fluido, contrariamente a la teoría del efluvio (emisión de partículas 
+diminutas de electricidad que se mantienen en el ambiente por algún motivo). 
+
+
 Michael Faraday (1791-1867). 
 ============================
 
