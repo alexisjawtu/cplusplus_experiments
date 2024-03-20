@@ -70,6 +70,20 @@ mejora del electróforo, cierto dispositivo usado para generar electricidad
 estática.
 Volta descubrió y aisló el gas metano.
 
+
+Johann Ritter (1776-1810).
+==========================
+
+Físico alemán. Ritter dedicó la mayor parte de sus esfuerzos al estudio de
+la electricidad y la electroquímica. En 1801 observó las corrientes
+termoeléctricas y anticipó el posterior descubrimiento de la termoelectricidad
+por parte de Thomas Seebeck. 
+Ritter inventó la celda voltaica seca en 1802 y, al año siguiente, un modelo
+de batería de almacenamiento eléctrico como aplicación del invento anterior.
+
+
+
+
 Michael Faraday (1791-1867). 
 ============================
 
