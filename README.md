@@ -1,5 +1,6 @@
 
 
+
 Michael Faraday (1791-1867). 
 ============================
 
@@ -52,3 +53,16 @@ Saturno.
 
 (Fuentes: Enciclopedia Universal Salvat. Volumen 21. Editorial Salvat, S.L. (2009), Diccionario Enciclopédico El Ateneo.
 Tomo IV. Editorial El Ateneo (1970).)
+
+
+Thomas Edison (1847-1931).
+==========================
+
+Físico estadounidense inventor de diversos artefactos eléctricos como la bombilla de luz incandescente, el
+quinetoscopio, un antecesor de la cámara cinematográfica y 
+el fonógrafo. Cuando concibe su bombilla con filamento, Edison ya sabe que un hilo metálico, con la resistencia
+adecuada, recorrido por una corriente se calienta hasta volverse luminoso. Sobre la base de este conocimiento
+previo, en 1878 tiene la idea de encerrar un hilo de platino al vacío en un globo de vidrio y curvarlo en
+forma de U. A continuación no quedaba más que poner en comunicación ese filamento de platino con los 
+conductores de electricidad. La bombilla eléctrica es recibida con asombro por un mundo que se ilumina con lámparas
+de petróleo, gas y velas.
