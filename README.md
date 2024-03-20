@@ -128,6 +128,16 @@ una corriente eléctrica es proporcional al producto entre la resistencia
 del material conductor y el cuadrado de la intensidad de corriente.
 
 
+Humphry Davy (1778-1829).
+=========================
+
+Químico e inventor inglés. Hizo investigaciones en celdas voltaicas, baterías y
+electrólisis. Inventó la lámpara conocida como lámpara de Davy y una forma muy 
+temprana de lámpara de arco.
+Usando electricidad consiguió aislar varios elementos químicos por primera vez:
+potasio, sodio, calcio, bario, magnesio. boro y estroncio.
+
+
 James Clerk Maxwell (1831 - 1879).
 ==================================
 
