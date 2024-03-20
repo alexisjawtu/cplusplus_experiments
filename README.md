@@ -131,7 +131,11 @@ Werner von Siemens (1816-1892).
 Ingeniero eléctrico alemán que tuvo un rol importante en el desarrollo
 de la industria del telégrafo. Su primer invento, al que llegó tras sus
 experimentos químicos mientras cumplía una condena en la cárcel, fue un
-proceso de galvanoplastia eléctrica.
+proceso de galvanoplastia eléctrica. El uso que hizo en 1847 de cierto látex
+vegetal, o caucho, para aislar cables telegráficos de la humedad fue más tarde
+ampliamente aplicado a los cables de luz eléctrica y también hizo posibles 
+a los primeros cables telegráficos subterráneos y submarinos.
+
 
 James Prescott Joule (1818-1889).
 =================================
