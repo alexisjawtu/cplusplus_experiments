@@ -182,3 +182,13 @@ previo, en 1878 tiene la idea de encerrar un hilo de platino al vacío en un glo
 forma de U. A continuación no quedaba más que poner en comunicación ese filamento de platino con los 
 conductores de electricidad. La bombilla eléctrica es recibida con asombro por un mundo que se ilumina con lámparas
 de petróleo, gas y velas.
+
+
+CONTINUE HERE
+https://www.britannica.com/biography/Heinrich-Hertz
+Heinrich Hertz (1857-1894).
+===========================
+
+
+Nikola Tesla (1856-1943).
+=========================
