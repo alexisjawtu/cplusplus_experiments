@@ -1,4 +1,17 @@
+Tales de Mileto (c.624–546 BC).
+===============================
 
+Con Tales comienza la historia científica de la electricidad conocida. Tales fue un filósofo y
+matemático griego que vivía en la antigua ciudad de Mileto, actualmente en Turquía, que descubrió
+el principio básico de la electricidad estática (electricidad que se forma localmente, a diferencia
+de una corriente). Cuando frotó una vara de ámbar (resina de árbol fosilizada)
+observó que podía usarla para atraer y levantar otros objetos livianos,
+como trozos de plumas.
+
+Tales es a menudo llamado el primer científico del mundo, porque
+fue una de las primeras personas que intentaron encontrar explicaciones
+sensitivas y racionales para las cosas. Las explicaciones y resultados que proponían estas personas, entre las cuales
+incluimos a Tales, aunque muchas veces erróneas, eran las mejores deducciones lógicas que podían hacer a partir de sus observaciones del mundo y a partir de los conocimientos previos con que contaban, y es en este sentido que decimos que ellas eran científicas.
 
 
 Michael Faraday (1791-1867). 
