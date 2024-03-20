@@ -82,6 +82,16 @@ Ritter inventó la celda voltaica seca en 1802 y, al año siguiente, un modelo
 de batería de almacenamiento eléctrico como aplicación del invento anterior.
 
 
+Humphry Davy (1778-1829).
+=========================
+
+Químico e inventor inglés. Hizo investigaciones en celdas voltaicas, baterías y
+electrólisis. Inventó la lámpara conocida como lámpara de Davy y una forma muy 
+temprana de lámpara de arco.
+Usando electricidad consiguió aislar varios elementos químicos por primera vez:
+potasio, sodio, calcio, bario, magnesio. boro y estroncio.
+
+
 Michael Faraday (1791-1867). 
 ============================
 
@@ -115,6 +125,14 @@ Las Leyes de Faraday:
 Tomo III. Editorial El Ateneo (1970).)
 
 
+Werner von Siemens (1816-1892).
+===============================
+
+Ingeniero eléctrico alemán que tuvo un rol importante en el desarrollo
+de la industria del telégrafo. Su primer invento, al que llegó tras sus
+experimentos químicos mientras cumplía una condena en la cárcel, fue un
+proceso de galvanoplastia eléctrica.
+
 James Prescott Joule (1818-1889).
 =================================
 
@@ -126,16 +144,6 @@ En un artículo publicado en 1840, Joule describió la ley que lleva su nombre
 postulando efectivamente que el calor producido en un conductor (un cable) por 
 una corriente eléctrica es proporcional al producto entre la resistencia
 del material conductor y el cuadrado de la intensidad de corriente.
-
-
-Humphry Davy (1778-1829).
-=========================
-
-Químico e inventor inglés. Hizo investigaciones en celdas voltaicas, baterías y
-electrólisis. Inventó la lámpara conocida como lámpara de Davy y una forma muy 
-temprana de lámpara de arco.
-Usando electricidad consiguió aislar varios elementos químicos por primera vez:
-potasio, sodio, calcio, bario, magnesio. boro y estroncio.
 
 
 James Clerk Maxwell (1831 - 1879).
