@@ -14,6 +14,21 @@ sensitivas y racionales para las cosas. Las explicaciones y resultados que propo
 incluimos a Tales, aunque muchas veces erróneas, eran las mejores deducciones lógicas que podían hacer a partir de sus observaciones del mundo y a partir de los conocimientos previos con que contaban, y es en este sentido que decimos que ellas eran científicas.
 
 
+Botella de Leyden (1740s).
+==========================
+
+Hacia el siglo dieciocho los experimentos eléctricos estaban todavía obstaculizados
+por la gran dificultad de producir y almacenar electricidad, las que, en este tiempo
+dependían esencialmente de frotar objetos para construir una buena carga estática.
+El estudio de la electricidad realmente avanzó cuando un grupo de científicos
+europeos divisaron maneras de almacenar cargas eléctricas en recipientes de vidrio
+con distintas piezas de metal unidas a las superficies interior y exterior de los recipientes.
+Estos dispositivos son los conocidos como botellas de Leyden, que fueron los primeros
+capacitores efectivos. Desarrollados independientemente en la década de 1740 por
+los alemanes Ewald Georg von Kleist y Pieter van Musschenbroek (de la ciudad de
+Leyden y por eso el nombre del artefacto), ofrecieron un modo mucho más conveniente
+de estudiar la electricidad.
+
 Michael Faraday (1791-1867). 
 ============================
 
