@@ -1,5 +1,5 @@
 Tales de Mileto (c.624–546 BC).
-===============================
+-------------------------------
 
 Con Tales comienza la historia científica de la electricidad conocida. Tales fue un filósofo y
 matemático griego que vivía en la antigua ciudad de Mileto, actualmente en Turquía, que descubrió
