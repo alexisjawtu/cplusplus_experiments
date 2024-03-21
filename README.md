@@ -189,6 +189,15 @@ https://www.britannica.com/biography/Heinrich-Hertz
 Heinrich Hertz (1857-1894).
 ===========================
 
+Físico alemán que mostró que la teoría del electromagnetismo de James Maxwell era correcta y que la luz
+y el calor son radiaciones electromagnéticas.
+Hertz hizo su trabajo doctoral con Hermann von Helmholtz en la Universidad de Berlin. Fue capaz de producir ondas
+electromagnéticas en el laboratorio y de medir su longitud y su velocidad. Hertz entonces mostró que la
+naturaleza de la vibración y la susceptibilidad de reflexión y refracción de estas ondas eran las mismas
+que aquellas de las ondas de luz y calor. Como resultado, estableció más allá de toda duda que la luz y el calor
+son radiaciones electromagnéticas.
+Las ondas electromagnéticas fueron llamadas posteriormente ondas de radio.
+
 
 Nikola Tesla (1856-1943).
 =========================
