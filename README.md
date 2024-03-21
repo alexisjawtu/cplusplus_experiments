@@ -17,7 +17,7 @@ sentido que decimos que ellas eran científicas.
 
 
 Botella de Leyden (1740s).
-==========================
+--------------------------
 
 Hacia el siglo dieciocho los experimentos eléctricos estaban todavía obstaculizados
 por la gran dificultad de producir y almacenar electricidad, las que, en este tiempo
@@ -33,7 +33,7 @@ de estudiar la electricidad.
 
 
 William Watson (1715-1787).
-===========================
+---------------------------
 
 Watson fue un físico y botánico inglés recordado fundamentalmente por sus
 estudios de la electricidad, especialmente aquellos conducidos con botellas
@@ -45,7 +45,7 @@ diminutas de electricidad que se mantienen en el ambiente por algún motivo).
 
 
 Liugi Galvani (1737-1798).
-==========================
+--------------------------
 
 Descubrió lo que llamamos la Bioelectricidad. En la Universidad de Bologna
 el cirujano Galvani estaba investigando los efectos de la electricidad en
@@ -55,7 +55,7 @@ que la electricidad era capaz de causar contracciones musculares.
 
 
 Alessandro Volta (1745-1827).
-=============================
+-----------------------------
 
 Físico italiano, uno de los lectores tempranos de los trabajos de Galvani y 
 también su amigo.
@@ -74,7 +74,7 @@ Volta descubrió y aisló el gas metano.
 
 
 Johann Ritter (1776-1810).
-==========================
+--------------------------
 
 Físico alemán. Ritter dedicó la mayor parte de sus esfuerzos al estudio de
 la electricidad y la electroquímica. En 1801 observó las corrientes
@@ -85,7 +85,7 @@ de batería de almacenamiento eléctrico como aplicación del invento anterior.
 
 
 Humphry Davy (1778-1829).
-=========================
+-------------------------
 
 Químico e inventor inglés. Hizo investigaciones en celdas voltaicas, baterías y
 electrólisis. Inventó la lámpara conocida como lámpara de Davy y una forma muy 
@@ -95,7 +95,7 @@ potasio, sodio, calcio, bario, magnesio. boro y estroncio.
 
 
 Michael Faraday (1791-1867). 
-============================
+----------------------------
 
 Químico y físico inglés, uno de los más grandes científicos de todos los tiempos. 
 Fue asistente de Humphrey Davy en su laboratorio, del que acabó siendo director.
@@ -129,7 +129,7 @@ Tomo III. Editorial El Ateneo (1970).)
 
 
 Werner von Siemens (1816-1892).
-===============================
+-------------------------------
 
 Ingeniero eléctrico alemán que tuvo un rol importante en el desarrollo
 de la industria del telégrafo. Su primer invento, al que llegó tras sus
@@ -141,7 +141,7 @@ a los primeros cables telegráficos subterráneos y submarinos.
 
 
 James Prescott Joule (1818-1889).
-=================================
+---------------------------------
 
 Físico inglés que estableció que las diversas formas de energía (mecánica, 
 eléctrica y calórica) son básicamente la misma y pueden ser transformadas
@@ -154,7 +154,7 @@ del material conductor y el cuadrado de la intensidad de corriente.
 
 
 James Clerk Maxwell (1831-1879).
-==================================
+----------------------------------
 
 Físico británico nacido en Escocia. Guiado por los experimentos de Faraday acerca de la acción
 del campo electromagnético sobre la luz polarizada, construyó la teoría electromagnética de la luz,
@@ -175,7 +175,7 @@ Enciclopédico El Ateneo. Tomo IV. Editorial El Ateneo (1970).)
 
 
 Thomas Edison (1847-1931).
-==========================
+--------------------------
 
 Físico estadounidense inventor de diversos artefactos eléctricos como la bombilla de luz incandescente, el
 quinetoscopio, un antecesor de la cámara cinematográfica y 
@@ -188,7 +188,7 @@ de petróleo, gas y velas.
 
 
 Heinrich Hertz (1857-1894).
-===========================
+---------------------------
 
 Físico alemán que mostró que la teoría del electromagnetismo de James Maxwell era correcta y que la luz
 y el calor son radiaciones electromagnéticas.
@@ -202,7 +202,7 @@ Las ondas electromagnéticas fueron llamadas posteriormente ondas de radio.
 
 
 Nikola Tesla (1856-1943).
-=========================
+-------------------------
 
 Ingeniero e inventor serbio-estadounidense que descubrió y patentó el campo magnético rotativo,
 base de la mayoría de la maquinaria de corriente alternante. También desarrolló el sistema de tres fases
