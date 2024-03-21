@@ -184,15 +184,14 @@ conductores de electricidad. La bombilla eléctrica es recibida con asombro por 
 de petróleo, gas y velas.
 
 
-CONTINUE HERE
-https://www.britannica.com/biography/Heinrich-Hertz
 Heinrich Hertz (1857-1894).
 ===========================
 
 Físico alemán que mostró que la teoría del electromagnetismo de James Maxwell era correcta y que la luz
 y el calor son radiaciones electromagnéticas.
-Hertz hizo su trabajo doctoral con Hermann von Helmholtz en la Universidad de Berlin. Fue capaz de producir ondas
-electromagnéticas en el laboratorio y de medir su longitud y su velocidad. Hertz entonces mostró que la
+Hertz hizo su trabajo doctoral con Hermann von Helmholtz en la Universidad de Berlin. 
+Fue capaz de producir ondas electromagnéticas en el laboratorio y de medir su longitud y su velocidad. 
+Hertz entonces mostró que la
 naturaleza de la vibración y la susceptibilidad de reflexión y refracción de estas ondas eran las mismas
 que aquellas de las ondas de luz y calor. Como resultado, estableció más allá de toda duda que la luz y el calor
 son radiaciones electromagnéticas.
@@ -201,3 +200,18 @@ Las ondas electromagnéticas fueron llamadas posteriormente ondas de radio.
 
 Nikola Tesla (1856-1943).
 =========================
+
+Ingeniero e inventor serbio-estadounidense que descubrió y patentó el campo magnético rotativo,
+base de la mayoría de la maquinaria de corriente alternante. También desarrolló el sistema de tres fases
+de transmisión de energía eléctrica.
+Tesla inventó también una bobina de inducción electromagnética que hoy lleva su nombre y que 
+es ampliamente usada en tecnología de radio.
+Otros inventos suyos fueron los rayos X, un sistema inalámbrico de transmisión de energía como
+así también la torre de Wardenclyffe -también conocida como la torre Tesla-.
+Tesla diseñó la primera planta de energía hidroeléctrica en las cataratas del Niágara.
+En sentido amplio Tesla inventó, o bien predijo, o bien hizo una contribución significativa a cientos
+de tecnologías eléctricas que juegan papeles importantes en nuestras vidas diarias, como el control
+remoto, las luces de neón y fluorescentes, la transmisión inalámbrica, las computadoras, los rayos
+láser, los robots y, por supuesto la corriente alternante alternating current, the basis of our present-day electrical system.
+
+
