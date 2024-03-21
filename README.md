@@ -1,3 +1,12 @@
+Línea de tiempo, historia de la electricidad. Trabajo Práctico.
+===============================================================
+
+
+Alexis Jawtuschenko. DNI 29.006.449         21 de marzo de 2024
+
+
+
+
 Tales de Mileto (c.624–546 BC).
 -------------------------------
 
