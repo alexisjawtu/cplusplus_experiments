@@ -449,6 +449,11 @@ int main_dynamic_memory ()
 }
 
 
+/*
+    Classes are either class or struct.
+    Structs are only for grouping data under a name.
+*/
+
 struct movie
 {
     string country;
@@ -463,6 +468,52 @@ void print_movie (movie mv)
     print(mv.name);
     print(mv.director);
     print(mv.year);
+}
+
+
+class Alosha {
+    // same class or friends. Specifier private is by default, so we can omit it.
+    int a;
+    
+    public:  // anywhere where the object is visible
+        int b;
+    protected:  // same class, derived classes of friends
+        int c;
+};
+
+
+class Rectangle {
+    int width;
+    int height;
+
+    public:
+        Rectangle() {
+            print("***default constructor***");
+            width = 0;
+            height = 0;
+        }
+        Rectangle(int w, int h) {
+            width = w;
+            height = h;
+        }
+        void set_values(int, int);
+        int area();
+        int perimeter() {
+            return 2 * width + 2 * height;
+        }
+};
+
+
+// :: is the scope operator
+// it grants the access to the private data of the class!
+void Rectangle::set_values(int w, int h) {
+    width = w;
+    height = h;
+}
+
+
+int Rectangle::area() {
+    return width * height;
 }
 
 
@@ -487,6 +538,21 @@ int main ()
 
     print_movie(films[1]);
     
+    Alosha alex;
+
+    print("no args. Rectangle r0{};");
+    Rectangle r0{};
+    print(r0.area());
+    print(r0.perimeter());
+
+    Rectangle r1(7, 4);
+    print(r1.area());
+    print(r1.perimeter());
+
+    print("hi");
+    Rectangle r = Rectangle(13, 5);
+    print(r.area());
+
     return 0;
 }
 
@@ -498,3 +564,5 @@ int main ()
  * [~53]= 1 111 1111 1111 1111 1111 1111 1100 1010     NEGATIVE
  * 
 */
+
+CONTINUE at: tutorial/classes -> Uniform initialization
