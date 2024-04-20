@@ -483,6 +483,7 @@ class Alosha {
 
 
 class Rectangle {
+
     int width;  // members default to private
     int height;
 
