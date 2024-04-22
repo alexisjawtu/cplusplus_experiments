@@ -494,6 +494,7 @@ class Rectangle {
             height = 0;
         }
         Rectangle(int w, int h) {
+            print("***parametric constructor***");
             width = w;
             height = h;
         }
@@ -516,6 +517,17 @@ void Rectangle::set_values(int w, int h) {
 int Rectangle::area() {
     return width * height;
 }
+
+
+class Square {
+    int edge;
+
+    public:
+        Square (int e) { edge = e; }
+        int area () {
+            return edge * edge;
+        }
+};
 
 
 int main ()
@@ -554,6 +566,21 @@ int main ()
     Rectangle r = Rectangle(13, 5);
     print(r.area());
 
+
+    print("unique parameter in constructor:");
+
+    Square sq = 2;
+    
+    printf("area of sq: %d\n", sq.area());
+    printf("g\n");
+
+    // following is uniform initialization
+    Rectangle r2 = {3, 4};
+    printf("area of r2: %d\n", r2.area());
+
+    Rectangle r3 {4, 5};
+    printf("area of r3: %d\n", r3.area());
+
     return 0;
 }
 
@@ -566,4 +593,4 @@ int main ()
  * 
 */
 
-CONTINUE at: tutorial/classes -> Uniform initialization
+CONTINUE at Pointers to classes
