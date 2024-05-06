@@ -593,4 +593,7 @@ int main ()
  * 
 */
 
-CONTINUE at Pointers to classes
+CONTINUE at
+1. //pointer to classes example
+   #include <iostream>
+2. classes(II)
