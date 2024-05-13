@@ -530,7 +530,7 @@ class Square {
 };
 
 
-int main ()
+int main_classes_I ()
 {
     // structs
     struct example
@@ -585,15 +585,62 @@ int main ()
 }
 
 
+int main ()
+{
+   /*
+    Rectangle obj = Rectangle(3, 4);
+    Rectangle * foo;
+    foo = &obj;
+    print(obj.area());
+    print((*foo).area());
+    print(foo -> area());
+   */
+    
+
+Nice to investigate:
+
+    Rectangle * bar;
+    print(bar);  // static memory?
+
+    bar = new Rectangle(5, 6);
+    print(bar);  // different address
+    delete bar;
+    print(bar);  // keeps the 'new' address after deletion
+
+    Rectangle * baz;
+    print(baz);  // declaration address before initialization
+
+    baz = new Rectangle[2] { {2, 5}, {3, 6} };  // a 'regular' array
+    print(baz[1].area());  // 18
+
+    print(baz);
+    print(&(baz[0]));  // both yield the same address
+                       // and it is the same address as the 'deleted' bar !!!
+    print(bar);
+    print(baz -> area());  // 10, the Rectangle in the first place.
+    
+    // so be careful with this:
+    print(bar -> area());
+    bar -> set_values(78, -2);
+    print(baz -> area());
+
+    // These two are the ones which are different.
+    print(&bar);
+    print(&baz);
+    return 0;
+}
+
 /**
  *       31                                   3210      
  * [53] = 0 000 0000 0000 0000 0000 0000 0011 0101     POSITIVE
  *        s
  * [~53]= 1 111 1111 1111 1111 1111 1111 1100 1010     NEGATIVE
  * 
-*/
-
 CONTINUE at
 1. //pointer to classes example
    #include <iostream>
 2. classes(II)
+
+*/
+
+
