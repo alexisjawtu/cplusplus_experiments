@@ -530,7 +530,7 @@ class Square {
 };
 
 
-int main_classes_I ()
+int main_classes_I_a ()
 {
     // structs
     struct example
@@ -585,48 +585,141 @@ int main_classes_I ()
 }
 
 
-int main ()
+int main_classes_I_b ()
 {
-   /*
     Rectangle obj = Rectangle(3, 4);
     Rectangle * foo;
     foo = &obj;
     print(obj.area());
     print((*foo).area());
     print(foo -> area());
-   */
-    
 
-Nice to investigate:
 
-    Rectangle * bar;
-    print(bar);  // static memory?
+    /*
+        first experiment:
+        two pointer declarations are apparently contiguous in static memory
 
+            0x7ffe96308410
+          - 0x7ffe96308408
+          ----------------
+            0x000000000008  eight bytes
+    */
+    Rectangle * bar;  // declaration. before initialization
+    Rectangle * baz;
+    print(bar);       // here we have the value 0, the null pointer.
+    print(&bar);      // here es the address where the pointer is.
+    print(&baz);      // and this address is contiguous
+
+    Rectangle * r0;
+    print(&r0);       // and this address is contiguous too
+
+    /*
+        second experiment: initialization and deletion.
+        now the pointer contains an address.
+    */
     bar = new Rectangle(5, 6);
-    print(bar);  // different address
+    print(bar);  // the value is an address. The address of an object.
     delete bar;
     print(bar);  // keeps the 'new' address after deletion
-
-    Rectangle * baz;
-    print(baz);  // declaration address before initialization
+    print(&bar); // and keeps it's own address
 
     baz = new Rectangle[2] { {2, 5}, {3, 6} };  // a 'regular' array
-    print(baz[1].area());  // 18
-
-    print(baz);
-    print(&(baz[0]));  // both yield the same address
-                       // and it is the same address as the 'deleted' bar !!!
-    print(bar);
+    r0  = new Rectangle;
+    print(r0);
+    print(baz);         // Here we print values. Both yield the same address, because an array is
+    print(&(baz[0]));   // similar to a pointer that stores the address to the first
+                        // element of the array.
     print(baz -> area());  // 10, the Rectangle in the first place.
-    
+
+    // Now, it is the same address as the Rectangle once stored in the deleter bar !!!    
     // so be careful with this:
     print(bar -> area());
     bar -> set_values(78, -2);
     print(baz -> area());
 
-    // These two are the ones which are different.
-    print(&bar);
-    print(&baz);
+    return 0;
+}
+
+
+/*
+    Third experiment.
+    Now we delete and initialize an object of another class
+*/
+int main_classes_I_c ()
+{
+    /*
+        We may suspect that the dynamic memory is reutilized in an ordered way.
+        But what is what 'delete' really does?
+    */
+    Rectangle * bar;
+    bar = new Rectangle(5, 6);
+    print("=========================Address of bar======================");
+    print(&bar); // it's own address
+    print("=========================Address in bar======================");
+    print(bar);  // the value is an address. The address of an object.
+    print(bar -> perimeter());
+    print(bar -> area());
+    delete bar;
+
+    print("=========================Address of bar post delete =========");
+    print(&bar); // keeps it's own address
+    print("=========================Address in bar post delete =========");
+    print(bar);  // keeps the 'new' address after deletion
+
+    Square * s;
+    s = new Square(4);
+    print("=========================Address of s======================");
+    print(&s);
+    print("=========================Address in s======================");
+    print(s);
+    print(s -> area());
+    print("=========================Address of bar post s =========");
+    print(&bar); // keeps it's own address
+    print("=========================Address in bar post s =========");
+    print(bar);  // keeps the 'new' address after deletion
+
+    print(bar -> area());
+    return 0;
+}
+
+
+class My_Class {
+    string product;
+    float price;
+
+    public:
+        string get_product () {
+            return product;
+        }
+      
+        float get_price () {
+            return price;
+        }
+        My_Class operator+(My_Class m);
+
+        My_Class () {};
+        My_Class (string p, float pr) {
+            product = p;
+            price = pr;
+        }
+
+};
+
+My_Class My_Class::operator+ (My_Class m) {
+    return My_Class(product + m.product, price + m.price);
+} 
+
+int main ()
+{
+    My_Class p2;
+    My_Class p0 = My_Class ("piano", 7320);
+    My_Class p1 = My_Class ("bench", 1);
+
+    p2 = p0 + p1;
+
+    print(p2.get_price());
+    print(p2.get_product());
+    
     return 0;
 }
 
@@ -637,9 +730,7 @@ Nice to investigate:
  * [~53]= 1 111 1111 1111 1111 1111 1111 1100 1010     NEGATIVE
  * 
 CONTINUE at
-1. //pointer to classes example
-   #include <iostream>
-2. classes(II)
+2. classes(II):: For example, cartesian vectors ...
 
 */
 
