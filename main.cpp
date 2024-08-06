@@ -722,16 +722,3 @@ int main ()
     
     return 0;
 }
-
-/**
- *       31                                   3210      
- * [53] = 0 000 0000 0000 0000 0000 0000 0011 0101     POSITIVE
- *        s
- * [~53]= 1 111 1111 1111 1111 1111 1111 1100 1010     NEGATIVE
- * 
-CONTINUE at
-2. classes(II):: For example, cartesian vectors ...
-
-*/
-
-
