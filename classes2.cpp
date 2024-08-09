@@ -3,19 +3,22 @@
  * [53] = 0 000 0000 0000 0000 0000 0000 0011 0101     POSITIVE
  *        s
  * [~53]= 1 111 1111 1111 1111 1111 1111 1100 1010     NEGATIVE
- * 
-classes2.cpp
+ * classes2.cpp
 */
-
 #include <iostream>
+#include <string>
+#include "_tools_.h"
+
 
 using namespace std;
 
-
+/*
 template <class T> void print(T data)
 {
-    cout << boolalpha << data << "\n";
+    std::cout << std::boolalpha << data << "\n";
 }
+*/
+
 
 class CVector {
   public:    
@@ -65,6 +68,20 @@ class Dummy {
 
 int Dummy::n = 0;
 
+template <class T>
+class Pair {
+    T values [2];
+  public:
+    Pair (T a, T b) {
+        this -> values[0] = a;
+        this -> values[1] = b;
+    }
+
+    friend ostream& operator << (ostream& o, Pair<T>& p) {
+        return o << p.values[0] << " " << p.values[1];
+    }
+};
+
 int main(int argc, char const *argv[])
 {
     CVector u, v, w;
@@ -100,7 +117,11 @@ int main(int argc, char const *argv[])
     c = new Dummy;
     print(b[2].n);
 
+    print("==========================================");
+
+    Pair<string> phrase ("alexis", "boris jawtu");
+
+    print(phrase);
+
     return 0;
 }
-    
-// CONTINUE at classesII.{Const members}
