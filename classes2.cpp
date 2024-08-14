@@ -65,6 +65,31 @@ class Dummy {
 
 int Dummy::n = 0;
 
+/*
+    constructor on const instances
+    overload on constness of function member
+*/
+class MyClass {
+  public:
+    int x;
+
+    MyClass (int val) {
+        this -> x = val;
+    }
+
+    int& getx ()
+    {
+        print("running non const");
+        return x;
+    }
+
+    const int& getx () const
+    {
+        print("running const");
+        return x;
+    }
+};
+
 int main(int argc, char const *argv[])
 {
     CVector u, v, w;
@@ -100,7 +125,22 @@ int main(int argc, char const *argv[])
     c = new Dummy;
     print(b[2].n);
 
+    print("==========================================");
+
+    MyClass foo (10);
+    // read-only object
+    const MyClass baz (30);
+
+    const MyClass bar = MyClass (20);
+    print(foo.getx());
+    print(baz.getx());
+    print(bar.getx());
+
+    foo.getx() = 16;  // si devuelve la referencia puedo modificar aca'! :)
+    print(foo.getx());
+    print(bar.getx());
+
     return 0;
 }
     
-// CONTINUE at classesII.{Const members}
+// CONTINUE at classesII.{Class templates}
