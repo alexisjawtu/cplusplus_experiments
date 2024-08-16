@@ -35,6 +35,7 @@ class Example4 {
     Example4 (const string& str) {
         ptr = new string (str);
     }
+    Example4 (const Example4& e) {}
     ~Example4 () {
         delete ptr;
         cout << "HEY" << "\n";
