@@ -27,18 +27,21 @@ class Example3 {
 };
 
 class Example4 {
-    string* ptr;
   public:
+    string* ptr;
+
     Example4 () {
-        ptr = new string ("");
+        this -> ptr = new string ("");
     }
     Example4 (const string& str) {
-        ptr = new string (str);
+        this -> ptr = new string (str);
     }
-    Example4 (const Example4& e) {}
+    Example4 (const Example4& e) {
+        this -> ptr = new string(e.content());
+    }
     ~Example4 () {
-        delete ptr;
-        cout << "HEY" << "\n";
+        delete this -> ptr;
+        cout << "DELETED " << this << "\n";
     }
     const string& content () const {
         return *ptr;
@@ -49,10 +52,21 @@ int main () {
 
     Example4 ex4 = Example4();
     Example4 ex5 = Example4("alo");
+    Example4 ex6 = Example4("sha");
+    Example4 ex7 = ex5;  // this line is merely a construction by copy. 
 
-    cout << ex5.content() << "\n";
+    ex4 = ex5;  // this line leads to a segmentation fault because of the assignment issue.
+                // maybe this performs a shallow copy, which is not suitable for classes
+                // that use dynamic memory.
+
+    // the copy assignment is an overload of the operator=
+
+    cout << &ex4 << " " << ex4.ptr << " " << ex4.content() << "\n";
+    cout << &ex5 << " " << ex5.ptr << " " << ex5.content() << "\n";
+    cout << &ex6 << " " << ex6.ptr << " " << ex6.content() << "\n";
+
 	return 0;
 }
 
 
-//CONTINUE at: special members.copy constructor
+//CONTINUE at: special members.Copy assignment (insistir!)
