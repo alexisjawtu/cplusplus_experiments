@@ -1,0 +1,47 @@
+Received: by 10.78.200.5 with HTTP; Tue, 17 Jun 2008 15:58:28 -0700 (PDT)
+Message-ID: <ba737dfb0806171558y55b62cacy2e5e59a82bacc81f@mail.gmail.com>
+Date: Tue, 17 Jun 2008 19:58:28 -0300
+From: "Alexis Jawtuschenko" <alexis.jawtuschenko@gmail.com>
+To: teofilo60@hotmail.com
+Subject: Por favor corregilo porque me parece que hice cualquiera.
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_31453_14135259.1213743508181"
+Delivered-To: alexis.jawtuschenko@gmail.com
+
+------=_Part_31453_14135259.1213743508181
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+listaInt diccionario::claves()const
+{
+
+    if(this->raiz != NULL)
+    {
+        if(this->cant == 1) return this->raiz->clave;
+
+       else
+        {
+            listaInt _izq = (this->raiz->izquierdo).claves();
+            listaInt _der = (this->raiz->derecho).claves();
+            return (_izq.ag_atras(this->raiz->clave)).agregarle(_der);
+        }
+    }
+    return listaInt();
+}
+
+------=_Part_31453_14135259.1213743508181
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div>listaInt diccionario::claves()const<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;if(this-&gt;raiz != NULL)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(this-&gt;cant == 1) return this-&gt;raiz-&gt;clave;<br>&nbsp;</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; listaInt _izq = (this-&gt;raiz-&gt;izquierdo).claves();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; listaInt _der = (this-&gt;raiz-&gt;derecho).claves();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (_izq.ag_atras(this-&gt;raiz-&gt;clave)).agregarle(_der);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br></div>
+<div>&nbsp;&nbsp;&nbsp; }<br></div>
+<div>&nbsp;&nbsp;&nbsp; return listaInt();<br></div>
+<div>}<br></div>
+
+------=_Part_31453_14135259.1213743508181--

@@ -1,0 +1,111 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs171184vcy;
+        Tue, 14 Sep 2010 13:36:34 -0700 (PDT)
+Received: by 10.213.4.67 with SMTP id 3mr407739ebq.79.1284495368295;
+        Tue, 14 Sep 2010 13:16:08 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:16:08 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Info: JGTYoYF78jEHjJx36Oi8+Z3TmmkSEdPt3Mi6GgUSv7yYKHQgGfDe+2wCW4LegkYQav29Pp7Mm4E=
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc3-f16.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Sun, 27 Apr 2008 21:23:38 -0700
+Received: (qmail 28919 invoked by uid 111); 28 Apr 2008 04:23:36 -0000
+Received: from 200.126.220.20 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(200.126.220.20):SA:0(-1.4/3.5):. 
+ Processed in 4.00007 secs); 28 Apr 2008 04:23:36 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.4 required=3.5 tests=ALL_TRUSTED autolearn=no 
+	version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [192.168.1.2]) (dgorin@[200.126.220.20])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <alexis_bj@hotmail.com>; 28 Apr 2008 04:23:32 -0000
+Mime-Version: 1.0 (Apple Message framework v753)
+In-Reply-To: <BLU142-W29E2460F9620392493EC1492DE0@phx.gbl>
+References: <6DC92BD3-B137-4019-BE89-D30725B9A3EB@dc.uba.ar> <BLU142-W29E2460F9620392493EC1492DE0@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; delsp=yes; format=flowed
+Message-Id: <ECCB831F-EFB1-4B01-88F9-CC9941C01E85@dc.uba.ar>
+Content-Transfer-Encoding: quoted-printable
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Subject: Re: Consulta (reiterada).
+Date: Mon, 28 Apr 2008 01:23:24 -0300
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+X-Mailer: Apple Mail (2.753)
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 28 Apr 2008 04:23:38.0291 (UTC) FILETIME=[A1A4E830:01C8A8E7]
+
+Hola, c=F3mo va?
+
+No me acuerdo bien qu=E9 hac=EDa "leer" en el pseudoc=F3digo de la =
+te=F3rica, =20
+ser=EDa pedirle un dato al usuario? (como el cin >> .... de c++?)
+
+En todo caso, la idea del ejercicio es armar una funci=F3n que reciba =20=
+
+las dos cadenas como par=E1metro y devuelva la cantidad de veces que =20
+aparece una en la otra. O sea, deber=EDa ser una funci=F3n de este =
+estilo:
+
+entero cantApariciones (ent caracter cadena [], ent caracter texto [])
+  ....
+
+No me acuerdo bien la sintaxis para arrays, pero creo que se =20
+entiende. Entonces, prob=E1 primero de adaptar lo que escribiste a ese =20=
+
+formato. Una vez que lo tengas bien as=ED, prob=E1 de hacerlo recursivo =20=
+
+(fijate que si no est=E1s definiendo una funci=F3n, no queda claro c=F3mo =
+=20
+pod=E9s tener recursi=F3n en primer lugar). Pista: definite una funci=F3n =
+=20
+auxiliar (la que va a ser recursiva) que tenga un par=E1metro por cada =20=
+
+variable que aparezca en la funci=F3n original.
+
+De todas formas, mir=E1 bien tu soluci=F3n iterativa. En lo que pusiste =20=
+
+como if me parece que de alguna forma ten=E9s la esperanza de que i =20
+est=E9 cuantificado universalmente y no es el caso. No ten=E9s =
+disponible =20
+tal operador, ten=E9s que hacerlo vos.....
+
+Sobre el ejercicio 3, no lo tengo a mano, pero creo que la idea es =20
+que un pico sea por alegor=EDa con una monta=F1a. En todo caso, una =20
+meseta se deber=EDa tomar como un pico muy ancho. O sea, en
+
+[1,3,7,7,7,5,7,4,8,8,8,8,8,8,8,8,8]
+
+yo cuento tres picos: el de 1,3,7,7,7,5; el de 5,7,4 y el de =20
+4,8,8,8,8,8,... (seg=FAn tu definici=F3n, habr=EDa muchos m=E1s)
+
+Saludos
+Daniel
+
+On Apr 27, 2008, at 11:03 PM, Alexis Jawtuschenko wrote:
+
+> Hola Daniel, =BFqu=E9 tal?
+>
+> Te quer=EDa consultar lo siguiente:
+>
+> finalmente no me sali=F3 la versi=F3n recursiva del algoritmo en el =20=
+
+> ejercicio 5 de la pr=E1ctica 2. Te adjunto la versi=F3n iterativa y si =
+=20
+> quer=E9s contame c=F3mo la paso a recursiva.
+>
+> El siguiente pedido es por una idea al menos en el ejercicio h) de =20
+> la pr=E1ctica 3. =BFUn pico es un valor que tiene inmediatamente a =20
+> derecha e izquierda valores menores o iguales que =E9l?
+>
+> Muchas gracias. Saludos.
+> Alexis.
+>
+> Ingres=E1 ya a MSN Deportes y enterate de las =FAltimas novedades del =20=
+
+> mundo deportivo. MSN Deportes
+
+

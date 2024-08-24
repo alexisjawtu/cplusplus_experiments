@@ -1,0 +1,120 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs170567vcy;
+        Tue, 14 Sep 2010 13:23:29 -0700 (PDT)
+Received: by 10.213.36.12 with SMTP id r12mr3190095ebd.96.1284495354283;
+        Tue, 14 Sep 2010 13:15:54 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:15:54 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Info: JGTYoYF78jEHjJx36Oi8+Z3TmmkSEdPt3Mi6GgUSv7yYKHQgGfDe+2wCW4LegkYQav29Pp7Mm4E=
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc1-f3.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Tue, 10 Jun 2008 06:39:05 -0700
+Received: (qmail 27854 invoked by uid 111); 10 Jun 2008 13:39:03 -0000
+Received: from 10.1.200.94 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(10.1.200.94):SA:0(-1.4/3.5):. 
+ Processed in 5.246285 secs); 10 Jun 2008 13:39:03 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.4 required=3.5 tests=ALL_TRUSTED,AWL autolearn=no 
+	version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [10.1.200.94]) (dgorin@[10.1.200.94])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <alexis_bj@hotmail.com>; 10 Jun 2008 13:38:57 -0000
+Mime-Version: 1.0 (Apple Message framework v753.1)
+In-Reply-To: <BLU142-W38EE7285CB1717D82414C392B30@phx.gbl>
+References: <BLU142-W38EE7285CB1717D82414C392B30@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; delsp=yes; format=flowed
+Message-Id: <180A04F1-B4E5-4FFC-954D-EE74FD500761@dc.uba.ar>
+Content-Transfer-Encoding: quoted-printable
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Subject: Re: Consulta TAD pilaEnt
+Date: Tue, 10 Jun 2008 10:38:51 -0300
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+X-Mailer: Apple Mail (2.753.1)
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 10 Jun 2008 13:39:05.0627 (UTC) FILETIME=[5A0C0EB0:01C8CAFF]
+
+Hola, Alexis
+
+Van un par de comentarios sobre copiaPila()
+
+- Cuando pon=E9s:
+
+pilaEnt copia =3D pilaEnt();
+
+lo que en realidad deber=EDas poner es:
+
+pilaEnt copia;
+
+o a lo sumo
+
+pilaEnt copia();  // esto *creo* que funciona
+
+En lo que vos pusiste, primero cre=E1s una pila _sin nombre_ usando el =20=
+
+constructor por defecto (pilaEnt()) y despu=E9s cre=E1s otra, llamada =20=
+
+copia, haciendo una copia de la pila an=F3nima. Esto deber=EDa quedar =
+m=E1s =20
+claro el mi=E9rcoles....
+
+- Idem con copia_al_reves....
+
+- Cuando recorr=E9s la lista, hac=E9s:
+
+		copia_al_reves.apilar(indicador_ -> valor);
+		copia_al_reves.cantidad++;
+
+Esto es muy raro. Fijate que al hacer copia_al_reves.cantidad++ est=E1s =20=
+
+"rompiendo" el invariante de representaci=F3n de copia_al_rev=E9s! O =
+sea, =20
+vos ya apilaste algo con apilar() y apilar() (si no metieron la pata) =20=
+
+se encarga de mantener sincronizado el largo de la lista con el campo =20=
+
+cantidad. Si ahora le sum=E1s uno a cantidad a manopla romp=E9s todo!
+
+- Algo parecido hac=E9s con la segunda recorrida. Fijate que ac=E1, de =20=
+
+hecho, pod=E9s usar tope() y desapilar() sobre copia_al_reves, en vez =20=
+
+de recorrer la lista a mano. Es lo mismo, pero bueh...
+
+- Sobre lo del NULL, ignor=E1 mi mail anterior.... el problema es que =20=
+
+ten=E9s que hacer:
+
+#include <cstdlib>
+
+- Ya que est=E1s, acordate de agregar el ';' al final de la definici=F3n =
+=20
+de la clase en el h!!!!!!!!
+
+
+
+On Jun 10, 2008, at 12:11 AM, Alexis Jawtuschenko wrote:
+
+> Hola! C=F3mo va?
+>
+> Quer=EDa pedirte si pod=E9s fijarte, en los archivos que te mando, si =20=
+
+> est=E1 bien el m=E9todo copiarPila() y qu=E9 me est=E1n diciendo los =20=
+
+> mensajes de error del compilador (consulta.txt). Aparecen cosas =20
+> como 'Null no est=E1 definido'...
+>
+> Gracias!
+> Saludos.
+>
+> Alexis.
+>
+> Descarg=E1 ya gratis y viv=ED la experiencia Windows Live. Descubre =20=
+
+> Windows Live<consulta.txt><pilaEnt.h><pilaEnt.cpp>
+
+

@@ -1,0 +1,205 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs170280vcy;
+        Tue, 14 Sep 2010 13:18:07 -0700 (PDT)
+Received: by 10.213.105.66 with SMTP id s2mr3203394ebo.92.1284495350482;
+        Tue, 14 Sep 2010 13:15:50 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:15:50 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Info: JGTYoYF78jEHjJx36Oi8+Z3TmmkSEdPt3Mi6GgUSv7yYKHQgGfDe+2wCW4LegkYQav29Pp7Mm4E=
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc12-f12.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Wed, 18 Jun 2008 21:31:36 -0700
+Received: (qmail 1135 invoked by uid 111); 19 Jun 2008 04:31:32 -0000
+Received: from 200.126.220.20 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(200.126.220.20):SA:0(-1.0/3.5):. 
+ Processed in 42.645067 secs); 19 Jun 2008 04:31:32 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=3.5 tests=ALL_TRUSTED,AWL,FUZZY_AMBIEN,
+	MAILTO_TO_SPAM_ADDR autolearn=no version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [192.168.1.2]) (dgorin@[200.126.220.20])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <alexis_bj@hotmail.com>; 19 Jun 2008 04:30:50 -0000
+Mime-Version: 1.0 (Apple Message framework v753.1)
+In-Reply-To: <BLU142-W229769BD3CB968A2B513D692AA0@phx.gbl>
+References: <008a01c8d0c3$9df30a10$6401a8c0@acer73d8bd810a> <CD697E1D-188F-40B8-BF8B-C4DF553975DE@dc.uba.ar> <BAY112-W22A881D356DF7DBD212F07BBAB0@phx.gbl> <E03C6CD6-4A40-496A-AEE4-A46FDD09BE2D@dc.uba.ar> <BAY112-W11BA562348F346DD720E60BBAB0@phx.gbl> <C8B6BB93-3A12-4162-8BF8-EADA498D91E0@dc.uba.ar>  <BAY112-W395DE2771CD222BA8DAB5BBAB0@phx.gbl> <BLU142-W229769BD3CB968A2B513D692AA0@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; delsp=yes; format=flowed
+Message-Id: <25845C84-4E75-4797-A88F-188079E5FD04@dc.uba.ar>
+Content-Transfer-Encoding: quoted-printable
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Subject: Re: consulta tp grupo 5
+Date: Thu, 19 Jun 2008 01:30:48 -0300
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+X-Mailer: Apple Mail (2.753.1)
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 19 Jun 2008 04:31:37.0160 (UTC) FILETIME=[5C8D8480:01C8D1C5]
+
+mmmm..... no, yo creo que deber=EDa seguir sin andar. el punto es que a =20=
+
+this->arbol nunca se le asigna un valor!
+(cuando asign=E1s un valor a "raiz" en definir_aux, no est=E1s cambiando =
+=20
+el valor de this->arbol)
+
+en realidad, no entiendo c=F3mo les pudo funcionar.... :S
+
+una cosa, f=EDjense que la negaci=F3n l=F3gica se hace con !, no con ~
+
+saludos
+daniel
+
+On Jun 18, 2008, at 9:27 PM, Alexis Jawtuschenko wrote:
+
+> Hola daniel... me parece que me di cuenta de lo que decis...
+>
+> te podrias fijar si la funcion definir() asi como quedo es =20
+> correcta? de hecho me compilo y con un par de ejemplos anduvo!!
+>
+> gracias!
+> saludos
+>
+>
+> void diccionario::definir_aux(NodoabB* raiz , clave k , valor v)
+> {
+>      if(raiz =3D=3D NULL)
+>     {
+>         raiz =3D new NodoabB;
+>         raiz->clave =3D k;
+>         raiz->valor =3D v;
+>         raiz->izquierdo =3D NULL;
+>         raiz->derecho =3D NULL;
+>
+>     }
+>     else if(raiz->clave < k)
+>     {
+>         definir_aux(raiz->derecho , k , v);
+>     }
+>     else if(raiz->clave > k)
+>     {
+>         definir_aux(raiz->izquierdo , k , v);
+>     }
+>     else
+>     {
+>         raiz->valor =3D v;
+>     }
+>     return;
+> }
+> void diccionario::definir(clave k, valor v)
+> {
+>    if(~(this->contieneclave(k)))
+>    {
+>        (this->cantidad)++;
+>    }
+>    definir_aux(this->arbol, k, v);
+>    return;
+> }
+>
+>
+> From: teofilo60@hotmail.com
+> To: alexis_bj@hotmail.com
+> Subject: FW: consulta tp grupo 5
+> Date: Wed, 18 Jun 2008 23:52:31 +0000
+>
+>
+>
+> > From: dgorin@dc.uba.ar
+> > Subject: Re: consulta tp grupo 5
+> > Date: Wed, 18 Jun 2008 20:45:09 -0300
+> > To: teofilo60@hotmail.com
+> >
+> > Hola, Mateo
+> >
+> > On Jun 18, 2008, at 8:20 PM, mateo astelarra wrote:
+> >
+> > > hola daniel
+> > > intente hacer lo q me dijiste:
+> > > la funcion definir me quedo una cosa asi:
+> > >
+> > > [...]
+> > >
+> > > pero la verdad es q me compila pero me da cualquier cosa.
+> >
+> > Regla de oro n=FAmero 1: Nunca va a funcionar de una :)
+> >
+> > > =BFq puede estar fallando?
+> >
+> > Dejame adivinar, this->arbol siempre queda en NULL! :P
+> >
+> > B=E1sicamente, fijate que al construir un nodo nuevo, =E9ste se =20
+> pierde! O
+> > sea, la l=EDnea
+> >
+> > raiz =3D nodoaux;
+> >
+> > no hace lo que ustedes querr=EDan que haga....
+> >
+> > >
+> > > implemente la auxiliar como una funcion del tipo diccionario aunq
+> > > no lo uso nunca.
+> > >
+> > > =BFpodria haberlo hecho de otra forma?
+> >
+> > As=ED como lo definieron, definir_aux toma un par=E1metro impl=EDcito,=
+ =20
+> y se
+> > lo est=E1n pasando, aunque no lo sepan! (ver m=E1s abajo). Lo que =
+pod=EDan
+> > hacer es definirla como una funci=F3n com=FAn y silvestre:
+> >
+> > void definir_aux(NodoABBD* raiz,clave k, valor v)
+> > {
+> > ...
+> > }
+> >
+> > De hecho, como es algo privado de la implementaci=F3n, ni falta hace
+> > que aparezca en el .h....
+> >
+> > > uso definir_aux(this->arbol,k,v), pero no le estoy dando ninguna
+> > > variable implicita.
+> > > =BFeso es un problema?
+> >
+> > No, no es un problema; es al pedo, nom=E1s :P
+> >
+> > Nunca lo vimos (me pareci=F3 que iba a ser m=E1s confuso que otra =
+cosa),
+> > pero como definir_aux lo definieron como un m=E9todo de diccionario =
+y
+> > lo est=E1n usando adentro de un m=E9todo de diccionario, entonces, =
+las
+> > siguientes son equivalentes:
+> >
+> > i) definir_aux(this->arbol,k,v)
+> > ii) this->definir_aux(this->arbol,k,v)
+> > iii) definir_aux(arbol,k,v)
+> > iv) this->definir_aux(arbol,k,v)
+> >
+> > O sea, siempre les hice poner todos los "this->" aunque no sean
+> > *estrictamente* necesarios, pero me pareci=F3 que se iban a =
+complicar
+> > mucho sino. Pero bueh....
+> >
+> > Ya que estamos, f=EDjense que en definir() recorren el arbol dos =20
+> veces.
+> > En t=E9rminos de complejidad est=E1 bien, pero no deja de ser medio =
+feo.
+> > Piensen c=F3mo podr=EDan hacer para que definir_aux tambi=E9n les =
+avise si
+> > la clave ya estaba o no!
+> >
+> > Espero se entienda, cualquier cosa, chifl=E1....
+> >
+> > Saludos
+> > Daniel
+>
+> Descarg=E1 ya gratis y viv=ED la experiencia Windows Live. Descubre =20=
+
+> Windows Live
+> Descarg=E1 ya gratis y viv=ED la experiencia Windows Live. Descubre =20=
+
+> Windows Live
+
+

@@ -1,0 +1,251 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.90.95.13 with SMTP id s13cs145982agb;
+        Fri, 19 Dec 2008 07:10:17 -0800 (PST)
+Received: by 10.150.201.2 with SMTP id y2mr5753577ybf.146.1229699416835;
+        Fri, 19 Dec 2008 07:10:16 -0800 (PST)
+Return-Path: <dgorin@dc.uba.ar>
+Received: from smtp-2.dc.uba.ar (smtp-2.dc.uba.ar [157.92.27.62])
+        by mx.google.com with ESMTP id 2si21774646gxk.49.2008.12.19.07.10.14;
+        Fri, 19 Dec 2008 07:10:16 -0800 (PST)
+Received-SPF: pass (google.com: best guess record for domain of dgorin@dc.uba.ar designates 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Authentication-Results: mx.google.com; spf=pass (google.com: best guess record for domain of dgorin@dc.uba.ar designates 157.92.27.62 as permitted sender) smtp.mail=dgorin@dc.uba.ar
+Received: (qmail 13527 invoked by uid 111); 19 Dec 2008 15:10:14 -0000
+Received: from 10.1.200.94 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(10.1.200.94):SA:0(-1.2/3.5):. 
+ Processed in 3.795369 secs); 19 Dec 2008 15:10:14 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.2 required=3.5 tests=ALL_TRUSTED,AWL,FUZZY_AMBIEN,
+	HTML_MESSAGE autolearn=no version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [10.1.200.94]) (dgorin@[10.1.200.94])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <alexis.jawtuschenko@gmail.com>; 19 Dec 2008 15:10:10 -0000
+Message-Id: <D20BA5AA-8DFE-4B54-ACE9-E9E62EFDC790@dc.uba.ar>
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+To: Alexis Jawtuschenko <alexis.jawtuschenko@gmail.com>
+In-Reply-To: <ba737dfb0812180948o4ba5087avc9af234c7dcdc5d7@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=Apple-Mail-2-136623359
+Mime-Version: 1.0 (Apple Message framework v930.3)
+Subject: Re: consulta
+Date: Fri, 19 Dec 2008 13:10:10 -0200
+References: <ba737dfb0812160636l449edd0dx18f982d5988d893b@mail.gmail.com> <C206D3E5-886E-4389-B127-07CB590A3C0A@dc.uba.ar> <ba737dfb0812160757j2d601fe9rf139018f5f5b154b@mail.gmail.com> <D87266E1-023D-41C9-AA9A-D5ACEC66FC84@dc.uba.ar> <ba737dfb0812180948o4ba5087avc9af234c7dcdc5d7@mail.gmail.com>
+X-Mailer: Apple Mail (2.930.3)
+
+
+--Apple-Mail-2-136623359
+Content-Type: text/plain;
+	charset=ISO-8859-1;
+	format=flowed;
+	delsp=yes
+Content-Transfer-Encoding: quoted-printable
+
+buenas
+
+me alegro que "java" ya figure en tu cv. es lo que en general mira la =20=
+
+gente de rrhh, obviamente sin tener la menor idea de lo que significa.
+
+cuando mires de nuevo tus apuntes vas a ver que hay muchas cosas muy =20
+parecidas a c++, con lo cual no vas a tener problema (el objetivo de =20
+los que hicieron java era tomar la sintaxis de c++ y sacarle todo lo =20
+que romp=EDa las bolas)
+
+sobre tu pregunta de rankings de lenguajes, la verdad que no tengo tal =20=
+
+cosa. si tomamos la relaci=F3n "me gusta menos que", con suerte quede un =
+=20
+orden parcial (pero bien podr=EDa terminar con ciclos o no transitiva), =20=
+
+sin primer elemento. si usamos en cambio la relaci=F3n "me gusta menos =20=
+
+para ense=F1ar qu=E9" tal vez quede un reticulado (?!) y c/c++ sea el =20=
+
+m=EDnimo.
+
+saludos
+daniel
+
+On Dec 18, 2008, at 3:48 PM, Alexis Jawtuschenko wrote:
+
+> Hola Daniel!
+> tiempo r=E9cord! ojal=E1 tuviera ese tiempo de respuesta en mis =20
+> aplicaciones :P
+>
+> Buen=EDsimo lo que me dec=EDs. Causalmente hace un tiempo le pagu=E9 =
+un =20
+> curso de java a una tal M=F3nica que vende cursos de extensi=F3n, =
+porque =20
+> sab=EDa que el java pagaba bien, con la mala suerte de que, si bien me =
+=20
+> VENDIERON el curso como para aprender a programar Y en java, result=F3 =
+=20
+> ser no m=E1s que un curso de java para programadores... o sea podr=EDa =
+=20
+> hacerlo ahora, despu=E9s de cursar con ustedes.... y bueno...
+> En cualquier caso me qued=F3 una leve idea de lo que es, y tambi=E9n =
+me =20
+> quedaron los apuntes. As=ED que me meto a leer eso y si puedo, m=E1s. =
+De =20
+> hecho, por ser tan caradura, yo ya tengo en mi curr=EDculum =20
+> <<Conocimientos de JAVA>>, jeje...
+> Pregunta: (realmente me interesa saberlo de parte de un "computer =20
+> scientist"), me qued=F3 la intriga) =BFCu=E1les son los cinco primeros =
+=20
+> lenguajes en tu ranking? Podr=EDa decir que empieza con Haskell...
+>
+> Mi ingl=E9s es muy bueno y no es mi =FAnico "foreign language", lo =
+=FAnico =20
+> que no tengo es un examen de ingl=E9s porque fui bastante =
+autodidacta...
+>
+> Bueno, realmente te agradezco el contacto, y te agradezco m=E1s que =20=
+
+> hayas hablado bien de m=ED.
+> Quedate tranquilo que soy responsable, creo que lo =FAnico que me =20
+> har=EDa decir que no es que no cubran mis necesidades econ=F3micas =20
+> urgentes...(porque ya no vivo m=E1s en la casa de mis padres).
+>
+> Hoy le mando el CV y te cuento..
+>
+> Muchas gracias, un abrazo.
+> Alexis.
+>
+>
+> El 18 de diciembre de 2008 10:32, Daniel Gor=EDn <dgorin@dc.uba.ar> =20=
+
+> escribi=F3:
+> hola, alexis
+>
+> c=F3mo va?
+>
+> le pregunt=E9 a un amigo que labura en una software factory que est=E1 =
+=20
+> tomando juniors. en otros tiempos les daban un poco de capacitaci=F3n, =
+=20
+> pero en este momento esperan que sepan algo de java y desarrollo web =20=
+
+> y que tengan un nivel m=E1s o menos decente de ingl=E9s (los clientes =20=
+
+> son de afuera).
+>
+> desarrollo web ten=E9s cubierto, java? es muy muy muy parecido a c++ =20=
+
+> s=F3lo que un poco m=E1s amigable. en cualquier caso, dir=EDa que te =20=
+
+> busques ya un libro/tutorial de internet, te pongas a leer por tu =20
+> cuenta y a todo lado que vayas digas que sab=E9s un poco de java. es =20=
+
+> el lenguaje "de moda" en las empresas y es lo que paga. tu ingl=E9s =20=
+
+> c=F3mo viene?
+>
+> bueno, en cualquier caso, mandale tu cv (acordate de decorarlo con =20
+> la palabra "java"!) a andres.ferrari@teracode.com. le habl=E9 bien de =20=
+
+> vos, as=ED que no me hagas quedar mal! :P
+>
+> despu=E9s contame c=F3mo te fue...
+>
+> saludos
+> daniel
+>
+> On Dec 16, 2008, at 1:57 PM, Alexis Jawtuschenko wrote:
+>
+> Ah, no, de ninguna manera te quiero condicionar... igual yo justo =20
+> hoy estoy en mi casa y ma=F1ana de 2 y media a 3 y media voy porque =20=
+
+> hay un congreso al que tengo que ir...
+> Yo paso y si no est=E1s no importa... es s=F3lo una consulta =20
+> medianamente urgente de tipo laboral..
+>
+> Nos vemos!
+>
+> Saludos
+>
+>
+>
+>
+
+
+--Apple-Mail-2-136623359
+Content-Type: text/html;
+	charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; =
+-webkit-line-break: after-white-space; ">buenas<div><br></div><div>me =
+alegro que "java" ya figure en tu cv. es lo que en general mira la gente =
+de rrhh, obviamente sin tener la menor idea de lo que =
+significa.<br><div><div><br></div><div>cuando mires de nuevo tus apuntes =
+vas a ver que hay muchas cosas muy parecidas a c++, con lo cual no vas a =
+tener problema (el objetivo de los que hicieron java era tomar la =
+sintaxis de c++ y sacarle todo lo que romp=EDa las =
+bolas)</div><div><br></div><div>sobre tu pregunta de rankings de =
+lenguajes, la verdad que no tengo tal cosa. si tomamos la relaci=F3n "me =
+gusta menos que", con suerte quede un orden parcial (pero bien podr=EDa =
+terminar con ciclos o no transitiva), sin primer elemento. si usamos en =
+cambio la relaci=F3n "me gusta menos para ense=F1ar qu=E9" tal vez quede =
+un reticulado (?!) y c/c++ sea el =
+m=EDnimo.</div><div><br></div><div>saludos</div><div>daniel</div><div><br>=
+</div><div>On Dec 18, 2008, at 3:48 PM, Alexis Jawtuschenko =
+wrote:</div><br class=3D"Apple-interchange-newline"><blockquote =
+type=3D"cite">Hola Daniel!<br>tiempo r=E9cord! ojal=E1 tuviera ese =
+tiempo de respuesta en mis aplicaciones :P<br><br>Buen=EDsimo lo que me =
+dec=EDs. Causalmente hace un tiempo le pagu=E9 un curso de java a una =
+tal M=F3nica que vende cursos de extensi=F3n, porque sab=EDa que el java =
+pagaba bien, con la mala suerte de que, si bien me VENDIERON el curso =
+como para aprender a programar Y en java, result=F3 ser no m=E1s que un =
+curso de java para programadores... o sea podr=EDa hacerlo ahora, =
+despu=E9s de cursar con ustedes.... y bueno...<br> En cualquier caso me =
+qued=F3 una leve idea de lo que es, y tambi=E9n me quedaron los apuntes. =
+As=ED que me meto a leer eso y si puedo, m=E1s. De hecho, por ser tan =
+caradura, yo ya tengo en mi curr=EDculum &lt;&lt;Conocimientos de =
+JAVA>>, jeje...<br> Pregunta: (realmente me interesa saberlo de parte de =
+un "computer scientist"), me qued=F3 la intriga) =BFCu=E1les son los =
+cinco primeros lenguajes en tu ranking? Podr=EDa decir que empieza con =
+Haskell...<br><br>Mi ingl=E9s es muy bueno y no es mi =FAnico "foreign =
+language", lo =FAnico que no tengo es un examen de ingl=E9s porque fui =
+bastante autodidacta...<br> <br>Bueno, realmente te agradezco el =
+contacto, y te agradezco m=E1s que hayas hablado bien de m=ED.<br>Quedate =
+tranquilo que soy responsable, creo que lo =FAnico que me har=EDa decir =
+que no es que no cubran mis necesidades econ=F3micas urgentes...(porque =
+ya no vivo m=E1s en la casa de mis padres).<br> <br>Hoy le mando el CV y =
+te cuento..<br><br>Muchas gracias, un abrazo.<br>Alexis.<br><br><br><div =
+class=3D"gmail_quote">El 18 de diciembre de 2008 10:32, Daniel Gor=EDn =
+<span dir=3D"ltr">&lt;<a =
+href=3D"mailto:dgorin@dc.uba.ar">dgorin@dc.uba.ar</a>></span> =
+escribi=F3:<br> <blockquote class=3D"gmail_quote" style=3D"border-left: =
+1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: =
+1ex;">hola, alexis<br> <br> c=F3mo va?<br> <br> le pregunt=E9 a un amigo =
+que labura en una software factory que est=E1 tomando juniors. en otros =
+tiempos les daban un poco de capacitaci=F3n, pero en este momento =
+esperan que sepan algo de java y desarrollo web y que tengan un nivel =
+m=E1s o menos decente de ingl=E9s (los clientes son de afuera).<br> <br> =
+desarrollo web ten=E9s cubierto, java? es muy muy muy parecido a c++ =
+s=F3lo que un poco m=E1s amigable. en cualquier caso, dir=EDa que te =
+busques ya un libro/tutorial de internet, te pongas a leer por tu cuenta =
+y a todo lado que vayas digas que sab=E9s un poco de java. es el =
+lenguaje "de moda" en las empresas y es lo que paga. tu ingl=E9s c=F3mo =
+viene?<br> <br> bueno, en cualquier caso, mandale tu cv (acordate de =
+decorarlo con la palabra "java"!) a <a =
+href=3D"mailto:andres.ferrari@teracode.com" =
+target=3D"_blank">andres.ferrari@teracode.com</a>. le habl=E9 bien de =
+vos, as=ED que no me hagas quedar mal! :P<br> <br> despu=E9s contame =
+c=F3mo te fue...<br> <br> saludos<br><font color=3D"#888888"> =
+daniel<br></font><div class=3D"Ih2E3d"> <br> On Dec 16, 2008, at 1:57 =
+PM, Alexis Jawtuschenko wrote:<br> <br> </div><div><div></div><div =
+class=3D"Wj3C7c"><blockquote class=3D"gmail_quote" style=3D"border-left: =
+1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: =
+1ex;"> Ah, no, de ninguna manera te quiero condicionar... igual yo justo =
+hoy estoy en mi casa y ma=F1ana de 2 y media a 3 y media voy porque hay =
+un congreso al que tengo que ir...<br> Yo paso y si no est=E1s no =
+importa... es s=F3lo una consulta medianamente urgente de tipo =
+laboral..<br> <br> Nos vemos!<br> <br> Saludos<br> <br> <br> =
+</blockquote> <br> =
+</div></div></blockquote></div><br></blockquote></div><br></div></body></h=
+tml>=
+
+--Apple-Mail-2-136623359--

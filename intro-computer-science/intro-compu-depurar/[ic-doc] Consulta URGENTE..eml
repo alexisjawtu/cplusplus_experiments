@@ -1,0 +1,117 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs171294vcy;
+        Tue, 14 Sep 2010 13:38:55 -0700 (PDT)
+Received: by 10.213.9.142 with SMTP id l14mr409121ebl.74.1284495370409;
+        Tue, 14 Sep 2010 13:16:10 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:16:10 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Info: JGTYoYF78jEHjJx36Oi8+Z3TmmkSEdPt3Mi6GgUSv7yYKHQgGfDe+2wCW4LegkYQav29Pp7Mm4E=
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc3-f2.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Mon, 21 Apr 2008 18:29:59 -0700
+Received: (qmail 24115 invoked by uid 111); 22 Apr 2008 01:29:57 -0000
+Received: from 200.126.220.20 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(200.126.220.20):SA:0(-1.0/3.5):. 
+ Processed in 5.244517 secs); 22 Apr 2008 01:29:57 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=3.5 tests=ALL_TRUSTED,FUZZY_AMBIEN 
+	autolearn=no version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [192.168.1.2]) (dgorin@[200.126.220.20])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <ic-doc@dc.uba.ar>; 22 Apr 2008 01:29:52 -0000
+In-Reply-To: <BLU142-W242491A483C0BD17FC542C92E10@phx.gbl>
+References: <7DCF16B8-029C-4C9D-9866-DC156E0C3C07@dc.uba.ar> <BLU142-W242491A483C0BD17FC542C92E10@phx.gbl>
+Mime-Version: 1.0 (Apple Message framework v753)
+Content-Type: text/plain; charset=ISO-8859-1; delsp=yes; format=flowed
+Message-Id: <79E5E1FE-FCCE-48C8-951A-C6D789F9885B@dc.uba.ar>
+Cc: ic-doc@dc.uba.ar
+Content-Transfer-Encoding: quoted-printable
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Subject: Re: [ic-doc] Consulta URGENTE.
+Date: Mon, 21 Apr 2008 22:29:36 -0300
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+X-Mailer: Apple Mail (2.753)
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 22 Apr 2008 01:29:59.0276 (UTC) FILETIME=[60F2E2C0:01C8A418]
+
+Hola, Alexis
+
+Una cagada lo que te pas=F3. Dudo mucho que las instrucciones que est=E1n =
+=20
+en el pdf tengan algo que ver. Normalmente, si la computadora se =20
+reinicia sola sistem=E1ticamente es por alg=FAn problema de hardware y/o =
+=20
+de drivers. Que justo te hayan instalado un servicio de internet es =20
+altamente sospechoso.
+
+Cosas que pod=E9s tratar de hacer:
+
+-  Si te instalaron un modem usb, prob=E1 de desenchufarlo de la =20
+computadora y ver si as=ED bootea
+- Sino,  prob=E1 de entrar en modo a prueba de fallos (hay que apretar =20=
+
+F8 o algo as=ED cuando est=E1 empezando a bootear, no me acuerdo bien). =20=
+
+As=ED al menos deber=EDas poder recuperar el TP. Desde ah=ED pod=E9s =
+tratar =20
+de diagnosticar qu=E9 driver est=E1 haciendo quilombo...
+- En cualquier caso, llam=E1 al servicio t=E9cnico de tu proveedor de =20=
+
+internet!
+
+Suerte con eso!
+
+Saludos
+Daniel
+
+On Apr 21, 2008, at 10:29 AM, Alexis Jawtuschenko wrote:
+> Mi computadora se descompuso este fin de semana.
+>
+> Este fin de semana "toqu=E9" las variables de entorno de acuerdo al =20=
+
+> pdf que mand=F3 Luis y anteriormente vinieron a instalarme un =20
+> servicio de internet, con lo cual tambi=E9n otras personas tocaron el =20=
+
+> sistema de mi computadora.
+> Despu=E9s de eso la m=E1quina empez=F3 a comportarse cada vez m=E1s =
+raro, =20
+> se reiniciaba sola por ejemplo.
+> Todo esto hasta llegar al punto de que ahora cuando la intento =20
+> encender, cada vez que est=E1 por finalizar el inicio del sistema, se =20=
+
+> reinicia nuevamente, para, otra vez al finalizar el inicio del =20
+> sistema se reinicia nuevamente, y luego nuevamente...
+>
+> Entonces estoy sin computadora literalmente (y en particular estoy =20
+> sin el Tp2 de mi grupo, que se encontraba en su disco r=EDgido).
+>
+> Pregunto: =BFPuede que lo que toqu=E9 de acuerdo a las indicaciones =20=
+
+> para usar el compilador haya
+> ocasionado todo esto? =BFPuede que lo hayan ocacionado los "peritos" =20=
+
+> que me instalaron internet?
+>
+> Si no es as=ED aprovecho para preguntar:
+>
+>                    a) =BFQu=E9 puede ser?
+>                    b) =BFQu=E9 puedo hacer?
+>
+> A.J.
+>
+>
+>
+> Ingres=E1 ya a MSN Deportes y enterate de las =FAltimas novedades del =20=
+
+> mundo deportivo. MSN Deportes
+> _______________________________________________
+> ic-doc mailing list
+> ic-doc@dc.uba.ar
+> https://listas.dc.uba.ar/cgi-bin/mailman/listinfo/ic-doc
+
+

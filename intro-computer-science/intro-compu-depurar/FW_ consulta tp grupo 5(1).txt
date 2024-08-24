@@ -1,0 +1,143 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs170298vcy;
+        Tue, 14 Sep 2010 13:18:27 -0700 (PDT)
+Received: by 10.213.114.19 with SMTP id c19mr388359ebq.97.1284495350728;
+        Tue, 14 Sep 2010 13:15:50 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning teofilo60@hotmail.com does not designate 65.54.246.157 as permitted sender) client-ip=65.54.246.157;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:15:50 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Delivery: Vj0zLjQuMDt1cz0wO2w9MDthPTE=
+X-Message-Status: n:0
+X-SID-PRA: mateo astelarra <teofilo60@hotmail.com>
+X-SID-Result: Pass
+X-Message-Info: JGTYoYF78jGvrvjgiYqyqFxH4j2iA7OuhV/2+UaWM8Qg7YAqHbnQmW22vEoBPhdh3dbEPgnh7YznqBCZtP18jSHoupWh6m1r
+Received: from bay0-omc2-s21.bay0.hotmail.com ([65.54.246.157]) by bay0-imc1-s23.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2444);
+	 Wed, 18 Jun 2008 16:53:30 -0700
+Received: from BAY112-W3 ([64.4.26.103]) by bay0-omc2-s21.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.3959);
+	 Wed, 18 Jun 2008 16:52:31 -0700
+Message-ID: <BAY112-W395DE2771CD222BA8DAB5BBAB0@phx.gbl>
+Return-Path: teofilo60@hotmail.com
+Content-Type: multipart/alternative;
+	boundary="_1ae9f6ac-7445-4bcc-85ce-adc803a8f585_"
+X-Originating-IP: [190.226.88.86]
+From: mateo astelarra <teofilo60@hotmail.com>
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+Subject: FW: consulta tp grupo 5
+Date: Wed, 18 Jun 2008 23:52:31 +0000
+Importance: Normal
+In-Reply-To: <C8B6BB93-3A12-4162-8BF8-EADA498D91E0@dc.uba.ar>
+References: <008a01c8d0c3$9df30a10$6401a8c0@acer73d8bd810a>
+ <CD697E1D-188F-40B8-BF8B-C4DF553975DE@dc.uba.ar>
+ <BAY112-W22A881D356DF7DBD212F07BBAB0@phx.gbl>
+ <E03C6CD6-4A40-496A-AEE4-A46FDD09BE2D@dc.uba.ar>
+ <BAY112-W11BA562348F346DD720E60BBAB0@phx.gbl>
+ <C8B6BB93-3A12-4162-8BF8-EADA498D91E0@dc.uba.ar>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 18 Jun 2008 23:52:31.0370 (UTC) FILETIME=[5F48BEA0:01C8D19E]
+
+--_1ae9f6ac-7445-4bcc-85ce-adc803a8f585_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+> From: dgorin@dc.uba.ar> Subject: Re: consulta tp grupo 5> Date: Wed, 18 J=
+un 2008 20:45:09 -0300> To: teofilo60@hotmail.com> > Hola, Mateo> > On Jun =
+18, 2008, at 8:20 PM, mateo astelarra wrote:> > > hola daniel> > intente ha=
+cer lo q me dijiste:> > la funcion definir me quedo una cosa asi:> >> > [..=
+.]> >> > pero la verdad es q me compila pero me da cualquier cosa.> > Regla=
+ de oro n=FAmero 1: Nunca va a funcionar de una :)> > > =BFq puede estar fa=
+llando?> > Dejame adivinar, this->arbol siempre queda en NULL! :P> > B=E1si=
+camente, fijate que al construir un nodo nuevo, =E9ste se pierde! O > sea, =
+la l=EDnea> > raiz =3D nodoaux;> > no hace lo que ustedes querr=EDan que ha=
+ga....> > >> > implemente la auxiliar como una funcion del tipo diccionario=
+ aunq > > no lo uso nunca.> >> > =BFpodria haberlo hecho de otra forma?> > =
+As=ED como lo definieron, definir_aux toma un par=E1metro impl=EDcito, y se=
+ > lo est=E1n pasando, aunque no lo sepan! (ver m=E1s abajo). Lo que pod=ED=
+an > hacer es definirla como una funci=F3n com=FAn y silvestre:> > void def=
+inir_aux(NodoABBD* raiz,clave k, valor v)> {> ...> }> > De hecho, como es a=
+lgo privado de la implementaci=F3n, ni falta hace > que aparezca en el .h..=
+..> > > uso definir_aux(this->arbol,k,v), pero no le estoy dando ninguna > =
+> variable implicita.> > =BFeso es un problema?> > No, no es un problema; e=
+s al pedo, nom=E1s :P> > Nunca lo vimos (me pareci=F3 que iba a ser m=E1s c=
+onfuso que otra cosa), > pero como definir_aux lo definieron como un m=E9to=
+do de diccionario y > lo est=E1n usando adentro de un m=E9todo de diccionar=
+io, entonces, las > siguientes son equivalentes:> > i) definir_aux(this->ar=
+bol,k,v)> ii) this->definir_aux(this->arbol,k,v)> iii) definir_aux(arbol,k,=
+v)> iv) this->definir_aux(arbol,k,v)> > O sea, siempre les hice poner todos=
+ los "this->" aunque no sean > *estrictamente* necesarios, pero me pareci=
+=F3 que se iban a complicar > mucho sino. Pero bueh....> > Ya que estamos, =
+f=EDjense que en definir() recorren el arbol dos veces. > En t=E9rminos de =
+complejidad est=E1 bien, pero no deja de ser medio feo. > Piensen c=F3mo po=
+dr=EDan hacer para que definir_aux tambi=E9n les avise si > la clave ya est=
+aba o no!> > Espero se entienda, cualquier cosa, chifl=E1....> > Saludos> D=
+aniel
+_________________________________________________________________
+Descarg=E1 ya gratis y viv=ED la experiencia Windows Live.
+http://www.descubrewindowslive.com/latam/index.html=
+
+--_1ae9f6ac-7445-4bcc-85ce-adc803a8f585_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<style>
+.hmmessage P
+{
+margin:0px;
+padding:0px
+}
+body.hmmessage
+{
+FONT-SIZE: 10pt;
+FONT-FAMILY:Tahoma
+}
+</style>
+</head>
+<body class=3D'hmmessage'>
+<BR><BR>&gt; From: dgorin@dc.uba.ar<BR>&gt; Subject: Re: consulta tp grupo =
+5<BR>&gt; Date: Wed, 18 Jun 2008 20:45:09 -0300<BR>&gt; To: teofilo60@hotma=
+il.com<BR>&gt; <BR>&gt; Hola, Mateo<BR>&gt; <BR>&gt; On Jun 18, 2008, at 8:=
+20 PM, mateo astelarra wrote:<BR>&gt; <BR>&gt; &gt; hola daniel<BR>&gt; &gt=
+; intente hacer lo q me dijiste:<BR>&gt; &gt; la funcion definir me quedo u=
+na cosa asi:<BR>&gt; &gt;<BR>&gt; &gt; [...]<BR>&gt; &gt;<BR>&gt; &gt; pero=
+ la verdad es q me compila pero me da cualquier cosa.<BR>&gt; <BR>&gt; Regl=
+a de oro n=FAmero 1: Nunca va a funcionar de una :)<BR>&gt; <BR>&gt; &gt; =
+=BFq puede estar fallando?<BR>&gt; <BR>&gt; Dejame adivinar, this-&gt;arbol=
+ siempre queda en NULL! :P<BR>&gt; <BR>&gt; B=E1sicamente, fijate que al co=
+nstruir un nodo nuevo, =E9ste se pierde! O <BR>&gt; sea, la l=EDnea<BR>&gt;=
+ <BR>&gt; raiz =3D nodoaux;<BR>&gt; <BR>&gt; no hace lo que ustedes querr=
+=EDan que haga....<BR>&gt; <BR>&gt; &gt;<BR>&gt; &gt; implemente la auxilia=
+r como una funcion del tipo diccionario aunq <BR>&gt; &gt; no lo uso nunca.=
+<BR>&gt; &gt;<BR>&gt; &gt; =BFpodria haberlo hecho de otra forma?<BR>&gt; <=
+BR>&gt; As=ED como lo definieron, definir_aux toma un par=E1metro impl=EDci=
+to, y se <BR>&gt; lo est=E1n pasando, aunque no lo sepan! (ver m=E1s abajo)=
+. Lo que pod=EDan <BR>&gt; hacer es definirla como una funci=F3n com=FAn y =
+silvestre:<BR>&gt; <BR>&gt; void definir_aux(NodoABBD* raiz,clave k, valor =
+v)<BR>&gt; {<BR>&gt; ...<BR>&gt; }<BR>&gt; <BR>&gt; De hecho, como es algo =
+privado de la implementaci=F3n, ni falta hace <BR>&gt; que aparezca en el .=
+h....<BR>&gt; <BR>&gt; &gt; uso definir_aux(this-&gt;arbol,k,v), pero no le=
+ estoy dando ninguna <BR>&gt; &gt; variable implicita.<BR>&gt; &gt; =BFeso =
+es un problema?<BR>&gt; <BR>&gt; No, no es un problema; es al pedo, nom=E1s=
+ :P<BR>&gt; <BR>&gt; Nunca lo vimos (me pareci=F3 que iba a ser m=E1s confu=
+so que otra cosa), <BR>&gt; pero como definir_aux lo definieron como un m=
+=E9todo de diccionario y <BR>&gt; lo est=E1n usando adentro de un m=E9todo =
+de diccionario, entonces, las <BR>&gt; siguientes son equivalentes:<BR>&gt;=
+ <BR>&gt; i) definir_aux(this-&gt;arbol,k,v)<BR>&gt; ii) this-&gt;definir_a=
+ux(this-&gt;arbol,k,v)<BR>&gt; iii) definir_aux(arbol,k,v)<BR>&gt; iv) this=
+-&gt;definir_aux(arbol,k,v)<BR>&gt; <BR>&gt; O sea, siempre les hice poner =
+todos los "this-&gt;" aunque no sean <BR>&gt; *estrictamente* necesarios, p=
+ero me pareci=F3 que se iban a complicar <BR>&gt; mucho sino. Pero bueh....=
+<BR>&gt; <BR>&gt; Ya que estamos, f=EDjense que en definir() recorren el ar=
+bol dos veces. <BR>&gt; En t=E9rminos de complejidad est=E1 bien, pero no d=
+eja de ser medio feo. <BR>&gt; Piensen c=F3mo podr=EDan hacer para que defi=
+nir_aux tambi=E9n les avise si <BR>&gt; la clave ya estaba o no!<BR>&gt; <B=
+R>&gt; Espero se entienda, cualquier cosa, chifl=E1....<BR>&gt; <BR>&gt; Sa=
+ludos<BR>&gt; Daniel<BR><br /><hr />Descarg=E1 ya gratis y viv=ED la experi=
+encia Windows Live. <a href=3D'http://www.descubrewindowslive.com/latam/ind=
+ex.html' target=3D'_new'>Descubre Windows Live</a></body>
+</html>=
+
+--_1ae9f6ac-7445-4bcc-85ce-adc803a8f585_--
+

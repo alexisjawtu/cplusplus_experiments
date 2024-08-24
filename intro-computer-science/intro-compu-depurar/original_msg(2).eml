@@ -1,0 +1,95 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.78.200.5 with SMTP id x5cs367887huf;
+        Mon, 16 Jun 2008 19:19:12 -0700 (PDT)
+Received: by 10.90.66.14 with SMTP id o14mr7937662aga.67.1213669150532;
+        Mon, 16 Jun 2008 19:19:10 -0700 (PDT)
+Return-Path: <teofilo60@hotmail.com>
+Received: from bay0-omc3-s7.bay0.hotmail.com (bay0-omc3-s7.bay0.hotmail.com [65.54.246.207])
+        by mx.google.com with ESMTP id l48si9606448wrl.4.2008.06.16.19.19.09;
+        Mon, 16 Jun 2008 19:19:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of teofilo60@hotmail.com designates 65.54.246.207 as permitted sender) client-ip=65.54.246.207;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of teofilo60@hotmail.com designates 65.54.246.207 as permitted sender) smtp.mail=teofilo60@hotmail.com
+Received: from BAY112-W30 ([64.4.26.130]) by bay0-omc3-s7.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.3959);
+	 Mon, 16 Jun 2008 19:18:19 -0700
+Message-ID: <BAY112-W30DE7C7581437E354A5C92BBA80@phx.gbl>
+Return-Path: teofilo60@hotmail.com
+Content-Type: multipart/alternative;
+	boundary="_7f29142f-3549-4245-b667-377dad42fb83_"
+X-Originating-IP: [190.226.88.86]
+From: mateo astelarra <teofilo60@hotmail.com>
+To: Alexis Jawtuschenko <alexis.jawtuschenko@gmail.com>
+Subject: RE:
+Date: Tue, 17 Jun 2008 02:18:18 +0000
+Importance: Normal
+In-Reply-To: <ba737dfb0806161432g39d273bdqc8c62aac09657fca@mail.gmail.com>
+References: <ba737dfb0806161432g39d273bdqc8c62aac09657fca@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 17 Jun 2008 02:18:19.0057 (UTC) FILETIME=[687C5A10:01C8D020]
+
+--_7f29142f-3549-4245-b667-377dad42fb83_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+void diccionario::definir(clave k, valor v){    if(this->raiz=3DNULL)    { =
+       NodoABBD=3Dnodoaux;        nodoaux->clave=3Dk;        nodoaux->valor=
+=3Dv;        nodoaux->izquierdo=3DNULL;        nodoaux->derecho=3DNULL;    =
+    this->raiz=3Dnodoaux;    }    else if( k<(this->raiz->clave))    {     =
+   this->raiz->izquierdo=3D(this->raiz->izquierdo).definir(k,v);    }    el=
+se    {        this->raiz->derecho=3D(this->raiz->derecho).definir(k,v);   =
+ }}
+
+
+Date: Mon, 16 Jun 2008 18:32:04 -0300From: alexis.jawtuschenko@gmail.comTo:=
+ teofilo60@hotmail.comSubject:=20
+contestame a gmail
+=20
+_________________________________________________________________
+=BFAburrido? Ingres=E1 ya y divertite como nunca en MSN Juegos.
+http://juegos.ar.msn.com/=
+
+--_7f29142f-3549-4245-b667-377dad42fb83_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<style>
+.hmmessage P
+{
+margin:0px;
+padding:0px
+}
+body.hmmessage
+{
+FONT-SIZE: 10pt;
+FONT-FAMILY:Tahoma
+}
+</style>
+</head>
+<body class=3D'hmmessage'>
+void diccionario::definir(clave k, valor v)<BR>{<BR>&nbsp;&nbsp;&nbsp; if(t=
+his-&gt;raiz=3DNULL)<BR>&nbsp;&nbsp;&nbsp; {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; NodoABBD=3Dnodoaux;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp; nodoaux-&gt;clave=3Dk;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+ nodoaux-&gt;valor=3Dv;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodoa=
+ux-&gt;izquierdo=3DNULL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodo=
+aux-&gt;derecho=3DNULL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this-=
+&gt;raiz=3Dnodoaux;<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; else if( =
+k&lt;(this-&gt;raiz-&gt;clave))<BR>&nbsp;&nbsp;&nbsp; {<BR>&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp; this-&gt;raiz-&gt;izquierdo=3D(this-&gt;raiz-&gt=
+;izquierdo).definir(k,v);<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; els=
+e<BR>&nbsp;&nbsp;&nbsp; {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thi=
+s-&gt;raiz-&gt;derecho=3D(this-&gt;raiz-&gt;derecho).definir(k,v);<BR>&nbsp=
+;&nbsp;&nbsp; }<BR>}<BR><BR>
+<BLOCKQUOTE>
+<HR>
+Date: Mon, 16 Jun 2008 18:32:04 -0300<BR>From: alexis.jawtuschenko@gmail.co=
+m<BR>To: teofilo60@hotmail.com<BR>Subject: <BR><BR>
+<DIV>contestame a gmail</DIV>
+<DIV>&nbsp;</DIV></BLOCKQUOTE><br /><hr />=BFAburrido? Ingres=E1 ya y diver=
+tite como nunca en MSN Juegos. <a href=3D'http://juegos.ar.msn.com/' target=
+=3D'_new'>MSN Juegos</a></body>
+</html>=
+
+--_7f29142f-3549-4245-b667-377dad42fb83_--

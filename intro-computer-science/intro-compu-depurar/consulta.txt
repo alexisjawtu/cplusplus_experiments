@@ -1,0 +1,123 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs170177vcy;
+        Tue, 14 Sep 2010 13:15:15 -0700 (PDT)
+Received: by 10.213.98.84 with SMTP id p20mr3172722ebn.59.1284492366858;
+        Tue, 14 Sep 2010 12:26:06 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.4.9 with POP3 id 9mf802065eyd.119;
+        Tue, 14 Sep 2010 12:26:06 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Info: JGTYoYF78jEHjJx36Oi8+Z3TmmkSEdPt3Mi6GgUSv7yYKHQgGfDe+2wCW4LegkYQav29Pp7Mm4E=
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc5-f4.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Tue, 24 Jun 2008 10:51:57 -0700
+Received: (qmail 7560 invoked by uid 111); 24 Jun 2008 17:51:54 -0000
+Received: from 10.1.200.149 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(10.1.200.149):SA:0(-1.4/3.5):. 
+ Processed in 5.791848 secs); 24 Jun 2008 17:51:54 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.4 required=3.5 tests=ALL_TRUSTED,AWL autolearn=no 
+	version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [10.1.200.149]) (dgorin@[10.1.200.149])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <alexis_bj@hotmail.com>; 24 Jun 2008 17:51:48 -0000
+Mime-Version: 1.0 (Apple Message framework v753.1)
+In-Reply-To: <BLU142-W3BA6AA7AF2AB4FCA5ABFD92A10@phx.gbl>
+References: <BLU142-W3BA6AA7AF2AB4FCA5ABFD92A10@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; delsp=yes; format=flowed
+Message-Id: <AA186BF3-1AA3-4F05-B36C-E8C8050AB28D@dc.uba.ar>
+Content-Transfer-Encoding: quoted-printable
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Subject: Re: consulta
+Date: Tue, 24 Jun 2008 14:51:46 -0300
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+X-Mailer: Apple Mail (2.753.1)
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 24 Jun 2008 17:51:57.0448 (UTC) FILETIME=[FEF0B880:01C8D622]
+
+hola, alexis
+
+hasta la noche no voy a tener tiempo de ponerme a mirar c=F3digo. si me =20=
+
+hac=E9s una pregunta un poco m=E1s concreta por ah=ED te puedo ayudar!
+
+sobre la pregunta de "optimizar memoria", no s=E9 en qu=E9 sentido =20
+habl=E1s. el programa no debe perder memoria, eso no es una =20
+optimizaci=F3n :P
+
+saludos
+daniel
+
+On Jun 24, 2008, at 1:05 PM, Alexis Jawtuschenko wrote:
+
+> Hola Daniel, qu=E9 tal?
+> Te quer=EDa consultar acerca de esta funci=F3n porque parece que hay =
+un =20
+> problema con los deletes al fondo. Te podr=EDas fijar si estan bien?
+> Segunda pregunta: es indispensable optimizar la memoria en este =20
+> sentido?
+>
+> gracias!!
+> saludos
+> Alexis
+>
+> NodoABBD* diccionario::indefinir_aux(NodoABBD* raiz, clave k)
+> {
+>     if( raiz !=3D NULL )
+>     {
+>         if(contieneclave_aux(raiz, k) =3D=3D 1 )
+>         {
+>             if( raiz->clave < k )
+>             {
+>                raiz->derecho =3D indefinir_aux(raiz->derecho, k);
+>             }
+>             else if( raiz->clave > k )
+>             {
+>                 raiz->izquierdo =3D indefinir_aux(raiz->izquierdo, k);
+>             }
+>             else
+>             {
+>                 if( raiz->derecho =3D=3D NULL)
+>                 {
+>                     NodoABBD* nodo_a_extraer =3D raiz;
+>                     raiz =3D raiz->izquierdo;
+>                     nodo_a_extraer->izquierdo =3D NULL;
+>                     delete nodo_a_extraer;
+>                 }
+>                 else
+>                 {
+>                     NodoABBD* nodominimo =3D raiz->derecho;
+>                     while( nodominimo->izquierdo !=3D NULL)
+>                     {
+>                         nodominimo =3D nodominimo->izquierdo;
+>                     }
+>                     NodoABBD* nodo_aux =3D raiz;
+>                     NodoABBD* derecha =3D raiz->derecho;
+>                     NodoABBD* izquierda =3D raiz->izquierdo;// aca =20
+> habria q borrar tambien
+>                     raiz =3D nodominimo;
+>                     nodo_aux->derecho =3D=3D NULL;
+>                     nodo_aux->izquierdo =3D=3D NULL;
+>                     delete nodo_aux;
+>                     raiz->izquierdo =3D izquierda;
+>                     raiz->derecho =3D indefinir_aux(derecha, =20
+> nodominimo->clave);
+>                     nodominimo->derecho =3D=3D NULL;
+>                     nodominimo->izquierdo=3D=3D NULL;
+>                     delete nodominimo;
+>
+>                 }
+>             }
+>         }
+>     }
+>     return raiz;
+> }
+>
+>
+> Descarg=E1 GRATIS el poder del nuevo Internet Explorer 7. Internet =20
+> Explorer 7
+
+

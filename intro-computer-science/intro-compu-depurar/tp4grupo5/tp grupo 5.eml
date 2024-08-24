@@ -1,0 +1,72 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs169683vcy;
+        Tue, 14 Sep 2010 13:04:55 -0700 (PDT)
+Received: by 10.213.31.134 with SMTP id y6mr358006ebc.82.1284492357256;
+        Tue, 14 Sep 2010 12:25:57 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.4.9 with POP3 id 9mf802065eyd.119;
+        Tue, 14 Sep 2010 12:25:57 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Delivery: Vj0zLjQuMDt1cz0wO2w9MDthPTA=
+X-Message-Status: n:0
+X-SID-PRA: Daniel =?utf-8?q?Gor=C3=ADn?= <dgorin@dc.uba.ar>
+X-Message-Info: JGTYoYF78jHc5b4+02Pad9ii9QUlU9Ga9JMjtqbQNArgAV+dkLdqpopVN4R+Un3CgyBI2abPvnvVapfo/n67PzMgvVE33wng
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc8-f13.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Fri, 8 Aug 2008 16:16:29 -0700
+Received: (qmail 10588 invoked by uid 111); 8 Aug 2008 23:16:27 -0000
+Received: from 10.1.100.52 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(10.1.100.52):SA:0(-1.0/3.5):. 
+ Processed in 3.111887 secs); 08 Aug 2008 23:16:27 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=3.5 tests=ALL_TRUSTED,FUZZY_AMBIEN 
+	autolearn=no version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO blue.cuartos.inv.dc.uba.ar) (dgorin@[10.1.100.52])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES256-SHA encrypted SMTP
+          for <teofilo60@hotmail.com>; 8 Aug 2008 23:16:24 -0000
+From: Daniel =?utf-8?q?Gor=C3=ADn?= <dgorin@dc.uba.ar>
+To: mateo astelarra <teofilo60@hotmail.com>
+Subject: Re: tp grupo 5
+Date: Fri, 8 Aug 2008 20:18:29 -0300
+User-Agent: KMail/1.9.9
+References: <BAY112-W5446C0BBA1FB803E4C33C0BB7E0@phx.gbl>
+In-Reply-To: <BAY112-W5446C0BBA1FB803E4C33C0BB7E0@phx.gbl>
+Cc: alexis_bj@hotmail.com
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+Message-Id: <200808082018.29945.dgorin@dc.uba.ar>
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 08 Aug 2008 23:16:29.0543 (UTC) FILETIME=[C9CD5F70:01C8F9AC]
+
+Buenas
+
+Perd=C3=B3n que tard=C3=A9 tanto en mirar su tp. Est=C3=A1 muy bien! Los =
+=C3=BAnicos comentarios=20
+que tengo para hacerles son estos:
+
+=2D Los operadores >> y << de lista no son reversibles.
+  El problema es que si la lista es vac=C3=ADa, entonces lo que
+  generan es "]", en lugar de "[]", que ser=C3=ADa lo esperable.
+  (algo parecido les pasa con el diccionario)
+
+=2D El destructor de diccionario les qued=C3=B3 O(n^2), cuando
+  con una simple recorrida post-order les quedaba lineal...
+
+Con esto les quedan aprobados los pr=C3=A1cticos de la materia
+
+
+On Friday 01 August 2008 21:07:11 you wrote:
+> daniel va lo q faltaba del tp.no cambie nada. se ve q estaba usando mal el
+> ofstream o algo asi. saludosmateo
+> _________________________________________________________________
+> Descarg=C3=A1 GRATIS el poder del nuevo Internet Explorer 7.
+> http://optimized.msn.com/Default.aspx?mkt=3Des-ar
+
+
+

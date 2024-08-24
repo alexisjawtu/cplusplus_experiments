@@ -1,0 +1,97 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.78.200.5 with SMTP id x5cs20356huf;
+        Wed, 18 Jun 2008 14:12:51 -0700 (PDT)
+Received: by 10.150.11.6 with SMTP id 6mr1791724ybk.9.1213823569954;
+        Wed, 18 Jun 2008 14:12:49 -0700 (PDT)
+Return-Path: <teofilo60@hotmail.com>
+Received: from bay0-omc3-s38.bay0.hotmail.com (bay0-omc3-s38.bay0.hotmail.com [65.54.246.238])
+        by mx.google.com with ESMTP id f60si234690pyh.37.2008.06.18.14.12.46;
+        Wed, 18 Jun 2008 14:12:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of teofilo60@hotmail.com designates 65.54.246.238 as permitted sender) client-ip=65.54.246.238;
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of teofilo60@hotmail.com designates 65.54.246.238 as permitted sender) smtp.mail=teofilo60@hotmail.com
+Received: from BAY112-W3 ([64.4.26.103]) by bay0-omc3-s38.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.3959);
+	 Wed, 18 Jun 2008 14:05:39 -0700
+Message-ID: <BAY112-W37B7E6CEE4842FFCB0C3EBBAB0@phx.gbl>
+Return-Path: teofilo60@hotmail.com
+Content-Type: multipart/alternative;
+	boundary="_945d2c23-2935-4674-a5aa-3c17f70ea918_"
+X-Originating-IP: [190.226.88.86]
+From: mateo astelarra <teofilo60@hotmail.com>
+To: Alexis Jawtuschenko <alexis.jawtuschenko@gmail.com>
+Subject: definir
+Date: Wed, 18 Jun 2008 21:05:39 +0000
+Importance: Normal
+In-Reply-To: <ba737dfb0806171558y55b62cacy2e5e59a82bacc81f@mail.gmail.com>
+References: <ba737dfb0806171558y55b62cacy2e5e59a82bacc81f@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 18 Jun 2008 21:05:39.0141 (UTC) FILETIME=[0F87D750:01C8D187]
+
+--_945d2c23-2935-4674-a5aa-3c17f70ea918_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+void diccionario::definir_aux(NodoABBD* raiz,clave k, valor v){     if(raiz=
+ =3D=3D NULL)    {        NodoABBD* nodoaux=3Dnew NodoABBD ;        nodoaux=
+->clave=3Dk;        nodoaux->valor=3Dv;        nodoaux->izquierdo=3DNULL;  =
+      nodoaux->derecho=3DNULL;        raiz=3Dnodoaux;    }    else if( (rai=
+z->clave)< k )    {        definir_aux(raiz->derecho,k,v);    }    else if(=
+ (raiz->clave) > k)    {        definir_aux(raiz->izquierdo,k,v);    }    e=
+lse    {        raiz->valor=3Dv;    }    this->arbol=3Draiz;    return;}
+void diccionario::definir(clave k, valor v){   if( ~(this->contieneclave(k)=
+) )   {       (this->cantidad)++;   }   this->definir_aux(this->arbol,k,v);=
+   return;}
+_________________________________________________________________
+Descarg=E1 ya gratis y viv=ED la experiencia Windows Live.
+http://www.descubrewindowslive.com/latam/index.html=
+
+--_945d2c23-2935-4674-a5aa-3c17f70ea918_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<style>
+.hmmessage P
+{
+margin:0px;
+padding:0px
+}
+body.hmmessage
+{
+FONT-SIZE: 10pt;
+FONT-FAMILY:Tahoma
+}
+</style>
+</head>
+<body class=3D'hmmessage'>
+<BR><BR>
+<BLOCKQUOTE>
+<DIV>void diccionario::definir_aux(NodoABBD* raiz,clave k, valor v)<BR>{<BR=
+>&nbsp;&nbsp;&nbsp;&nbsp; if(raiz =3D=3D NULL)<BR>&nbsp;&nbsp;&nbsp; {<BR>&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NodoABBD* nodoaux=3Dnew NodoABBD =
+;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodoaux-&gt;clave=3Dk;<BR>&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodoaux-&gt;valor=3Dv;<BR>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodoaux-&gt;izquierdo=3DNULL;<BR>&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodoaux-&gt;derecho=3DNULL;<BR>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raiz=3Dnodoaux;<BR>&nbsp;&nbsp;&nbsp; }=
+<BR>&nbsp;&nbsp;&nbsp; else if( (raiz-&gt;clave)&lt; k )<BR>&nbsp;&nbsp;&nb=
+sp; {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; definir_aux(raiz-&gt;de=
+recho,k,v);<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&nbsp;&nbsp; else if( (raiz-&g=
+t;clave) &gt; k)<BR>&nbsp;&nbsp;&nbsp; {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp; definir_aux(raiz-&gt;izquierdo,k,v);<BR>&nbsp;&nbsp;&nbsp; }<BR=
+>&nbsp;&nbsp;&nbsp; else<BR>&nbsp;&nbsp;&nbsp; {<BR>&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp; raiz-&gt;valor=3Dv;<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp;&n=
+bsp;&nbsp; this-&gt;arbol=3Draiz;<BR>&nbsp;&nbsp;&nbsp; return;<BR>}</DIV>
+<DIV>void diccionario::definir(clave k, valor v)<BR>{<BR>&nbsp;&nbsp; if( ~=
+(this-&gt;contieneclave(k)) )<BR>&nbsp;&nbsp; {<BR>&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; (this-&gt;cantidad)++;<BR>&nbsp;&nbsp; }<BR>&nbsp;&nbsp; this-=
+&gt;definir_aux(this-&gt;arbol,k,v);<BR>&nbsp;&nbsp; return;<BR>}<BR></DIV>=
+</BLOCKQUOTE><br /><hr />Descarg=E1 ya gratis y viv=ED la experiencia Windo=
+ws Live. <a href=3D'http://www.descubrewindowslive.com/latam/index.html' ta=
+rget=3D'_new'>Descubre Windows Live</a></body>
+</html>=
+
+--_945d2c23-2935-4674-a5aa-3c17f70ea918_--

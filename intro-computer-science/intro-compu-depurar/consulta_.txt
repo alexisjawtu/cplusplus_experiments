@@ -1,0 +1,223 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs171122vcy;
+        Tue, 14 Sep 2010 13:35:15 -0700 (PDT)
+Received: by 10.213.20.79 with SMTP id e15mr423210ebb.59.1284495366810;
+        Tue, 14 Sep 2010 13:16:06 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning dgorin@dc.uba.ar does not designate 157.92.27.62 as permitted sender) client-ip=157.92.27.62;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:16:06 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Info: JGTYoYF78jEHjJx36Oi8+Z3TmmkSEdPt3Mi6GgUSv7yYKHQgGfDe+2wCW4LegkYQav29Pp7Mm4E=
+Received: from smtp-2.dc.uba.ar ([157.92.27.62]) by bay0-mc12-f7.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Sat, 3 May 2008 10:49:07 -0700
+Received: (qmail 29460 invoked by uid 111); 3 May 2008 17:49:02 -0000
+Received: from 200.126.220.20 by athila-2 (envelope-from <dgorin@dc.uba.ar>, uid 1002) with qmail-scanner-1.25 
+ (spamassassin: 3.0.4.  
+ Clear:RC:0(200.126.220.20):SA:0(-1.3/3.5):. 
+ Processed in 4.605849 secs); 03 May 2008 17:49:02 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.3 required=3.5 tests=ALL_TRUSTED,AWL autolearn=no 
+	version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [192.168.1.2]) (dgorin@[200.126.220.20])
+          (envelope-sender <dgorin@dc.uba.ar>)
+          by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <alexis_bj@hotmail.com>; 3 May 2008 17:48:58 -0000
+Mime-Version: 1.0 (Apple Message framework v753)
+In-Reply-To: <BLU142-W28767230EA2C293161283C92DB0@phx.gbl>
+References: <BLU142-W28767230EA2C293161283C92DB0@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; delsp=yes; format=flowed
+Message-Id: <60F17D01-D86A-46F0-A015-34EFC93987C2@dc.uba.ar>
+Content-Transfer-Encoding: quoted-printable
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Subject: Re: Consulta.
+Date: Sat, 3 May 2008 14:48:43 -0300
+To: Alexis Jawtuschenko <alexis_bj@hotmail.com>
+X-Mailer: Apple Mail (2.753)
+Return-Path: dgorin@dc.uba.ar
+X-OriginalArrivalTime: 03 May 2008 17:49:09.0599 (UTC) FILETIME=[FD69FEF0:01C8AD45]
+
+hola
+
+perd=F3n por la demora. te mando comentarios....
+
+saludos
+daniel
+
+- la idea del iterativo est=E1 muy bien. asumo que al especificar el
+   problema lo hiciste de tal manera que el resultado de contar [a,a] en
+   [a,a,a] sea 2 y no 1.
+
+- los arrays se indexan desde 0 =F3 desde 1?
+
+- r ten=E9s que definirla afuera del ciclo principal, si no la est=E1s =20=
+
+reseteando
+   todo el tiempo!
+
+- yo, personalmente, me mareo un poco con expresiones como "lc + k - =20
+1" o
+   "i - k + 1". encima, nombres de variables como k, r, o j no ayudan =20=
+
+mucho a que
+   uno entienda qu=E9 quer=EDas hacer cuando mira el programa por =
+primera =20
+vez. en
+   general, se asume que i y j son "=EDndices", pero no mucho m=E1s... =20=
+
+para el resto,
+   mejor poner nombres "declarativos"
+
+- te mando c=F3mo escribir=EDa el _mismo algoritmo_ que escribiste vos. =20=
+
+los cambios
+   son menores, pero me parece que est=E1 un poco m=E1s claro... =20
+(obviamente esto
+   es bastante discutible)
+
+entero cantAparic(ENT caracter cadena[], ENT caracter texto[])
+{
+
+   int result =3D 0;
+
+   entero lc =3D longitud(cadena);
+   entero lt =3D longitud(texto);
+
+   // con esto nos evitamos recalcular lt - lc cada vez que se evalua =20=
+
+la guarda...
+   entero ult_posible =3D lt - lc - 1;
+
+   para (entero i =3D 0; i <=3D ultimo_posible; i =3D i + 1)
+   {=09
+     entero j =3D 0;=09
+
+     mientras (j < lc && texto[i + j] =3D=3D cadena[j])
+     {
+       j =3D j + 1;
+     }
+
+     si (j =3D=3D lc)
+     {
+       result =3D result + 1;
+     }
+   }
+
+   retornar result;
+}
+
+- para la versi=F3n recursiva, en problemas como estos, donde el tipo =20=
+
+de datos
+   sobre el que trabaj=E1s no es recursivo, pod=E9s hacer una traducci=F3n=
+ =20
+bastante
+   directa. primero voy a transformar la soluci=F3n que escrib=ED =
+arriba, =20
+separando
+   el ciclo de adentro en otra funci=F3n:
+
+entero cantAparic(ENT caracter cadena[], ENT caracter texto[])
+{
+
+   int result =3D 0;
+
+   entero lc =3D longitud(cadena);
+   entero lt =3D longitud(texto);
+
+   // con esto nos evitamos recalcular lt - lc cada vez que se evalua =20=
+
+la guarda...
+   entero ult_posible =3D lt - lc - 1;
+
+   para (entero i =3D 0; i <=3D ultimo_posible; i =3D i + 1)
+   {=09
+     entero j =3D enCuantoCoinciden(cadena, texto, i);
+
+     si (j =3D=3D lc)
+     {
+       result =3D result + 1;
+     }
+   }
+
+   retornar result;
+}
+
+// precond: desde + largo(cadena) <=3D largo(texto)
+entero enCuantoCoinciden(ENT caracter cadena[],
+                          ENT caracter texto[], ENT entero desde)
+{
+     entero i =3D 0;=09
+
+     mientras (i < largo(cadena) && texto[desde + i] =3D=3D cadena[i])
+     {
+       i =3D i + 1;
+     }
+
+     retornar i;
+}
+
+- convertir enCuantoCoinciden en recursiva es directo, lo =FAnico que =20=
+
+tengo que
+   hacer es hacerme una auxiliar (que va a ser la recursiva) con tantos
+   par=E1metros como variables locales haya en la versi=F3n iterativa:
+
+entero enCuantoCoincidenAux(ENT caracter cadena[],
+                             ENT caracter texto[], ENT entero desde,
+                             ENT entero i) // <-- esta era variable =20
+local
+{
+   si (i < largo(cadena) && texto[desde + i] =3D=3D cadena[i]) //<-- =20
+guarda del while
+   {
+       retornar enCuantoCoincidenAux(cadena, texto, desde, i+1);
+           // uso recursi=F3n para cuando se hubiera iterado.
+           // notar que el i =3D i + 1 se convierte en pasar
+           // i+1 como valor para el par=E1metro asociado a i
+   } sino {
+       retornar i;
+
+       // lo que se devuelve despu=E9s del ciclo se convierte en el =20
+caso base
+   }
+}
+
+entero enCuantoCoinciden(ENT caracter cadena[],
+                          ENT caracter texto[], ENT entero desde)
+{
+     retornar enCuantoCoincidenAux(cadena, texto, desde, 0);
+     // el valor inicial de i es el que le dimos al inicializar i en =20
+la versi=F3n
+     // iterativa...
+}
+
+- ahora deber=EDas poder hacer lo mismo con la funci=F3n principal. como =
+=20
+te dec=EDa
+   ayer no tiene mucha gracia porque el array no es un tipo recursivo =20=
+
+y, este
+   algoritmo sale con lo que se conoce como "recursi=F3n a la cola"
+   (http://en.wikipedia.org/wiki/Tail_recursion). te sali=F3 el =20
+ejercicio que te
+   dej=E9 de calcular partes de un conjunto?
+
+On May 1, 2008, at 4:26 PM, Alexis Jawtuschenko wrote:
+
+> Hola, =BFc=F3mo va?
+>
+> te mando un archivito para que veas si est=E1 bien el ejercicio 5 =20
+> (iterativo + una idea para el recursivo) de la pr=E1ctica 3.
+>
+> Muchas gracias!
+>
+> A. J.
+>
+>
+> Descarg=E1 ya gratis y viv=ED la experiencia Windows Live. Descubre =20=
+
+> Windows Live<ejercicio 5.txt>
+
+

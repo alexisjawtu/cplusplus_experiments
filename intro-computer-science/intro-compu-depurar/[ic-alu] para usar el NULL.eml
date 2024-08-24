@@ -1,0 +1,89 @@
+Delivered-To: alexis.jawtuschenko@gmail.com
+Received: by 10.220.164.19 with SMTP id c19cs170550vcy;
+        Tue, 14 Sep 2010 13:23:09 -0700 (PDT)
+Received: by 10.213.31.134 with SMTP id y6mr398716ebc.82.1284495354082;
+        Tue, 14 Sep 2010 13:15:54 -0700 (PDT)
+Received-SPF: softfail (google.com: best guess record for domain of transitioning ic-alu-bounces@dc.uba.ar does not designate 157.92.27.61 as permitted sender) client-ip=157.92.27.61;
+Received: by 10.208.8.6 with POP3 id 6mf900350eyh.22;
+        Tue, 14 Sep 2010 13:15:54 -0700 (PDT)
+X-Gmail-Fetch-Info: alexis_bj@hotmail.com 1 pop3.live.com 995 alexis_bj@hotmail.com
+X-Message-Delivery: Vj0zLjQuMDt1cz0wO2w9MDthPTE=
+X-Message-Status: n:0
+X-SID-PRA: ic-alu-bounces@dc.uba.ar
+X-Message-Info: JGTYoYF78jGINhMtQjBCbIuvszFkoTJn9VfLQ972iqNR3NM6V2jRVR5APpwR83wwFPXX15wCh7NQPD0ikL0JkA==
+Received: from smtp-1.dc.uba.ar ([157.92.27.61]) by bay0-mc8-f17.bay0.hotmail.com with Microsoft SMTPSVC(6.0.3790.2668);
+	 Tue, 10 Jun 2008 06:44:02 -0700
+Received: (qmail 12655 invoked from network); 10 Jun 2008 13:44:00 -0000
+Received: from unknown (HELO listas.dc.uba.ar) ([10.0.0.31])
+          (envelope-sender <ic-alu-bounces@dc.uba.ar>)
+          by smtp-1.dc.uba.ar (qmail-ldap-1.03) with compressed SMTP
+          for <alexis_bj@hotmail.com>; 10 Jun 2008 13:44:00 -0000
+Received: (qmail 4813 invoked from network); 10 Jun 2008 13:44:00 -0000
+Received: from unknown (HELO [127.0.0.1]) ([127.0.0.1])
+          (envelope-sender <ic-alu-bounces@dc.uba.ar>)
+          by listas.dc.uba.ar (qmail-ldap-1.03) with SMTP
+          for <el_tatu_carreta@hotmail.com>; 10 Jun 2008 13:44:00 -0000
+Received: (qmail 4809 invoked from network); 10 Jun 2008 13:43:59 -0000
+Received: from unknown ([10.0.0.62])
+	by listas.dc.uba.ar (qmail-ldap-1.03) with QMQP;
+	10 Jun 2008 13:43:59 -0000
+Delivered-To: CLUSTERHOST smtp-2.dc.uba.ar ic-alu@dc.uba.ar
+Received: (qmail 29308 invoked by uid 111); 10 Jun 2008 13:43:59 -0000
+Received: from 10.1.200.94 by athila-2 (envelope-from <dgorin@dc.uba.ar>,
+	uid 1002) with qmail-scanner-1.25 (spamassassin: 3.0.4.  
+	Clear:RC:0(10.1.200.94):SA:0(-1.4/3.5):. 
+	Processed in 5.539565 secs); 10 Jun 2008 13:43:59 -0000
+X-Spam-Checker-Version: SpamAssassin 3.1.4 (2006-07-26) on athila-2
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.4 required=3.5 tests=ALL_TRUSTED, AWL autolearn=no 
+	version=3.1.4
+X-Envelope-From: dgorin@dc.uba.ar
+Received: from unknown (HELO [10.1.200.94]) (dgorin@[10.1.200.94])
+	(envelope-sender <dgorin@dc.uba.ar>)
+	by smtp-2.dc.uba.ar (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+	for <ic-alu@dc.uba.ar>; 10 Jun 2008 13:43:54 -0000
+Mime-Version: 1.0 (Apple Message framework v753.1)
+Message-Id: <98C2A89C-44E2-45A0-A6E3-5BC669515836@dc.uba.ar>
+To: ic-alu@dc.uba.ar
+From: =?ISO-8859-1?Q?Daniel_Gor=EDn?= <dgorin@dc.uba.ar>
+Date: Tue, 10 Jun 2008 10:43:47 -0300
+X-Mailer: Apple Mail (2.753.1)
+Subject: [ic-alu] para usar el NULL
+X-BeenThere: ic-alu@dc.uba.ar
+X-Mailman-Version: 2.1.9
+Precedence: list
+List-Id: =?iso-8859-1?q?Lista_de_alumnos_de_la_materia_Introducci=F3n_a_la_Computaci=F3n?=
+	<ic-alu.dc.uba.ar>
+List-Unsubscribe: <https://listas.dc.uba.ar/cgi-bin/mailman/listinfo/ic-alu>, 
+	<mailto:ic-alu-request@dc.uba.ar?subject=unsubscribe>
+List-Archive: <http://listas.dc.uba.ar/pipermail/ic-alu>
+List-Post: <mailto:ic-alu@dc.uba.ar>
+List-Help: <mailto:ic-alu-request@dc.uba.ar?subject=help>
+List-Subscribe: <https://listas.dc.uba.ar/cgi-bin/mailman/listinfo/ic-alu>,
+	<mailto:ic-alu-request@dc.uba.ar?subject=subscribe>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Sender: ic-alu-bounces@dc.uba.ar
+Errors-To: ic-alu-bounces@dc.uba.ar
+Return-Path: ic-alu-bounces@dc.uba.ar
+X-OriginalArrivalTime: 10 Jun 2008 13:44:03.0218 (UTC) FILETIME=[0B6CD720:01C8CB00]
+
+Buenas
+
+A varios les pas=F3 que intentaron usar el NULL para hacer el TP y el  =
+
+compilador les tira un error. Necesitan, poner al principio de  =
+
+su .cpp un:
+
+#include <cstdlib>
+
+para que el compilador lo reconozca.
+
+Saludos
+Daniel
+_______________________________________________
+ic-alu mailing list
+ic-alu@dc.uba.ar
+https://listas.dc.uba.ar/cgi-bin/mailman/listinfo/ic-alu
+
