@@ -96,4 +96,4 @@ int main () {
 }
 
 
-// CONTINUE at: {special members}.{Move constructor and assignment}
+// CONTINUE at: {special members}.{Move constructor and Move assignment}
