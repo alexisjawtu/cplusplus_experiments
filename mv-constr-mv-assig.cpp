@@ -61,5 +61,3 @@ int main ()
 	cout << "baz " << baz.content() << "\n";
 	return 0;
 }
-
-// CONTINUE at: {special members}.{Implicit members}
