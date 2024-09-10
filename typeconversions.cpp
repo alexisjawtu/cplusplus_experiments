@@ -1,8 +1,42 @@
 #include <iostream>
 #include <cmath>
+#include "_tools_.h"
 
 
 using namespace std;
+
+
+class A {};
+
+class B {
+
+public:
+	// conversion from A with a constructor with one parameter
+	explicit B (const A& a)
+    {
+        print("__single argument constructor__");
+    };
+
+	// conversion from A through assignment
+	B& operator= (const A& a)
+    {
+        print("__assignment operator__");
+        return *this;
+	};
+
+    // conversion to A (type-cast)
+    explicit operator A ()
+    {
+        print("__type-cast operator__");
+        return A();
+    }
+
+};
+
+void fn (B x)
+{
+    print("__call to fn__");
+}
 
 
 /*
@@ -38,6 +72,25 @@ int main ()
 	bool k = pf;
 
 	cout << boolalpha << k << "\n";
+
+
+	/*
+		implicit conversions with classes
+	*/
+
+    A foo;
+    A alo;
+
+    print("__2__");
+    fn(B(alo));  // keyword explicit!
+
+    print("__3__");
+    B boris = B(foo);
+    print("__4__");
+    boris = alo;
+    print("__5__");
+
+    foo = A(boris);  // type-casting with explicit keyword!
 
 	return 0;
 }
