@@ -135,3 +135,48 @@
     --000e0ce0b8721fe135049ee29930--
 
 */
+
+/*
+
+    Example3
+    
+    Perdon, lei re tarde... Espero que sirva, igual todo esto es medio falso ahora creo. Hay ciertas arquitecturas que te dejan direccionar a mas de 2^bits basicamente mandando la direccion en dos ciclos o cosas asi... O sea, no es del todo cierto (segun entiendo) que si tenes 30 bits solo podes direccionar a 2^30 cosas.
+
+    Tampoco es cierto que un sistema operativo de 32 bits solo puede soportar 4GB (o un poco menos realmente) de memoria. El sistema operativo podria usar mas de una palabra para direccionar (kernel PAE: http://en.wikipedia.org/wiki/Physical_Address_Extension) y meter eso en el bus o mandarlo en varios ciclos si es soportado por la arquitectura.
+
+    Lo que si es cierto con un sistema de 32 bits usando kernel PAE es que cada proceso puede usar hasta 4GB de memoria pero eso es un tema de software y seguro se podria evitar tambien (de hecho, el sistema operativo es el unico proceso que no lo cumple en esa situacion o sea que como poderse ;-)).
+
+    Saludos,
+    Diego
+
+
+    2012/5/4 Alexis Jawtuschenko <alexis.jawtuschenko@gmail.com>
+
+        7:54 PM me: recien lei las preguntas
+          a ver si me acuerdo algo jeje
+            5 minutes
+        8:00 PM me: por lo que me acuerdo seria algo asi
+          pero podria estar mal
+        8:01 PM si tenes 4096MB que son 2^12MB
+          y la palabra es de 2^5 = 32 bits
+        8:03 PM 4096MB = 2^12 * 2^20 * 8 bits / 2^5 bits = 2^30 bits ... o sea, 30 bits en el bus
+        8:04 PM si pones dos mas es 32 , direccionas a byte y se llama intel
+        4GB
+          el 25 es basicamente la misma cosa 3 veces
+        8:05 PM 2GB = 2*2^30*8 bits
+          dividis por 16 (2^4) y te queda 2^30 de nuevo
+          o sea, 30 bits
+        8:06 PM 8GB = 2^3*2^30*8 = 2^36 bits, la palabra de 8 bytes que es 8 * 8 = 2^6 bits
+          te queda 30 otra vez
+        8:07 PM 512 * 2^20 * 8 = 2^32 que dividido 8 es 2^29
+          o sea, el ultimo da 29 bits parece
+          estoy haciendo las cuentas mentalmente jeje , pero vos sos groso doctor en matematica asi que si le pifie te vas a dar cuenta :)
+          el 26 dice
+        8:08 PM direcciones de 24 bits y palabras de 64
+          o sea, podes apuntar a 2^24 cosas de 2^6 bits
+          2^30 bits de capacidad = 2^7MB
+        8:09 PM 1GB = 2^10 MB = 2^20 KB = 2^30 B
+        8:10 PM b) 2^20 direcciones de memoria y palabra de 8 bytes.
+          tenes 2^20*2^3*8 bits = 2^26 bits = 8MB
+        8:11 PM c) 2^24 * 2^5 bits = 2^29 bits = 2^6 MB = 64MB
+*/
