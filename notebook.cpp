@@ -58,7 +58,6 @@
     Content-Type: multipart/alternative; boundary=000e0ce0b8721fe135049ee29930
 
     --000e0ce0b8721fe135049ee29930
-    Content-Type: text/plain; charset=ISO-8859-1
 
     Se entiende mejor asi (sin pisar los nombres de las funciones).
 
@@ -80,13 +79,8 @@
 
     2011/3/20 Diego Gavinowich <gdiego@gmail.com>
 
-    > Aca tengo lo de hoy que no me tomaba la sintaxis... Che, me olvide, te
-    > podria haber dado el librito de analisis numerico.
-    >
-    >
-    > Saludos,
-    > Diego
-    >
+    > Aca tengo lo de hoy que no me tomaba la sintaxis
+
     > #include <iostream>
     > using namespace std;
     > void h(string url) {
@@ -119,9 +113,9 @@
     2011/3/20 Diego Gavinowich <span dir=3D"ltr">&lt;<a href=3D"mailto:gdiego@g=
     mail.com">gdiego@gmail.com</a>&gt;</span><br><blockquote class=3D"gmail_quo=
     te" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;=
-    ">Aca tengo lo de hoy que no me tomaba la sintaxis... Che, me olvide, te po=
-    dria haber dado el librito de analisis numerico.<br>
-    <br><br>Saludos,<br>Diego<br><br>#include &lt;iostream&gt;<br>using namespa=
+    ">Aca tengo lo de hoy que no me tomaba la sintaxis
+
+    #include &lt;iostream&gt;<br>using namespa=
     ce std;<br>void h(string url) {<br>
     =A0 cout &lt;&lt; url &lt;&lt; endl;<br>}<br>void g(string url, void (*h)(s=
     tring)) {<br>=A0 h(url);<br>}<br>void f(string url, void (*g)(string, void =
@@ -129,11 +123,7 @@
     ref=3D"http://www.google.com/" target=3D"_blank">http://www.google.com/</a>=
     &quot;, g);<br>
 
-    }<br><br>
-    </blockquote></div><br>
-
-    --000e0ce0b8721fe135049ee29930--
-
+    }
 */
 
 /*
