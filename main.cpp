@@ -709,7 +709,7 @@ My_Class My_Class::operator+ (My_Class m) {
     return My_Class(product + m.product, price + m.price);
 } 
 
-int main ()
+int main_classes_I_d ()
 {
     My_Class p2;
     My_Class p0 = My_Class ("piano", 7320);
@@ -720,5 +720,11 @@ int main ()
     print(p2.get_price());
     print(p2.get_product());
     
+    return 0;
+}
+
+int main ()
+{
+    Rectangle r0;
     return 0;
 }

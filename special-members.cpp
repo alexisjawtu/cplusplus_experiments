@@ -88,12 +88,13 @@ int main () {
 
     // the copy assignment is an overload of the operator=
 
-    cout << &ex4 << " " << ex4.ptr << " " << ex4.content() << "\n";
-    cout << &ex5 << " " << ex5.ptr << " " << ex5.content() << "\n";
-    cout << &ex6 << " " << ex6.ptr << " " << ex6.content() << "\n";
+    cout << "ex4 " << &ex4 << " " << ex4.ptr << " " << ex4.content() << "\n";
+    cout << "ex5 " << &ex5 << " " << ex5.ptr << " " << ex5.content() << "\n";
+    cout << "ex6 " << &ex6 << " " << ex6.ptr << " " << ex6.content() << "\n";
+    cout << "ex7 " << &ex7 << " " << ex7.ptr << " " << ex7.content() << "\n";
+
+    ex7 = Example4();
+    cout << "ex7 " << &ex7 << " " << ex7.ptr << " " << ex7.content() << "\n";
 
 	return 0;
 }
-
-
-// CONTINUE at: {special members}.{Move constructor and assignment}
