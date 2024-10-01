@@ -66,4 +66,4 @@ int main ()
 	return 0;
 }
 
-	CONTINUE HERE: Input/output with files::get and put stream positioning
+//	CONTINUE HERE: Input/output with files::get and put stream positioning
