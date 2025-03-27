@@ -723,8 +723,12 @@ int main_classes_I_d ()
     return 0;
 }
 
+
+
+#include <iomanip>
+
 int main ()
 {
-    Rectangle r0;
+    cout << "dcv2" << " " << quoted("dcv2") << '\n';
     return 0;
 }
