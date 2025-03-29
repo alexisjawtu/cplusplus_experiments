@@ -1,3 +1,5 @@
+int number_of_errors;
+
 /**
  * Spurious global variable;
  * it stores the value of the last read NUMBER.
@@ -22,6 +24,12 @@ enum Value_Symbol {
 };
 
 Value_Symbol current_symbol = PRINT;
+
+double error(const string& c) {
+    number_of_errors ++;
+    cerr << "error: " << c << '\n';
+    return 1;
+}
 
 Value_Symbol get_symbol()
 {
