@@ -727,8 +727,12 @@ int main_classes_I_d ()
 
 #include <iomanip>
 
-int main ()
+int main_quoted ()
 {
     cout << "dcv2" << " " << quoted("dcv2") << '\n';
     return 0;
+}
+
+int main () {
+    cerr << "Test of cerr stream\n";
 }
