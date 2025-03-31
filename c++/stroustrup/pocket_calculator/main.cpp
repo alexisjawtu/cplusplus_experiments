@@ -1,3 +1,12 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <cctype>  // isalpha(), etc.
+
+
+using namespace std;
+
+
 int number_of_errors;
 
 /**
@@ -20,7 +29,7 @@ enum Value_Symbol {
 	NAME,
     NUMBER, // NUMBER is an integer or floating point literal
     END, PLUS='+', MINUS='-', MULT='*', DIV='/',
-	PRINT=';', ASIGN = '='; LEFTP='(', RIGHTP=')'
+	PRINT=';', ASIGN='=', LEFTP='(', RIGHTP=')'
 };
 
 Value_Symbol current_symbol = PRINT;
@@ -102,6 +111,10 @@ Value_Symbol get_symbol()
 };
 */
 
+
+double prim(bool get);
+
+
 double term(bool get)
 {
 	double left = prim(get);
@@ -125,6 +138,7 @@ double term(bool get)
 	}
 }
 
+
 double expression(bool get)
 {
     double left = term(get);
@@ -145,9 +159,6 @@ double expression(bool get)
         }
     }
 }
-
-
-
 
 
 double prim(bool get)
@@ -188,3 +199,21 @@ double prim(bool get)
     }
 }
 
+
+int main () {
+
+    /**
+     * predefined names
+     */
+    table["pi"] = 3.141592654;
+    table["e"]  = 2.718281828;
+
+    while (cin) {
+        get_symbol();
+        if (current_symbol == END) break;
+        if (current_symbol == PRINT) continue;
+        cout << expression(false) << '\n';
+    }
+
+    return number_of_errors;
+}
