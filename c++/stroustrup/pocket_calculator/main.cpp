@@ -28,11 +28,20 @@ enum Value_Symbol {
     **/
 	NAME,
     NUMBER, // NUMBER is an integer or floating point literal
-    END, PLUS='+', MINUS='-', MULT='*', DIV='/',
-	PRINT=';', ASIGN='=', LEFTP='(', RIGHTP=')'
+    END,
+    PLUS='+',
+    MINUS='-',
+    MULT='*',
+    DIV='/',
+	PRINT=';',
+    ASSIGN='=', 
+    LEFTP='(',
+    RIGHTP=')'
 };
 
 Value_Symbol current_symbol = PRINT;
+
+double expression(bool);
 
 double error(const string& c) {
     number_of_errors ++;
@@ -65,7 +74,46 @@ Value_Symbol get_symbol()
     }
 }
 
-/*
+
+double prim(bool get)
+{
+    if (get) get_symbol();
+
+    switch(current_symbol) {
+        case NUMBER:            // floating point constant
+        {
+            double v = number_value;
+            get_symbol();
+            return v;
+        }
+
+        case NAME:
+        {
+            double& v = table[string_value];
+            if (get_symbol() == ASSIGN)
+                v = expression(true);
+            return v;
+        }
+
+        case MINUS:             // unitary minus
+            return -prim(true);
+
+        case LEFTP:
+        {
+            double e = expression(true);
+            if (current_symbol != RIGHTP)
+                return error("Expected ).");
+
+            get_symbol();  // jump ')'
+            return e;
+        }
+
+        default:
+            return error("Expected primary expression.");
+    }
+}
+
+/**
 Value_Symbol get_symbol()
 {
     char ch = 0;
@@ -112,15 +160,11 @@ Value_Symbol get_symbol()
 */
 
 
-double prim(bool get);
-
-
 double term(bool get)
 {
 	double left = prim(get);
 
-	while (true)
-	{
+	for (;;)
 		switch (current_symbol) {
 			case MULT:
                 left *= prim(true);
@@ -134,8 +178,6 @@ double term(bool get)
             default:
                 return left;
 		}
-
-	}
 }
 
 
@@ -161,47 +203,8 @@ double expression(bool get)
 }
 
 
-double prim(bool get)
-{
-    if (get) get_symbol();
 
-    switch(current_symbol) {
-        case NUMBER:            // floating point constant
-        {
-            double v = number_value;
-            get_symbol();
-            return v;
-        }
-
-        case NAME:
-        {
-            double& v = table[string_value];
-            if (get_symbol() == ASIGN)
-                v = expression(true);
-            return v;
-        }
-
-        case MINUS:             // unitary minus
-            return -prim(true);
-
-        case LEFTP:
-        {
-            double e = expression(true);
-            if (current_symbol != RIGHTP)
-                return error("Expected ).");
-
-            get_symbol();  // jump ')'
-            return e;
-        }
-
-        default:
-            return error("Expected primary expression.");
-    }
-}
-
-
-int main () {
-
+int main (int argc, char* argv[]) {
     /**
      * predefined names
      */
@@ -211,8 +214,8 @@ int main () {
     while (cin) {
         get_symbol();
         if (current_symbol == END) break;
-        if (current_symbol == PRINT) continue;
-        cout << expression(false) << '\n';
+        if (current_symbol != PRINT)
+            cout << expression(false) << '\n';
     }
 
     return number_of_errors;
