@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 constexpr int frame {2};
 
 class Bad_area {};
@@ -27,9 +31,20 @@ int main(int argc, char *argv[])
     try
     {
         test (-1,2,4);
+        cout << "hi";
     }
     catch (Bad_area)
     {
-        cout << "oops, bad arguments\n";
+        cout << "oops, bad args\n";
+    }
+
+    try
+    {
+        area (3,2);
+        cout << "hi";
+    }
+    catch (Bad_area)
+    {
+        cout << "oops, bad argumevvvvnts\n";
     }
 }
