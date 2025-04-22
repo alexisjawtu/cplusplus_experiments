@@ -48,3 +48,32 @@ int main(int argc, char *argv[])
         cout << "oops, bad argumevvvvnts\n";
     }
 }
+
+
+int main(int argc, char *argv[])
+{
+	try
+	{
+	    return 0;
+	}
+	catch (exception& e)
+	{
+	    cerr << e.what();
+	    return 1;
+	}
+	catch (...)
+	{
+	    cerr << "unknown error\n";
+	    return 2;
+	}
+}
+
+void error (string s1, string s2)
+{
+    throw runtime_error {s1 + s2};
+}
+
+TODO
+To see what an uncaught exception error looks like, run a small program that uses
+
+error() without catching any exceptions.
