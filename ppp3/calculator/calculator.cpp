@@ -69,8 +69,30 @@ double term()
         }
     }
 }
-double term() {};
-double primary() {};
+
+
+double primary()
+{
+    Token t = get_token();
+
+    switch (t.kind)
+    {
+        case '(':
+        {
+            double d = expression();
+            t = get_token();
+            if (t.kind != ')')
+                error ("')' expected"); 
+            return d;
+        }
+
+        case '8':
+            return t.value;
+
+        default:
+            error ("primary expected");
+    }
+}
 
 Token get_token()
 {
