@@ -3,3 +3,5 @@
 *.o
 *.*~
 gcm.cache
+*.orig
+
