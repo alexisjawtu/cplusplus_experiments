@@ -13,6 +13,35 @@ class Token
         Token (char k, double v): kind{k}, value{v} {}
 };
 
+// Each function deals with a specific part of an expression and leaves everything else to other
+// functions. This radically simplifies each function.
+
+
+
+double expression()
+{
+    double left = term();
+    Token t = get_token();
+
+    while (true)
+    {
+        switch (t.kind)
+        {
+            case '+':
+                left += term();
+                t = get_token();
+                break;
+            case '-':
+                left -= term();
+                t = get_token();
+                break;
+            default:
+                return left;
+        }
+    }
+}
+double term() {};
+double primary() {};
 
 Token get_token()
 {
