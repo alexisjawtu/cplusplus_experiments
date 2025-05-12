@@ -1,3 +1,7 @@
+//
+// Each function deals with a specific part of an expression and leaves everything else to other
+// functions. This radically simplifies each function.
+//
 #include "PPPheaders.h"
 
 
@@ -13,15 +17,20 @@ class Token
         Token (char k, double v): kind{k}, value{v} {}
 };
 
-// Each function deals with a specific part of an expression and leaves everything else to other
-// functions. This radically simplifies each function.
+//------------------------------------------------------------------------------
 
+class Token_stream
+{
+    // get()
+    // put_back()
+};
 
+//------------------------------------------------------------------------------
 
 double expression()
 {
     double left = term();
-    Token t = get_token();
+    Token t = ts.get();
 
     while (true)
     {
@@ -29,23 +38,25 @@ double expression()
         {
             case '+':
                 left += term();
-                t = get_token();
+                t = ts.get();
                 break;
             case '-':
                 left -= term();
-                t = get_token();
+                t = ts.get();
                 break;
             default:
+                ts.put_back(t);
                 return left;
         }
     }
 }
 
+//------------------------------------------------------------------------------
 
 double term()
 {
     double left = primary();
-    Token t = get_token();
+    Token t = ts.get();
 
     while (true)
     {
@@ -53,7 +64,7 @@ double term()
         {
             case '*':
                 left *= primary();
-                t = get_token();
+                t = ts.get();
                 break;
             case '/':
             {
@@ -61,26 +72,28 @@ double term()
                 if (d == 0)
                     error ("divide by zero");
                 left /= d;
-                t = get_token();
+                t = ts.get();
                 break;
             }
             default:
+                ts.put_back(t);
                 return left;
         }
     }
 }
 
+//------------------------------------------------------------------------------
 
 double primary()
 {
-    Token t = get_token();
+    Token t = ts.get();
 
     switch (t.kind)
     {
         case '(':
         {
             double d = expression();
-            t = get_token();
+            t = ts.get();
             if (t.kind != ')')
                 error ("')' expected"); 
             return d;
@@ -94,24 +107,40 @@ double primary()
     }
 }
 
-Token get_token()
-{
-    return Token {'*'};
-}
+//------------------------------------------------------------------------------
 
-
-vector<Token> tok;
-
+Token_stream ts;
 
 int main ()
 {
-    while (cin)
+    try
     {
-        Token t = get_token();
-        tok.push_back(t);
+        double val {0};
+        while (cin)
+        {
+            Token t = ts.get();
+            if (t.kind == 'q')
+                break;
+            if (t.kind == ';')
+                cout << '=' << val << '\n';
+            else
+                ts.put_back(t);
+            val = expression();
+        }
+    }
+    catch (exception& e)
+    {
+        cerr << e.what() << '\n';
+        return 1;
+    }
+    catch (...)
+    {
+        cerr << "Exception \n";
+        return 2;
     }
 }
 
+//------------------------------------------------------------------------------
 
 /*
 int first_version_main ()
