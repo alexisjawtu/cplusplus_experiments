@@ -13,17 +13,77 @@ class Token
     public:
         char kind;
         double value;
-        Token (char k): kind{k}, value{0.0} {}
-        Token (char k, double v): kind{k}, value{v} {}
+        Token (char k)
+            : kind{k}, value{0.0} { }
+        Token (char k, double v)
+            : kind{k}, value{v} { }
 };
 
 //------------------------------------------------------------------------------
 
 class Token_stream
 {
-    // get()
-    // put_back()
+    public:
+        Token get();
+        void put_back(Token t);
+    private:
+        bool full {false};
+        Token buffer = {'0'};
 };
+
+void Token_stream::put_back(Token t)
+{
+    if (full) error("put_back into a full buffer");
+    buffer = t;
+    full = true;
+}
+
+Token Token_stream::get()
+{
+    if (full)
+    {
+        full = false;
+        return buffer;
+    }
+    char ch;
+    cin >> ch;
+
+    switch (ch)
+    {
+        case ';':  // print
+        case 'q':  // quit
+        case '(':
+        case ')':
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            return Token{ch};
+        case '.':
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            {
+                cin.put_back(ch);
+                double val;
+                cin >> val;
+                return Token{'8', val};
+            }
+        default:
+            error("Bad Token");
+    }
+}
+
+//------------------------------------------------------------------------------
+
+Token_stream ts;
 
 //------------------------------------------------------------------------------
 
@@ -109,7 +169,6 @@ double primary()
 
 //------------------------------------------------------------------------------
 
-Token_stream ts;
 
 int main ()
 {
@@ -139,48 +198,3 @@ int main ()
         return 2;
     }
 }
-
-//------------------------------------------------------------------------------
-
-/*
-int first_version_main ()
-{
-    cout << "Expression (x to end) ";
-    int lval {0};
-    int rval {0};
-    cin >> lval;
-    if (!cin)
-        error ("missing 1st. operand");
-
-    for (char op; cin >> op; )
-    {
-        if (op != 'x')
-            cin >> rval;
-        if (!cin)
-            error ("missing 2nd. operand");
-
-        switch (op)
-        {
-            case '+':
-                lval += rval;
-                break;
-            case '-':
-                lval -= rval;
-                break;
-            case '*':
-                lval *= rval;
-                break;
-            case '/':
-                lval /= rval;
-                break;
-            default:
-                cout << "Result " << lval << '\n';
-                return 0;
-        }
-    }
-
-    error ("wrong expression");
-
-    return 0;
-}
-*/
