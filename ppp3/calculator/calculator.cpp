@@ -24,16 +24,18 @@ class Token
 class Token_stream
 {
     public:
+    /* functions */
         Token get();
-        void put_back(Token t);
+        void putback(Token t);
     private:
-        bool full {false};
+    /* members */
+        bool full {false};  // default member in-class initialization
         Token buffer = {'0'};
 };
 
-void Token_stream::put_back(Token t)
+void Token_stream::putback(Token t)
 {
-    if (full) error("put_back into a full buffer");
+    if (full) error("putback into a full buffer");
     buffer = t;
     full = true;
 }
@@ -45,8 +47,9 @@ Token Token_stream::get()
         full = false;
         return buffer;
     }
-    char ch;
-    cin >> ch;
+    char ch {0};
+    if (!(cin >> ch))
+        error("no input");
 
     switch (ch)
     {
@@ -70,14 +73,15 @@ Token Token_stream::get()
         case '7':
         case '8':
         case '9':
-            {
-                cin.put_back(ch);
-                double val;
-                cin >> val;
-                return Token{'8', val};
-            }
+	{
+            cin.putback(ch);
+            double val {0};
+            cin >> val;
+            return Token{'8', val};
+	}
         default:
             error("Bad Token");
+	    return Token{'x'};
     }
 }
 
@@ -87,27 +91,29 @@ Token_stream ts;
 
 //------------------------------------------------------------------------------
 
-double expression()
+double expression();
+
+double primary()
 {
-    double left = term();
     Token t = ts.get();
 
-    while (true)
+    switch (t.kind)
     {
-        switch (t.kind)
+        case '(':
         {
-            case '+':
-                left += term();
-                t = ts.get();
-                break;
-            case '-':
-                left -= term();
-                t = ts.get();
-                break;
-            default:
-                ts.put_back(t);
-                return left;
+            double d = expression();
+            t = ts.get();
+            if (t.kind != ')')
+                error ("')' expected"); 
+            return d;
         }
+
+        case '8':
+            return t.value;
+
+        default:
+            error ("primary expected");
+	    return .0;
     }
 }
 
@@ -136,7 +142,7 @@ double term()
                 break;
             }
             default:
-                ts.put_back(t);
+                ts.putback(t);
                 return left;
         }
     }
@@ -144,31 +150,31 @@ double term()
 
 //------------------------------------------------------------------------------
 
-double primary()
+double expression()
 {
+    double left = term();
     Token t = ts.get();
 
-    switch (t.kind)
+    while (true)
     {
-        case '(':
+        switch (t.kind)
         {
-            double d = expression();
-            t = ts.get();
-            if (t.kind != ')')
-                error ("')' expected"); 
-            return d;
+            case '+':
+                left += term();
+                t = ts.get();
+                break;
+            case '-':
+                left -= term();
+                t = ts.get();
+                break;
+            default:
+                ts.putback(t);
+                return left;
         }
-
-        case '8':
-            return t.value;
-
-        default:
-            error ("primary expected");
     }
 }
 
 //------------------------------------------------------------------------------
-
 
 int main ()
 {
@@ -183,7 +189,7 @@ int main ()
             if (t.kind == ';')
                 cout << '=' << val << '\n';
             else
-                ts.put_back(t);
+                ts.putback(t);
             val = expression();
         }
     }
