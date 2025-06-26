@@ -52,6 +52,8 @@ if has('syntax') && has('eval')
 endif
 
 colorscheme alexis
+set backupdir=~/tmp,.,~/
+set directory=~/tmp
 set nowrap
 set tabstop=4
 set shiftwidth=4
