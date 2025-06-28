@@ -1,0 +1,11 @@
+[user]
+	email = alexis.jawtuschenkogmail.com
+	name = Alexis Jawtuschenko
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[pull]
+	rebase = false

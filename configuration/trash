@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+for ent in $@
+do
+	echo [TRASHING] $ent
+	mv $ent /home/alexis/.local/share/Trash/files/
+done
+echo "Trashed $# files."
