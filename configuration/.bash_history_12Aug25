@@ -1,0 +1,2000 @@
+cd materiasDm/MEFA2016/
+ls
+cd ejercicios/
+cd ..
+ls web/
+atril web/e6-04-01-05.pdf 
+rm web/e6-04-01-05.pdf 
+atril web/lazarov.pdf 
+rm web/lazarov.pdf 
+cd web/
+ls
+atril ledret 
+ls -l
+rm ledret 
+atril M1ApproxPDE_Chapter3.pdf 
+rm M1ApproxPDE_Chapter3.pdf 
+cd ..
+rmdir web/
+ls
+cd ejercicios/
+pdftk *.txt cat output exercises.pdf
+pdftk *.pdf cat output exercises.pdf
+ls -lt
+trash *.log
+ls -lt
+trash *.aux
+ls -lt
+trash ejercicios5.tex.bak 
+ls
+ls -1
+atril exercises.pdf 
+cd ..
+ls
+mv Investigación\ Operativa\ 2010/ OperResearch2010
+ls
+cd ..
+cd code/sheets/
+git fetch origin 
+git status
+git push origin develop 
+git status
+cd ../tests_sheets/
+ls
+c++ -std=c++20 test_and_diff.cpp
+c++ -std=c++20 test_and_diff.cpp -i common.h
+c++ -std=c++20 test_and_diff.cpp common.h
+c++ -std=c++20 test_and_diff.cpp
+ls
+./a.out 
+c++ -std=c++20 test_and_diff.cpp
+c++ -std=c++17 test_and_diff.cpp
+c++ -std=c++20 test_and_diff.cpp
+c++ -std=c++20 test_and_diff.cpp common.h
+c++ -std=c++20 test_and_diff.cpp -I ./common.h
+c++ -std=c++20 test_and_diff.cpp -I ./
+ls -1
+ls -lt
+./a.out 
+ls -1
+batcat runtest.sh 
+rm runtest.sh 
+c++ -std=c++20 test_and_diff.cpp -I ./
+ls -lt
+trash *~
+ls -lt
+./a.out 
+ls -a
+ls -l
+subl runtest.sh 
+subl differences.diff 
+ls -l
+rm differences.diff 
+rm runtest.sh 
+ls -a
+trash *.swp
+trash .*.swp
+trash .*~
+ls -a
+rm a.out 
+trash *~
+ls -a
+c++ -std=c++20 test_and_diff.cpp -I ./
+./a.out 
+c++ -std=c++20 test_and_diff.cpp -I ./
+./a.out 
+ls -la
+rm .test_and_diff.cpp.un~ 
+clean
+history
+subl clean.sh
+ls
+sudo chmod +x clean.sh 
+ls
+sudo mv clean.sh /usr/local/bin/clean
+ls /usr/local/bin/clean
+ls /usr/local/bin/ -l
+ls
+clean
+ls
+ls *.diff
+subl elemstable.diff 
+ls
+rm *.diff
+c++ -std=c++20 test_and_diff.cpp -I ./
+./a.out 
+ls -1
+subl elemstable.diff 
+subl bdry2Dverts.diff 
+c++ -std=c++20 test_and_diff.cpp -I ./
+ls
+rm common.h.gch 
+c++ -std=c++20 test_and_diff.cpp -I ./
+./a.out 
+ls
+ls -la
+clean
+ls -la
+rm *.diff
+ls -al
+git status
+git add .
+git commit -m WIP
+git status
+git push origin main 
+ls
+cd ..
+cd sheets/
+ls
+clean
+ls
+sudo vim /usr/local/bin/clean 
+ls
+clean
+ls
+git fetch origin 
+git status
+ls
+cd source/
+ls
+clean
+cd cylinder/
+ls
+clean
+ls
+vim -p *.cpp
+exit
+cd ..
+cd profile/
+l
+ls
+vim main.cpp 
+cd ..
+cd profiler/
+vim source/main.cpp
+exit
+cd code/
+cd sheets/
+git fetch origin 
+git status
+git diff
+vim source/cylinder/main.cpp
+exit
+git status
+git remote
+git remote show
+cd .git/
+ls -la
+batcat config 
+git push --set-upstream origin https://github.com/alexisjawtu/tests_sheets.git
+git push --set-upstream origin main 
+batcat config 
+git remote set-url https://github.com/alexisjawtu/tests_sheets.git
+git remote set-url origin https://github.com/alexisjawtu/tests_sheets.git
+batcat config 
+cd ..
+ls
+ipython3 
+python3 test_utils.py 
+echo "python3 test_utils.py" >> example.sh
+batcat example.sh 
+bash example.sh 
+which bash
+ls cylinder/*2D* -1
+ls cylinder/tmp/*2D* -1
+ls cylinder/*2D* -1
+ipython3 
+bash example.sh 
+subl ./.tmpfiles.txt ./.files.txt 
+bash example.sh 
+git status
+l
+ls
+cat runtest1.sh 
+rm runtest1.sh runtest2.sh runtest3.sh 
+
+mv example.sh driver.sh
+cd cylinder/
+ls
+cd ..
+bash driver.sh
+ipython3 
+bash driver.sh
+ls
+ls -a
+subl .files.txt 
+rm .files.txt .tmpfiles.txt 
+clean
+ls -a
+clean
+ls -a
+bash driver.sh 
+git fetch origin 
+git status
+rm .files.txt .tmpfiles.txt 
+git add .
+git status
+git commit
+git status
+git push origin main 
+git status
+cd ..
+cd sheets/
+ls
+git fetch origin 
+git status
+git diff
+vim -p source/cylinder/Cylinder.cpp source/cylinder/main.cpp
+exit
+cd code/tests_sheets/
+vim test_and_diff.cpp 
+ls -1
+cd cylinder/tmp/
+ls
+cd ..
+ls
+cd ..
+ls
+vim test_utils.py 
+fg
+cd
+cd code/sheets/
+subl source/cylinder/main.cpp
+ls
+cd include/
+ls
+clean
+ls
+git mv _tools_.h tools.h
+git status
+cd ..
+grep -irn --color=auto "_tools" .
+git diff > /home/alexis/d.diff
+subl /home/alexis/d.diff 
+git status
+git push origin develop 
+exit
+std="c++20"
+echo $std
+exit
+cd code/sheets/
+vim -O source/cylinder/main.cpp source/cylinder/Cylinder.cpp
+git status
+git add .
+git commit
+git status
+git push origin develop 
+git status
+exit
+cd code/sheets/
+ls
+cat make_cyl.sh 
+make_cyl 
+f=run_test
+echo $f
+ls
+which cylinder
+ls
+cd ../tests_sheets/
+ls
+vim driver.sh 
+ls
+clean
+ls
+bash driver.sh 
+vim driver.sh 
+ls
+bash run_cases.
+bash run_cases.o
+./run_cases.o 
+vim driver.sh 
+cd ../sheets/
+grep -irn --color=auto "this -> folder_id" .
+grep -irn --color=auto "this -> folder" .
+cd ../tests_sheets/
+ls
+bash driver.sh
+ls
+ls -la
+rm .files.txt .tmpfiles.txt 
+clean
+bash driver.sh
+make_cyl 
+bash driver.sh
+git status
+git add driver.sh 
+git status
+git commit -m "WIP"
+git status
+bash driver2.sh
+rm driver2.sh
+bash driver.sh
+ls /usr/local/bin/
+cat /usr/local/bin/clean 
+bash driver.sh
+git status
+echo "*.o" >> .gitignore 
+git status
+rm .files.txt .tmpfiles.txt 
+git status
+git add .
+git status
+git add .
+git status
+git commit -m WIP
+git status
+git push origin main 
+git status
+exit
+cd code/sheets/
+vim include/cylinder/Cylinder.h
+exit
+cd ../cplusplus_experiments/ppp3/
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+exit
+cd code/cplusplus_experiments/
+git fetch origin 
+git status
+git pull
+git status
+ls
+ls -lt
+clean
+ls -lt
+mkdir ppp3
+mv exceptions.cpp runtime.cpp offbyone.cpp outofrange.cpp drill3.cpp ppp3/
+ls -lt
+cd ppp3/
+ls
+vim exceptions.cpp 
+exit
+cd code/cplusplus_experiments/ppp3/
+c++ exceptions.cpp
+c++ -std=c++20 exceptions.cpp
+ls
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+c++ -std=c++20 exceptions.cpp
+./a.out 
+cd
+cd code/profiler/
+git fetch origin 
+git status
+git diff
+vim source/main.cpp
+git statu
+git status
+git add .; git commit -m "Add important documentation"
+git status
+git push origin develop 
+git status
+cd
+cd code/cplusplus_experiments/ppp3/
+cd
+cd code/profiler/
+vim source/main.cpp
+exit
+vim PPP_support.h 
+subl PPP_support.h
+rm a.out 
+clean
+git status
+cd ..
+git status
+git add . ; git commit WIP
+git add . ; git commit -m WIP
+git statu
+git status
+git push origin master 
+git status
+exit
+cd code/profiler/
+vim source/main.cpp
+exit
+pdflatex alexis-jawtuschenko-es.tex 
+atril alexis-jawtuschenko-es.pdf 
+git diff
+exit
+ls
+batcat index.html 
+git push origin v0.1.0 
+git status
+rm index.html 
+clean
+rm alexis-jawtuschenko-es.pdf 
+git status
+clean
+ls
+ls -la
+rm .swp 
+vim .gitignore 
+git status
+git add .
+git commit -m WIP
+exit
+cd Downloads/non-academic/
+ls
+git tag
+git branch -v
+git tag --annotate v0.1.0
+git tag
+git push origin main 
+git tag -r
+git tag --list 
+git rm alexis-jawtuschenko-es.tex history-es.tex 
+git status
+vim -
+vim -O alexis-jawtuschenko-en.tex alexis-jawtuschenko-es.tex 
+git status
+git add .
+git commit -m WIP
+pdflatex alexis-jawtuschenko-es.tex 
+fg
+pdflatex alexis-jawtuschenko-es.tex 
+ls -l
+ls -la
+clean
+ls -la
+atril alexis-jawtuschenko-e
+atril alexis-jawtuschenko-es.pdf 
+grep -irn --color=auto "\`a" history-es.tex alexis-jawtuschenko-es.tex 
+sed -i s/"\`a"/"\\'a"/g history-es.tex 
+grep -irn --color=auto "\\'a" history-es.tex
+man sed
+man grep
+cat
+man cat
+man ed
+man grep
+man read
+man batcat
+batcat
+man sed
+sed 127p history-es.tex 
+sed -n 127p history-es.tex 
+vim history-es.tex
+git status
+git diff
+git status
+rm alexis-jawtuschenko-es.pdf 
+git status
+git add . && git commit -m "Publish resume in Castilian"
+git status
+git push origin main 
+exit
+fg
+exit
+sed -n 11p 12p 16p 23p 90p 99p 111p 114p 115p 118p 127p history-es.tex 
+sed -n -e 11p -e 12p -e 16p -e 23p -e 90p -e 99p -e 111p -e 114p -e 115p -e 118p -e 127p history-es.tex 
+sed -i s/'\'a'/'\\\'a'/g
+history-es.tex 
+sed -n -e 11p -e 12p -e 16p -e 23p -e 90p -e 99p -e 111p -e 114p -e 115p -e 118p -e 127p history-es.tex 
+subl history-es.tex alexis-jawtuschenko-es.tex 
+vim history-es.tex 
+pdflatex alexis-jawtuschenko-es.tex 
+atril alexis-jawtuschenko-es.pdf 
+pdflatex alexis-jawtuschenko-es.tex 
+atril alexis-jawtuschenko-es.pdf 
+cd
+cd code/cplusplus_experiments/
+cd ppp3/
+ls
+vim random.cpp
+exit
+ls
+vim exceptions.cpp 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+exit
+cd code/
+ls
+ls -l
+cd cplusplus_experiments/
+cd ppp3/
+ls
+vim random.cpp
+exit
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+rm a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+.a
+/
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+c++ -std=c++20 compiler_reacts.cpp
+./a.out 
+exit
+git status
+rm 3
+git status
+ls -la
+c++ -std=c++20 random.cpp
+./a.out 
+c++ -std=c++20 random.cpp
+./a.out 
+ls
+rm a.out 
+ls -l
+./a.out 
+rm a.out 
+./a.out 
+rm a.out 
+clean
+git status
+rm ch4ex13.cpp 
+git status
+git add .; git commit -m "Do it"
+git status
+wget https://github.com/alexisjawtu/cplusplus_experiments/issues/4
+ls
+vim 4
+git status
+git push origin master 
+git status
+ls
+./a.out 
+ls
+cd calculator/
+;s
+ls
+./a.out 
+ls
+./a.out 
+exit
+cd code/cplusplus_experiments/
+git fetch origin 
+git status
+cd ppp3/
+git help iisue
+git help issue
+git help
+githelp git
+git help git
+git status
+git add .; git commit -m Do
+git status
+git pull
+git ls-files
+git fetch origin 
+git checkout 3-do-it 
+git status
+ls
+git ls-files
+ls -la
+git diff master 
+wget https://github.com/alexisjawtu/cplusplus_experiments/issues/3#issue-3031582641
+ls -l
+batcat 3 
+subl 3
+vim a
+vim 3
+ls
+rm calculator.cpp\! 
+vim calculator.cpp 
+mkdir calculator && mv calculator.cpp ./calculator
+ls
+clean
+cd calculator/
+ls
+vim calculator.cpp 
+exit
+cd code/cplusplus_experiments/ppp3/
+ls
+cd calculator/
+ls
+vim calculator.cpp
+fg
+ls
+clean
+ls
+git add .; git commit -m WIP
+git status
+exit
+grep -irn --color=auto cpx
+grep -irn --color=auto cpx | grep outbound
+grep -irn --color=auto cpx | grep inbound
+ls kernel/formulation/
+ls kernel/
+ls kernel/stages/
+vim -p kernel/stages/short_term_*
+exit
+cd code/
+ls
+git clone https://github.com/alexisjawtu/alextron
+ls
+cd alextron/
+git statu
+git status
+git branch
+git branch -v
+git branch -r
+git checkout feature/contracts 
+git branch -v
+ls -l
+vim AlexTroN.py 
+exit
+cal
+apt list **cal**
+apt list **netrw**
+exit
+git status
+git diff main 
+exit
+cd code/alextron/
+ls
+cd kernel/
+cd stages/
+ls
+vim short_term_model.py 
+git diff
+git status
+fg
+git status
+vim short_term_model.py 
+git branch
+git checkout main 
+cd ..
+ls
+grep -irn "ls_" .
+grep -irn "ls_" . > /home/alexis/Desktop/res.grep
+subl /home/alexis/Desktop/res.grep
+grep -irn "shift_kinds" . >> /home/alexis/Desktop/res.grep
+git status
+git diff
+git add .; git commit
+git status
+git fetch origin 
+git status
+git push origin main 
+git status
+git branch -r
+git checkout feature/contracts 
+echo "\n\n**new**\n\n" >> /home/alexis/Desktop/res.grep && grep -irn "ls_" . >> /home/alexis/Desktop/res.grep
+git status
+git diff
+git add .; git commit
+git status
+git push origin feature/contracts 
+git checkout feature/table_for_extra_hours 
+git fetch origin 
+git status
+echo "\n\n**new**\n\n" >> /home/alexis/Desktop/res.grep && grep -irn "ls_" . >> /home/alexis/Desktop/res.grep
+git status
+git diff
+git add .; git commit
+git status
+git push origin feature/table_for_extra_hours 
+git status
+git branch -v
+git branch -r
+exit
+cd code/cplusplus_experiments/ppp3/
+git status
+git fetch origin 
+git status
+git branch -v
+exit
+cd code/cplusplus_experiments/
+ls
+cd cp
+cd ppp3/
+ls
+vim random.cpp 
+git status
+vim random.cpp 
+exit
+cd code/cplusplus_experiments/ppp3/
+git status
+ls
+ls ../
+cd calculator/
+ls
+git status
+ls
+git checkout master 
+ls
+git checkout 3-do-it 
+ls
+git diff master 3-do-it 
+git  status
+git diff master 
+git diff master 3-do-it 
+git checkout master 
+git merge 3-do-it 
+git mergetool --tool=vimdiff 
+git status
+cd ..
+git status
+git status | tail
+git status | more
+git status | tail >> ../.gitignore 
+vim ../.gitignore 
+ls
+vim random.cpp.orig 
+git status
+git add ../.gitignore .
+git status
+batcat calculator/calculator.cpp 
+git commit -m "WIP"
+git status
+git push origin master 
+git status
+ls
+cd calculator/
+ls
+vim calculator.cpp 
+exit
+cd code/cplusplus_experiments/ppp3/
+ls
+git fetch origin 
+git statys
+git status
+git diff origin/3-do-it 
+git status
+git push origin 3-do-it 
+git status -v
+git status
+git branch -v
+ls -1
+cd calculator/
+ls
+git diff master 
+git diff 3-do-it master 
+git status
+git diff master 
+ls
+./a.out 
+3
+4
+5
+|
+D
+git status
+git add .; git commit -m "Continue on 5.5.3 Terms"
+git add .; git commit -m "Continue on 5.5.4 Primary"
+git add .; git commit -m "Complete 5.5.4 Primary"
+ls
+cd ..
+ls
+cd ..
+ls
+echo "CONTINUE HERE: PPP3::5.5 Trying the first version" >> README.md
+ls
+git status
+git add README.md ; git commit -m "Add a readme file"
+git status
+git push origin master 
+git status
+exit
+cd code/structured_code_Dev_CPU/structured_code_Dev_GPU/
+vim msg
+exit
+ls
+c++ calculator.cpp -I ../
+cd code/
+cd cplusplus_experiments/
+git fetch origin 
+git status
+ls
+cat README.md 
+git log --oneline 
+vim README.md 
+cd ppp3/calculator/
+ls
+vim calculator.cpp
+clean
+ls -la
+trash calculator00.cpp 
+git status
+cd ../..
+git status
+vim README.md
+git status
+git add .
+git status
+git commit -m "Continue on page 142"
+git status
+git push origin master 
+git status
+git branch -d
+git branch -v
+exit
+cd code/cplusplus_experiments/ppp3/calculator/
+ls
+c++ --std=c++20 calculator00.cpp 
+c++ --std=c++20 calculator00.cpp -I .
+ls
+clean
+ls
+ls -la
+c++ --std=c++20 calculator00.cpp -I .
+ls -la
+./a.out 
+c++ --std=c++20 calculator00.cpp -I .
+./a.out 
+c++ --std=c++20 calculator00.cpp -I .
+./a.out 
+c++ --std=c++20 calculator01.cpp -I .
+./a.out 
+exit
+cd code/
+cd cplusplus_experiments/
+git fetch origin
+git status
+git diff origin/master 
+exit
+ezxit
+exit
+cd code/
+ls
+cd cplusplus_experiments/
+cd ppp3/
+ls
+vim ../README.md
+cd calculator/
+ls
+ls -1
+vim calculator.cpp 
+c++ --std=c++20 calculator01.cpp
+./a.out 
+cd code/cplusplus_experiments/ppp3/calculator/
+vim calculator01.cpp 
+ipython3 
+exit
+ls -1
+ls
+cd calculator/
+vim calculator01.cpp
+vim ~/d.diff 
+ls
+clean
+cd ..
+ls
+mkdir printing
+git mv booklet.sh mgraf[1-4].pdf PPP3_waiting_to_be_printed.pdf ./printing/
+ls
+ls -1
+ls printing/
+ls printing/ -1
+cd calculator/
+vim -p calculator.cpp calculator01.cpp 
+exit
+cd code/cplusplus_experiments/ppp3/
+git fetch origin 
+git status
+git add .; git commit -m WIP
+git status
+git diff origin/master 
+git diff master origin/master 
+git merge origin/master 
+git status
+git diff master origin/master > ~/d.diff
+git push origin master 
+git status
+trash ~/d.diff
+git status
+git add .; git commit -m "Emplace printings into folder"
+git status
+git fetch origin 
+git status
+git push origin master 
+exit
+python3
+exit
+fdisk
+mount
+sudo apt update
+sudo apt install fdisk
+sudo fdisk
+sudo fdisk -l
+ls -l /dev/disk/by-path/
+ls -l /dev/disk/by-id/usb-*
+ls -l /dev/disk/by-id/
+ls -1 /dev/disk/by-id/
+lsblk
+ls -l /dev/disk/by-id/usb-*
+sudo fdisk -l
+umount /dev/sdb
+lsblk
+umount /dev/sdb
+lsblk
+umount /dev/sdb1
+lsblk
+gparted
+parted
+sudo parted
+sudo gparted
+sudo apt upgrade
+sudo apt autoremove 
+sudo apt upgrade 
+sudo apt autoremove 
+sudo apt update
+sudo apt autoremove 
+sudo apt install gparted
+lsblk
+cp Desktop/debian-12.11.0-amd64-netinst.iso /dev/disk/by-id/usb-Kingston_DataTraveler_108_1C6F654E5975EB80200019CB-0\:0
+sudo cp Desktop/debian-12.11.0-amd64-netinst.iso /dev/disk/by-id/usb-Kingston_DataTraveler_108_1C6F654E5975EB80200019CB-0\:0
+sudo sync
+lsblk
+mount /dev/disk/by-id/usb-Kingston_DataTraveler_108_1C6F654E5975EB80200019CB-0\:0
+mount /dev/sdb
+sudo mount /dev/sdb
+sudo mount /dev/disk/by-id/usb-Kingston_DataTraveler_108_1C6F654E5975EB80200019CB-0\:0
+cd code/
+ls -1
+ls
+cat ~/elitros/*.txt >> aver
+batcat aver 
+cat aver >> README.md 
+git fetch origin 
+git status
+rm aver 
+git add README.md ; git commit -m "Update README.md"
+git status
+git push origin develop 
+ipython3 
+exit
+cd /media/alexis/6c05dd30-cd06-4cf9-924a-c8dc44db0b76/
+ls
+ls home/
+sudo mv ./home/ ~/Desktop/
+sudo mv ./home/alexis/ ~/Desktop/
+ls
+cd ..
+ls
+cd 6c05dd30-cd06-4cf9-924a-c8dc44db0b76/
+ls
+cd home/
+ls
+sudo cp alexis/ /home/alexis/Desktop/
+sudo cp -r alexis/ /home/alexis/Desktop/
+cd ..
+ls 
+cd alexis/
+ls
+cd 6c05dd30-cd06-4cf9-924a-c8dc44db0b76/
+ls
+cd home/
+ls
+sudo cp -r alexis/ /home/alexis/Desktop/
+exit
+cd /media/alexis/
+ls
+cd 6c05dd30-cd06-4cf9-924a-c8dc44db0b76/
+cd home/
+ls
+sudo mv lola/ /home/alexis/Desktop/
+exit
+cd Desktop/
+ls
+ls -1
+cd home/
+ls
+ls alexis/
+cd alexis/
+ls -a
+cd ..
+sudo rmdir alexis/
+ls -la
+cd ..
+sudo rmdir home/
+ls -la
+sudo thunar
+sudo sync 
+exit
+cd /media/alexis/
+ls
+ls -l
+sudo chown alexis | alexis 6112c4aa-d891-46fd-ae09-94148a4d935b/
+sudo chown 6112c4aa-d891-46fd-ae09-94148a4d935b/ alexis | alexis
+sudo chown 6112c4aa-d891-46fd-ae09-94148a4d935b/ alexis alexis
+sudo chown alexis  alexis 6112c4aa-d891-46fd-ae09-94148a4d935b/
+sudo chown alexis 6112c4aa-d891-46fd-ae09-94148a4d935b/
+ls -la
+sudo thunar
+exit
+hardinfo
+sudo hardinfo
+apt list **hardinfo**
+apt list **b43**
+cat /etc/apt/sources.list
+exit
+lspci
+hwinfo
+lspci -vv
+lsusb
+cd /proc/
+ls
+cat cpuinfo 
+cat meminfo 
+uname -r
+lshw
+sudo apt install lshw
+lshw
+apt list **hwinfo**
+sudo apt install hwinfo 
+hwinfo
+sudo hwinfo
+sudo hwinfo > ~/info.hw
+cd
+vim info.hw 
+ls -l
+dmidecode
+sudo dmidecode 
+sudo dmidecode | less
+exit
+apt list **epiphany**
+apt list **chromium**
+sudo apt install chromium
+sudo apt update
+sudo apt upgrade 
+sudo apt autoremove 
+cd /
+pwd
+sudo find . -name "cpp.vim"
+vim usr/share/vim/vim90/syntax/cpp.vim 
+vim usr/share/vim/vim90/syntax/c.vim 
+vim usr/share/vim/vim90/indent/c.vim 
+vim usr/share/vim/vim90/indent/cpp.vim
+vim
+exit
+vim
+exit
+htop
+free
+sudo dmidecode
+sudo dmidecode > dmi.text
+vim dmi.text 
+exit
+htop
+sudo apt update
+sudo apt install htop
+htop
+exit
+ls Downloads/
+ls /opt/
+ls / -l
+ls /opt/ -l
+sudo mv Downloads/anyconnect-linux64-4.10.06079-predeploy-k9.tar.gz /opt/
+ls /opt/ -l
+sudo tar -xvf /opt/anyconnect-linux64-4.10.06079-predeploy-k9.tar.gz -C /opt/
+sudo chmod -R 777 /opt/anyconnect-linux64-4.10.06079/vpn
+cd /opt/anyconnect-linux64-4.10.06079/vpn/
+ls
+sudo ./vpn_install.sh 
+cd ..
+ls -l
+ls -1
+cd cisco/
+ls
+cd anyconnect/
+ls
+cd ..
+sudo rm anyconnect-linux64-4.10.06079-predeploy-k9.tar.gz 
+sudo rmdir -R anyconnect-linux64-4.10.06079/
+sudo rmdir -r anyconnect-linux64-4.10.06079/
+sudo rmdir anyconnect-linux64-4.10.06079/
+sudo rmdir anyconnect-linux64-4.10.06079/ -r
+sudo rmdir anyconnect-linux64-4.10.06079/ -R
+sudo thunar
+ls -1
+exit
+free
+htop
+lshw
+ls
+sudo dmidecode > dmi.text 
+vim dmi.text 
+mousepad dmi.text 
+vim dmi.text 
+exit
+vim dmi.text 
+ls /
+cd /proc/
+ls
+vim meminfo 
+lshw
+sudo lshw > ~/hw.out
+cd
+vim hw.out 
+exit
+vim
+free
+neofetch
+htop
+top
+exit
+free
+htop
+sudo dmidecode 
+sudo apt install neofetch 
+neofetch 
+top
+sudo lshw -short -C memory
+sudo lshw -short
+exit
+htop
+free
+xfce4-taskmanager 
+cd Desktop/
+ls
+mv slidefootnotes.txt notepages.txt
+vim notepages.txt 
+exit
+htop
+exit
+htop
+ssh -V
+ls -la
+ssh-keygen -t ed25519 -C "ajawtuschenk@nvidia.com B50"
+vim .ssh/id_ed25519.pub 
+vim .ssh/id_ed25519
+subl
+xclip
+xclipboard 
+man xclipboard 
+sudo apt update
+apt list --upgradable 
+sudo apt install xclip 
+xclip -sel clip < .ssh/id_ed25519.pub 
+ssh -T git@gitlab-master.nvidia.com
+ssh -Tvvv git@gitlab-master.nvidia.com
+htop
+exit
+ls
+sudo rm Kiko\ Loureiro.-Creative\ Fusion\ Beyond\ Pentatonics\ \&\ Power\ Chords.pdf 
+htop
+cd Documents/insight-nvidia/
+ls
+mv RBP\ Next\ Steps\ vWorking.pdf RBPNextStepsvWorking.pdf
+ls -1
+vim howtogetaccesssap.txt 
+exit
+vim
+ls -la
+ls .ssh/
+exit
+vim rbpsegmentation.py
+xclip -sel clip < rbpsegmentation.py 
+vim rbpsegmentation.py 
+htop
+exit
+sudo mv Desktop/lola/ Desktop/from_old_backups/
+neofetch 
+free
+htop
+vim /proc/cpuinfo 
+exit
+ls -la
+cd
+ls -la
+cd .ss
+cd .ssh/
+ls -la
+batcat id_ed25519
+batcat id_ed25519.pub 
+cd
+cd Desktop/
+ls
+batcat sshkeyrandomart 
+exit
+batcat --list-languages
+cd
+cd code/alextron/
+batcat AlexTroN.py 
+batcat --list-themes
+exit
+cd ..
+ls
+vim filetype.vim 
+cd ftplugin/
+ls
+cd ..
+ls
+ls -1
+cd ftplugin/
+ls -l
+edit python.vim 
+vim python.vim 
+python3 -m pydoc
+cd ..
+diff colors/habamax.vim colors/habamax_tune.vim 
+ls colors/ -1
+ls colors/lists/
+ls colors/tools/
+vim colors/alexis.vim 
+exit
+ls
+cd code/
+ls
+cd a
+cd alextron/
+git status
+ls -1
+libreoffice ABC_nvidia.docx 
+mv ABC_nvidia.docx ~/Downloads/
+vim kernel/util/readers.py 
+exit
+git config --get user.email 
+git config --get user.name 
+git config
+git config --get-all
+git config --get
+ls -la
+cd .git/
+ls -la
+batcat config
+ls ~/ -la
+cd ~/.config/
+ls -la
+cd 
+ls -la
+batcat .gitconfig 
+batcat .git-credentials 
+batcat .xsession-errors
+ls
+exit
+cd code/
+ls
+cd profiler/
+batcat .gitignore 
+cd ../sheets/
+batcat .gitignore 
+ipython3 
+cd ../rbpsegmentation/
+ipython3 
+which python3
+/usr/bin/python3 -m pip install pandas
+sudo apt install python3-pandas
+exit
+xclip -sel clip < rbpsegmentation.py 
+ipython3 
+ls
+rm rbpsegmentation.py 
+rm d.diff~ 
+cd Downloads/
+ls
+ls -1
+cd
+cd code/rbpsegmentation/
+ls
+mv ~/Downloads/20250520064CombinedRawData_IBP.csv .
+git status
+git add .
+git status
+exit
+cd ..
+ls
+cd structured_code_Dev_CPU/
+ls
+ls -a
+cd structured_code_Dev_GPU/
+ls -a
+ristretto Screenshot\ from\ 2025-04-05\ 12-39-43.png 
+cd
+cd code/
+git clone ssh://git@gitlab-master.nvidia.com:12051/ai-for-business-applications/rbpsegmentation.git
+git clone https://gitlab-master.nvidia.com/ai-for-business-applications/rbpsegmentation.git
+ls -l
+cd rbpsegmentation/
+ls -la
+batcat README.md 
+batcat
+man batcat
+batcat --help
+cd /usr/share/vim/vim90/colors/
+diff alexis.vim desert.vim 
+vim alexis.vim 
+cd
+ls -la
+vim .vimrc
+cd code/rbpsegmentation/
+ls
+git status
+git checkout -b develop
+git status
+git remote
+git branch
+git branch -r
+git branch -v
+git push --set-upstream origin develop 
+git status
+git branch -v
+git branch -r
+git status
+git branch -v
+git fetch origin 
+git branch -v
+git branch -r
+git checkout 1-data-ingestion 
+git branch
+git branch -v
+git branch -d 1-data-ingestion 
+git checkout main 
+git branch -d 1-data-ingestion 
+git fetch origin o
+git fetch origin
+git checkout feature/1-data-ingestion 
+ls -la
+vim input_readers.py
+exit
+fg
+exit
+vim .bashrc 
+exit
+cd code/rbpsegmentation/
+ls
+vim 20250520064CombinedRawData_IBP.csv 
+ls -1
+ls -l
+cd ..
+ls -l
+mv rbpsegmentation/20250520064CombinedRawData_IBP.csv ~/Downloads/
+ls -1
+ls -la
+ls rbpsegmentation/
+mv 20250520064CombinedRawData_IBP.csv ./rbpsegmentation/
+cd rbpsegmentation/
+ls -l1
+ls -la
+cd __pycache__/
+ls
+ls -la
+git statu
+git status
+cd ..
+ipython3 
+exit
+vim constants.py 
+exit
+cd
+cd code/alextron/
+ls
+cd kernel/
+ls
+cd util/
+ls
+vim readers.py 
+exit
+cd code/rbpsegmentation/
+ls -1
+ipython3 
+git status
+echo "*.xlsx" >> .gitignore 
+git status
+ipython3 
+git status
+echo ".~*" >> .gitignore 
+git status
+git add .
+git status
+git commit -m "Format the names of the columns"
+git status
+git push origin feature/1-data-ingestion 
+exit
+ls -1
+ls -la
+ls -lt
+vim smallcase.csv 
+exit
+cat smallcase.csv 
+exit
+neofetch 
+exit
+ipython3 
+exit
+vim 125k_rows_of_CombinedRawData_IBP.xlsx 
+libreoffice 125k_rows_of_CombinedRawData_IBP.xlsx 
+ls -1
+vim 20250520064CombinedRawData_IBP.csv 
+mv 20250520064CombinedRawData_IBP.csv 110k_rows_of_CombinedRawData_IBP.csv 
+vim 125k_rows_of_CombinedRawData_IBP.csv 
+exit
+cd code/alextron/
+ls
+grep -r save .
+grep -r write .
+vim kernel/formulation/model.py 
+grep -r ITEMS .
+exit
+apt list **sc**
+sc
+sudo apt update
+sudo apt install sc
+sc
+man sc
+ls
+sc smallcase.xlsx 
+sc smallcase.csv 
+sc /usr/share/doc/sc/tutorial.sc.gz 
+sudo gunzip /usr/share/doc/sc/tutorial.sc.gz 
+ls /usr/share/doc/sc/tutorial.sc.gz 
+ls /usr/share/doc/sc/ -l
+sc /usr/share/doc/sc/tutorial.sc 
+fg
+man sc
+sc smallcase.csv 
+man sc
+sc
+sc /usr/share/doc/sc/tutorial.sc 
+scim
+apt list **scim**
+sudo apt install scim
+scim smallcase.csv 
+scim ./smallcase.csv 
+scim
+man scim
+sc-im
+apt list **sc-im**
+column smallcase.csv 
+csvlook
+ipython3 
+exit
+ping debian.org
+cd code/
+cd rbpsegmentation/
+git status
+git push origin feature/1-data-ingestion 
+vim -p input_readers.py constants.py 
+exit
+cd code/rbpsegmentation/
+git status
+git fetch origin 
+git status
+head newcols.txt 
+mv newcols.txt ~/Desktop/
+git status
+git add .
+git commit -m "Classify useful fields"
+git status
+git push origin feature/1-data-ingestion 
+git status
+exit
+ls
+cd Downloads/
+l
+ls
+cd ../Documents/
+ls
+cd caece-alexis/
+vim tareas.txt
+ls
+clear
+ls
+clean
+ls
+exit
+q
+quit
+cd Documents/caece-alexis/
+ls
+ls -1
+ls -l
+cat lineales 
+trash lineales 
+atril AllaireKaber_2008_Book_NumericalLinearAlgebra.pdf 
+mv AllaireKaber_2008_Book_NumericalLinearAlgebra.pdf kaber-allaire.pdf
+ls -l
+cat caece.txt 
+ls -l
+cat contenidos-min.md 
+trash contenidos-min.md 
+ls -l
+sudo apt update
+vim caece.txt 
+exit
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove 
+exit
+cd code/rbpsegmentation/
+git fetch origin 
+[A
+git fetch origin 
+git status
+cd code/rbpsegmentation/
+git fetch origin 
+git status
+git pull
+git status
+vim README.md 
+git status
+git add README.md ; git commit -m "WIP"
+git status
+git push origin feature/1-data-ingestion 
+exit
+cd code/rbpsegmentation/
+ipython3 
+exirr
+exit
+ls -1
+ipython3 
+subl 110k_rows_of_CombinedRawData_IBP.csv 
+cd
+cd 
+cd Downloads/
+ls
+cd
+ls
+atril Pandas_Cheat_Sheet.pdf 
+exit
+cd code/rbpsegmentation/
+git fetch origin 
+git status
+git pull 
+vim README.md
+exit
+tail
+tail draft.py 
+exit
+cd code/
+cd rbpsegmentation/
+git status
+vim draft.py 
+cat \[60\].py 
+rm \[60\].py 
+ls
+git status
+git add .
+git commit -m "WIP"
+git fetch origin 
+git status
+git push origin feature/1-data-ingestion 
+git status
+ls -la
+exit
+ipython3 
+ls
+vim 110k_rows_of_CombinedRawData_IBP.csv 
+exit
+apt list **everforest**
+mkdir -p .vim/pack/colors/opt
+git clone --depth=1 https://github.com/sainnhe/everforest.git ~/.vim/pack/colors/opt/everforest
+vim
+exit
+ipython3 
+cd ..
+ls
+cd cplusplus_experiments/
+git fetch origin 
+git  status
+git branch -r
+git branch -v
+git pull
+find . -name alexis*
+find . -name cylinder*
+sudo  cp /usr/share/vim/vim90/colors/alexis.vim .
+ls
+mv alexis.vim configuration/
+ls con
+ls configuration/
+git add .; git commit -m "Add color scheme"; git push origin master 
+git status
+sudo apt update 
+apt list --upgradable 
+sudo apt update 
+sudo apt upgrade 
+exit
+ipython3 
+exit
+cd ..
+ls
+cd alextron/
+grep -rn merge .
+grep -rn .merge .
+grep -rn ".merge" .
+grep -rn "\.merge" .
+exit
+uptime
+uptime | xclip
+exit
+xclip -sel clip < "hola" 
+xclip -sel clip  "hola" 
+xclip -sel
+xclip
+xclip hola
+man xclip
+exit
+ipython3 
+exit
+cd code/rbpsegmentation/
+git fetch origin
+git status
+git pull 
+git status
+vim constants.py input_readers.py README.md
+exit
+ipython3 
+ls
+cat draft.py >> code/rbpsegmentation/input_readers.py
+cd code/
+cd rbpsegmentation/
+git status
+git add .
+git commit -m "Merge the signals"
+git status
+git push origin feature/1-data-ingestion 
+git fetch 
+git fetch origin 
+git status
+git push origin feature/1-data-ingestion 
+git status
+batcat input_readers.py
+exit
+vim ejercicios.tex 
+exit
+vim guia_de_ejercicios_unidad1.
+vim guia_de_ejercicios_unidad1.tex 
+ls -1
+fg
+exit
+cd Templates/
+cd practicaU1/
+ls
+pdflatex guia_de_ejercicios_unidad1.tex 
+exit
+cd code/rbpsegmentation/
+git fetch origin 
+git status
+git pull
+git status
+exit
+cd pilots/
+diff 25k_rws_of_CombinedRawData_IBP.csv fake_dds.csv > ~/difs.txt
+vim ~/difs.txt 
+head 25k_rws_of_CombinedRawData_IBP.csv 
+head fake_dds.csv
+rm fake_dds.csv
+clear
+exit
+cd ../alextron/
+grep -rn from_records .
+vim kernel/formulation/model.py 
+cd
+ls -1
+vim s.py 
+rm s.py
+exit
+git rm names.py 
+ls
+cd pilots/
+ls
+cd no_packout/
+ls
+mv scenario_1a.csv scenario_1a.data 
+git status
+cd ..
+git status
+cd pilots/
+cd no_packout/
+ls
+git cp scenario_1a.data scenario_1a_dds.data
+cp scenario_1a.data scenario_1a_dds.data
+mv scenario_1a.data scenario_1a_rbp_tpa.data 
+ls -1
+head scenario_1a_dds.data scenario_1a_rbp_tpa.data 
+cd ..
+git status
+git  add .
+git status
+cd pilots/no_packout/
+ls
+head *
+cd ..
+ls
+subl full20250520064CombinedRawData_IBP.csv 
+head *
+cd no_packout/
+head *
+cd ..
+git status
+
+ls pilots/
+cd pilots/no_packout/
+head *
+cd ..
+ls
+clean
+ls -1
+diff input_readers.py scenario_1.py
+git status
+git add .
+git commit -m "Build a scenario for case 1"
+git status
+git push origin feature/1-data-ingestion 
+git status
+exit
+cd code/rbpsegmentation/
+ls
+clean
+ls
+ls names/
+mkdir pilots
+mv *csv pilots/
+ls -1
+mv 125k_rows_of_CombinedRawData_IBP.xlsx smallcase.xlsx pilots/
+ls -1
+cd pilots/
+ls -1
+#vim tou
+#
+#vim tou
+touch scenario_1a.csv
+mkdir no_packout
+mv scenario_1a.csv no_packout/
+cd ..
+vim pilots/no_packout/scenario_1a.csv 
+ls pilots/
+ls
+cd pilots/
+ls
+mv draft.csv no_packout/
+cd no_packout/
+ls -1
+fg
+clean
+vim draft.csv 
+vim scenario_1a.csv
+fg
+ls
+cat draft.csv
+rm draft.csv
+clean
+cd ..
+ls
+clean
+cd ..
+ls
+diff names.py names/fields.py 
+vim names.py names/fields.py 
+exit
+vim names/fields.py 
+ipython3 
+exit
+history > h.txt
+vim h.txt 
+diff rbpsegmentation/input_readers.py rbpsegmentation/scenario_1.py > difstate
+exit
+ls -l
+tail scenario_1.py~
+exit
+vim
+exit
+cd code/rbpsegmentation/
+vim ./
+exit
+cd code/rbpsegmentation/
+ipython3 
+git status
+git add .
+git commit -m "Complete alternative RBP consumption"
+git status
+git push origin feature/1-data-ingestion 
+ping debian.org
+git push origin feature/1-data-ingestion 
+clear
+git fetch origin 
+git status
+git push origin feature/1-data-ingestion 
+git status
+sudo shutdown -h now
+ls -1
+cat README.md 
+exit
+ls -1
+clean
+ls -1
+batcat scenario.py 
+git mv scenario_1.py draft_scenario_1.py 
+git mv scenario_2.py draft_scenario_2.py
+git status
+git rm scratch_session.py 
+git status
+git add .
+git commit -m "Reorganize the draft scenarios"
+git statis
+git status
+vim README.md 
+sudo apt update 
+apt list **tmux**
+sudo apt install tmux
+sudo apt upgrade 
+ls
+cat README.md 
+exit
+exit
+s
+ls
+man tmux
+exit
+tmux
+exit
+cd code/rbpsegmentation/
+git fetch origin 
+git status
+vim ./
+ls -1
+clean
+git mv draft_scenario_1.py draft_scenario_1_a.py
+git mv draft_scenario_2.py draft_scenario_2_a.py 
+git status
+vim draft_scenario_2_a.py 
+git add .
+git commit -m "Work in scenario 2 a"
+git status
+git push origin feature/1-data-ingestion 
+git status
+exit
+cd code/rbpsegmentation/
+git fetch origin 
+git status
+git pull
+git status
+vim README.md
+vim ./
+git status
+git add .; git commit -m "WIP"
+git status
+git push origin feature/1-data-ingestion 
+git status
+sudo  shutdown -h 600
+sudo shutdown -c
+sudo  shutdown -h 10
+apt list **cifs**
+sudo  apt update
+sudo apt upgrade 
+apt lilst **cifs**
+apt list **cifs**
+uname -v
+neofetch 
+sudo apt install cifs-utils 
+sudo apt install cifs-utils smbclient winbind 
+sudo apt autoremove 
+sudo apt update
+sudo mkdir /mnt/win_share
+sudo mount -t username=ajawtuschenk //10.48.45.150/sapfsp-integ.nvidia.com /mnt/win_share/
+dmesg
+sudo dmesg
+sudo dmesg | grep mount
+sudo dmesg | grep nvidia
+sudo mount -t cifs -o username=ajawtuschenk //10.48.45.150/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //10.48.46.101/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //10.48.44.123/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26#53/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfsp-integ.nvidia.com /mnt/win_share/
+ls /mnt/
+cd /mnt/win_share/
+ls
+ls -l
+d
+cd
+exit
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo dmesg | grep cifs
+route
+sudo route
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfs-integ.nvidia.com /mnt/win_share/
+sudo dmesg | grep cifs
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfsp-integ.nvw.nvidia.com /mnt/win_share/
+nslookup sapfsp-integ
+sudo mount -t cifs -o username=ajawtuschen //172.16.136.26/sapfsp-integ.nvw.nvidia.com /mnt/win_share/
