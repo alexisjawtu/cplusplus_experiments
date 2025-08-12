@@ -1,63 +1,3 @@
-cd materiasDm/MEFA2016/
-ls
-cd ejercicios/
-cd ..
-ls web/
-atril web/e6-04-01-05.pdf 
-rm web/e6-04-01-05.pdf 
-atril web/lazarov.pdf 
-rm web/lazarov.pdf 
-cd web/
-ls
-atril ledret 
-ls -l
-rm ledret 
-atril M1ApproxPDE_Chapter3.pdf 
-rm M1ApproxPDE_Chapter3.pdf 
-cd ..
-rmdir web/
-ls
-cd ejercicios/
-pdftk *.txt cat output exercises.pdf
-pdftk *.pdf cat output exercises.pdf
-ls -lt
-trash *.log
-ls -lt
-trash *.aux
-ls -lt
-trash ejercicios5.tex.bak 
-ls
-ls -1
-atril exercises.pdf 
-cd ..
-ls
-mv Investigación\ Operativa\ 2010/ OperResearch2010
-ls
-cd ..
-cd code/sheets/
-git fetch origin 
-git status
-git push origin develop 
-git status
-cd ../tests_sheets/
-ls
-c++ -std=c++20 test_and_diff.cpp
-c++ -std=c++20 test_and_diff.cpp -i common.h
-c++ -std=c++20 test_and_diff.cpp common.h
-c++ -std=c++20 test_and_diff.cpp
-ls
-./a.out 
-c++ -std=c++20 test_and_diff.cpp
-c++ -std=c++17 test_and_diff.cpp
-c++ -std=c++20 test_and_diff.cpp
-c++ -std=c++20 test_and_diff.cpp common.h
-c++ -std=c++20 test_and_diff.cpp -I ./common.h
-c++ -std=c++20 test_and_diff.cpp -I ./
-ls -1
-ls -lt
-./a.out 
-ls -1
-batcat runtest.sh 
 rm runtest.sh 
 c++ -std=c++20 test_and_diff.cpp -I ./
 ls -lt
@@ -1998,3 +1938,63 @@ sudo dmesg | grep cifs
 sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfsp-integ.nvw.nvidia.com /mnt/win_share/
 nslookup sapfsp-integ
 sudo mount -t cifs -o username=ajawtuschen //172.16.136.26/sapfsp-integ.nvw.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //sapfsp-integ.nvidia.com/data/rapidx /mnt/win_share/
+ping sapfsp-integ.nvidia.com
+sudo mount -t cifs -o username=ajawtuschenk //10.48.45.101/anaplan/Inbound/CombinedRawData /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/ /mnt/win_share/
+ls /mnt/
+ls /mnt/win_share/
+ls /mnt/win_share/ -la
+ll /mnt
+ls /mnt -la
+cd /mnt/
+sudo mkdir win_share2/
+ls -la
+cd 
+cd Downloads/
+sudo ./cifs_mount.sh -p //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/ -m /mnt/win_share/ -u ajawtuschenk
+sudo chmod +x cifs_mount2.sh 
+ls -l
+sudo ./cifs_mount.sh -p //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/ -m /mnt/win_share/ -u ajawtuschenk
+sudo ./cifs_mount2.sh -p //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/ -m /mnt/win_share/ -u ajawtuschenk
+batcat cifs_mount2.sh 
+ping 10.48.45.101
+history
+sudo ./cifs_mount2.sh -p //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ -m /mnt/win_share/ -u ajawtuschenk
+mount -t cifs
+sudo apt install psmisc
+sudo ./cifs_mount2.sh -p //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ -m /mnt/win_share/ -u ajawtuschenk
+sudo mount -t cifs //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ /mnt/win_share
+sudo mount -t cifs //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ /mnt/win_share -u ajawtuschenk
+man mount
+sudo mount -t cifs //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ -m /mnt/win_share
+sudo mount -t cifs -o username=ajawtuschenk //172.16.136.26/sapfsp-integ.nvidia.com /mnt/win_share/
+sudo mount -t cifs -o username=ajawtuschenk //10.48.45.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ /mnt/win_share/
+dig sapfsp-integ.nvidia.com
+sudo mount -t cifs -o username=ajawtuschenk //10.48.46.101/anaplan/Inbound/CombinedRawData_IBP/Archive/ /mnt/win_share/
+cd /mnt/
+ls
+cd win_share
+ls -la
+tail ~/.bash_history
+cat ~/.bash_history
+exit
+ls -1
+cd 
+ls -la
+batcat .bash_history
+vimbatcat .bash_history
+vim .bash_history
+cp .bash_history code/cplusplus_experiments/configuration/.bash_history_12Aug25
+cd code/
+cd cplusplus_experiments/
+git fetch origin 
+git status
+git add .; git commit -m "WIP"
+git status
+git push origin master 
+git status
+cd configuration/
+tail .bash_history_12Aug25 
+exit
