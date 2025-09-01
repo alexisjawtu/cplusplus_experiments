@@ -4,4 +4,4 @@
 *.*~
 gcm.cache
 *.orig
-
+*.pyc
