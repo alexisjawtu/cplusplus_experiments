@@ -1,0 +1,10 @@
+Hello,
+
+As already talked about by email, I am interested in knowing about the proposal.
+I am an experienced applied mathematician, and with regard to this project, I have 
+developed successfully three dimensional meshing algorithms both in C++ and in Python.
+
+My distinctive skill to offer for these kinds of requirements is that I wrote my meshing
+algorithms from scratch. I didn't use any CAD nor triangulation libraries because the way
+I think a mesh results the better is when it is crafted starting from the particular object as target,
+and then add generalization overloads as needed. 
