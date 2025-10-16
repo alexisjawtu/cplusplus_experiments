@@ -1,0 +1,96 @@
+Tad matriz<alfa>: 
+
+Constructores:
+
+		matriz<alfa> def_Id(entero n);
+		
+		matriz<alfa> defM(entero n, entero m)
+				
+		matriz<alfa> transp(matriz M);
+
+		matriz<alfa> inv(matriz M);
+			      
+		matriz<alfa> defCoef(entero i, entero j, alfa x, matriz M);
+
+Observadores básicos:
+
+	entero #filas(matriz<alfa> M);
+
+	entero #col(matriz<alfa> M);
+
+	alfa det(matriz M);
+		precondición: #filas(matriz M) == #col(matriz M);
+
+	alfa coef(entero i, entero j, matriz M)
+		precondición: 1 <= i <= #filas(matriz M); 1 <= j <= #col(matriz M); //Puede que este observador esté de más.
+
+	secuencia<alfa> fila(entero i, matriz<alfa> M);
+
+	secuencia<alfa> col(entero j, matriz<alfa> M); //Puede que este observador esté de más.
+
+Otras operaciones:
+
+	matriz<alfa> suma(matriz M, matriz M')
+		precondición: #filas(matriz M) == #filas(matriz M'); #col(matriz M) == #col(matriz M');
+
+	matriz<alfa> prod(matriz M, matriz M')
+		precondición: #col(matriz M) == #filas(matriz M');
+
+	matriz<alfa> accion(alfa x, matriz M);
+
+	
+	
+	secuencia<alfa> vector(matriz<alfa> M, entero i, booleano x) 
+		postcondición: vector(M, i, true) == fila i de M
+					   vector(M, i, false) == col i de M
+	alfa prod_esc(secuencia<alfa> S,secuencia<alfa> S');
+		precondición: long(S) == long(S')
+		postcondición: prod_esc(S, S') == S[0]*S'[0]+...+S[long(S)-1]*S[long(S)-1]
+	
+		
+Pre y postcondiciones de las operaciones:
+
+	matriz<alfa> def_Id(entero n);
+	
+		precondicion: n > 0;
+		postcondiciones:
+			#filas(def_Id(n)) == n
+			#col(def_Id(n)) == n
+			det(def_Id(n)) == 1
+			coef(i, j, def_Id(n)) == 1*[i=j]  //[i=j] vale 1 si i=j y 0 si ¬(i=j).
+			fila(i, def_Id(n)) == ei // el i-ésimo vector canónico.
+			col(j, def_Id(n)) == ej // el j-ésimo vector canónico.
+			
+	matriz<alfa> defM(entero n, entero m);
+	
+		precondición: (n, m enteros positivos)
+		postcondiciones: 
+			#filas(defM(n, m)) == n;
+			#col(defM(n, m)) == m;
+			det(defM(n, m)) == 0;
+			coef(i, j, defM(n, m)) == 0 para todo i en {1, ..., n} y j en {1, ..., m};
+			fila(i, defM(n, m)) == <0> para todo i en {1, ..., n};
+			col(j, defM(n, m)) == <0> para todo j en {1, ..., m};
+			
+	matriz<alfa> transp(matriz M);
+	
+		postcondiciones:
+			#filas(transp(M)) == #col(M);
+			#col(transp(M)) == #filas(M);
+			det(transp(M)) == det(M);
+			coef(i, j, transp(M)) == coef(j, i, M) para todo i en {1, ..., #col(M)} y j en {1, ..., #filas(M)};
+			fila(i, transp(M)) == col(i, M) para todo i en {1, ..., #col(M)};
+			col(j, defM(n, m)) == <0> para todo j en {1, ..., #filas(M)};
+			
+	matriz<alfa> inv(matriz M);
+	
+		precondiciones:
+			#filas(M) == #col(M);
+			es_inv(det(M));
+		postcondiciones: si M' es el resultado de la operación entonces
+			#filas(M') == #filas(M);
+			#col(M') == #col(M);
+			det(M') == 1/det(M);
+			producto(M', M) == producto(M, M') == defId(#filas(M));
+			
+	matriz<alfa> defCoef(entero i, entero j, alfa x, matriz M);

@@ -1,0 +1,25 @@
+void ___addToPage(struct __page **s, struct __page **e, apc_cache_link_t *p, long ob) {
+    if (*s == NULL) {
+        *s = (struct __page*)malloc(sizeof(struct __page));
+        (*s)->prev = (*s)->next = NULL;
+        (*s)->p = p, *e = *s;
+        return;
+    }
+    if (*s == *e) {
+        *e = (struct __page*)malloc(sizeof(struct __page));
+        (*s)->next = *e, (*e)->prev = *s, (*e)->next = NULL, (*e)->p = p;
+        return;
+    }
+    struct __page *i = *s, *np = (struct __page*)malloc(sizeof(struct __page));
+    while (i != NULL && __goes_before(i->p, p, ob)) i = i->next;
+    np->p = p;
+    if (i == NULL) {
+        np->prev = *e, np->next = NULL, (*e)->next = np, *e = np;
+        return;
+    }
+    if (*s == i) {
+        np->prev = NULL, np->next = *s, (*s)->prev = np, *s = np;
+        return;
+    }
+    np->next = i, np->prev = i->prev, i->prev->next = np, i->prev = np;
+}

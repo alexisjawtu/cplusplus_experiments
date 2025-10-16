@@ -1,0 +1,102 @@
+el programa es:
+
+precondicion=n tiene que ser mayor o igual que uno(o sea, tiene que ingresar algun registro)
+
+int fmin(int n, int v[])
+{
+       int k=1;
+       int minimo=v[0];
+       while (k<n)
+       {
+             if (minimo>v[k])
+             {
+                             minimo=v[k];
+             }
+             k++;
+       }
+       return minimo;
+}
+
+postcondicion = devuelve el minimo de las coordenadas del vector
+
+prueba de correctitud:
+ 
+planteo el invariante:
+
+ minimo=min{v[i]/ 0<=i<=k-1} ^  1<=k<=n  ;
+
+.antes de comenzar el ciclo:
+se cumple que k=1 ( 1<=1<=n)
+y minimo=V[0]=min{V[i]/ i=0]
+o sea, vale elinvariante
+
+
+.supongamos ahora que el programa itero j+1 veces(o sea que itero j veces y la guarda volvio a dar verdadera). 
+tomando como hipotesis inductiva que despues de iterar j veces vale el invariante queremos ver que vale tambien despues de la j+1 esima iteracion.
+llamo minimo(j) y k(j) a los valores de minimo y k al comenzar la j+1 esima iteracion.(podemos suponer que son los mismos que al terminar la k esima iteracion) 
+
+estamos suponiendo que:
+(1)minimo(j)=min{v[i]/ 0<=i<=k(j)-1} ^  1<=k(j)<=n  
+(2)k(j)<n (porque la guarda dio verdadero)
+
+veamos cuanto valen minimo(j+1) y k(j+1):
+
+si minimo(j)>v[k(j)]( o sea min{v[i]/ 0<=i<=k(j)-1}>v[k(j)] )
+minimo(j+1) vale v[k(j)]=min{v[i]/ 0<=i<=k(j)} ( pues si es mas chico que el minimo es mas chico que todos los otros)
+
+
+y si no vale que minimo(j)<= v[k(j)]
+en cuyo caso minimo(j+1)=minimo(j)=min{v[i]/ 0<=i<=k(j)} (porque era mas chico que todos los demas y ahora vimos que era mas chico que v[k(j)] )
+
+por otro lado: k(j+1)=k(j)+1 entonces por (1) y (2)vale  1<2<=k(j+1)<=n 
+
+
+conclusion: minimo(j+1)=min{v[i]/ 0<=i<=k(j)}=min{v[i]/ 0<=i<=k(j+1)-1} ^ 1<=k(j+1)<=n;
+o sea, vale el invariante.
+
+. ahora si el ciclo termina:
+quiere decir que k>=n  y vale que: minimo=min{v[i]/ 0<=i<=k-1} ^ 1<=k<=n
+osea que k=n y minimo=min{v[i]/ 0<=i<=n-1}; 
+que es lo que queriamos que valga.
+
+
+. veamos que el ciclo termina:
+elijo el variante como n-k
+(1) el variante es decreciente porque por lo visto antes en cada paso el k aumenta en 1.
+(2) si n-k<=0 entonces k=>n y la condicion de la guarda es falsa.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

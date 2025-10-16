@@ -1,0 +1,19 @@
+Informe de la Complejidad de los métodos de la clase listaInt.
+
+	Los métodos listaVacia(), tam(l), ag_adelante(l,x), ag_atras(l, x), sin_primero(l) y sin_ultimo(l) tienen, cada una,
+	solo un número fijo de asignaciones, comparaciones y las demás operaciones básicas (return, delete, etc.), con lo cual la complejidad de cada
+	una es del orden de una suma finita fija de constantes, lo que es otra constante. Luego todos lo métodos mencionados tienen complejidad del
+	orden O(1).
+	
+	Los métodos "no constantes":
+	
+		iesimo(l, i) está implementado con un for() que itera i veces (donde 0 <= i < tam(l) = n) dentro del cual sólo hay una asiganción.
+		Fuera del for() hay una cantidad fija de asignaciones/comparaciones. Entonces la complejidad es del orden de una constante C 
+		- por la guarda del if() - multiplicada por B*n, donde B es otra constante. Entonces es <= A*n, A cte, o sea 0(n).
+		
+		agregarle (l, l2) esta tiene un iterador q va recorriendo los nodos de l2,en cada paso del while se usa ag_atras q es de orden constante y se pasa al sieguiente nodo. como siguiente se puede hacer como mucho tam(l2) veces, el while queda de orden O(tam(l2)) y eso es todo!
+
+		copiar(l):         copiar basicamente define una lista nueva y despues usa el operator=.
+definir una lista vacia es O(1). veamos el operator=, primero borra la lista vacia( q es O(1) porq no entra en el while), despues tiene dos while con n iteraciones porq los iteradores empiezan en el primero de l y copia_al_revez q son lista de n nodos. y en cada iteracion tiene orden cte. con lo cual queda de orden lineal.
+
+		iguales(l, l2):    O(n + m). esta tiene un for de tamaño n y en cada iteracion hace una comparacion y dos asignaciones ( en el peor caso hace todas las iteraciones). y afuera del for hay una comparacion mas y dos asignaciones mas. osea q queda de orden n q es menor q n+m.

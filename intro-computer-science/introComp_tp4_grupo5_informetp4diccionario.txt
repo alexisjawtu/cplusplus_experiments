@@ -1,0 +1,88 @@
+diccionarioVacio():
+
+éste método tiene sólo una cantidad fija de asignaciones, con lo cual 
+tiene complejidad de orden constante.
+
+- cantClaves(d):      
+
+El método tiene nada más que una asignación, con lo cual es de complejidad O(1).
+
+- claves(d):          
+
+listaInt diccionario::claves()const
+{
+    listaInt lista_claves;
+    claves_aux(this->arbol,lista_claves);
+    return lista_claves;
+}
+
+Sup claves_aux() tiene complejidad O(f(n)). claves() consta de dos asignaciones y una llamada
+a claves_aux(), luego O(C + f(n)), o sea O(f(n)).
+
+Ahora:
+
+void diccionario::claves_aux(NodoABBD* raiz, listaInt& _claves)const
+{
+
+    if(raiz!=NULL)
+    {
+        claves_aux(raiz->izquierdo,_claves);
+        _claves.ag_atras(raiz->clave);
+        claves_aux(raiz->derecho,_claves);
+        return;
+    }
+
+}
+
+Supongamos que n es la cantidad de nodos del árbol. 
+En el algoritmo cada nodo se visita exactamente una vez.
+Cada vez que se visita un nodo la suma de operaciones en él son O(1), pues son tomar la clave del nodo 
+e invocar a ag_atras() que es de complejidad O(1), lo que implica que f(n) es O(n).
+Luego claves es de complejidad O(n).
+
+
+- valores(d):         
+
+valores() está implementada igual que claves(), con lo cual es también O(n).
+
+- copiar(d):  O(tam(d))
+aqui lo que hace es asignarle a la variable implicita tamaño cero y apuntar a NULL( O(1)).
+despues usa el operator=, primero borra el diccionario q esta en la variable implicita(en este caso particular
+es O(1).
+
+despues  usa:
+NodoABBD* copiar_arbol(const NodoABBD* raiz)
+{
+    if(raiz == NULL)
+    {
+        return NULL;
+    }
+    else
+    {
+        NodoABBD* copia = new NodoABBD;
+        copia->clave = raiz->clave;
+        copia->valor = raiz->valor;
+        copia->derecho = copiar_arbol(raiz->derecho);
+        copia->izquierdo = copiar_arbol(raiz->izquierdo);
+        return copia;       
+    }
+}
+
+q es O(n), siendo n la cantidad de nodos del arbol. pues si n=1 le asigna a un nuevo nodo un valor y una clave.
+y asu lado derecho e izuiqerdo les asigna NULL. osea es O(1).
+en general si f(n) es el tiempo q tarda para un arbol de tamaño n.y suponemos f(k)<= ck para k menor q n
+f(n)<=cte+f(i)+f(j)<=cte +ci +cj<= cte+c(n-1)<= max{cte,c} n.
+con lo cual f(n) es O(n).
+luego copiar arbol es O(n) y como lo unico q se hace despues es asiganrle al nuevo diccionario el tamaño del q
+se quiere copiar la funcion copiar es O(n)
+
+
+- iguales(d, d2):    O(n + m)
+donde n = tam(d) y m = tam(d2)
+
+en el caso en q n y m son distintos. lo unico que hace es comparar el tamaño, osea q en ese caso es O(1).
+luego podemos suponer q n=m.
+en tal caso, tiene q calcular claves y valores de ambos diccionarios(4n) y usar dos veces el iguales de lista (2n). con lo cual la complejidad queda O(n+m) pues en cualquier caso 6n+c<= k(n+m);
+ 
+
+

@@ -1,0 +1,183 @@
+Trabajo Práctico IV
+===================
+
+1) Considere la siguiente especificación de un TAD.
+
+TAD ListaInt
+
+Observadores
+------------
+
+entero tam(ENT ListaInt l)
+  // post: delvuelve el "tamaño" de la lista
+
+entero iesimo(ENT ListaInt l, int i)
+  // pre: 0 <= i < tam(l)
+  // post: devuelve el iesimo elemento de la lista
+
+Operaciones
+-----------
+
+ListaInt listaVacia()
+  // post: tam(listaVacia()) = 0
+
+ag_adelante(ENTSAL ListaInt l, entero x)
+  // post: Sea l' cómo queda l luego de ejecutar ag_adelante(l,x). Entonces:
+  //   - tam(l') = tam(l) + 1
+  //   - iesimo(l', 0) = x
+  //   - iesimo(l', i) = iesimo(l, i-1)   si 1 <= i < tam(l')
+
+ag_atras(ENTSAL ListaInt l, entero x)
+  // post: Sea l' cómo queda l luego de ejecutar ag_atras(l,x). Entonces:
+  //   - tam(l') = tam(l) + 1
+  //   - iesimo(l', i)   = iesimo(l, i)   si 0 <= i < tam(l)
+  //   - iesimo(l', tam(l)) = x
+
+sin_primero(ENTSAL ListaInt l)
+  // pre: tam(l) > 0
+  // post: Sea l' cómo queda l luego de ejecutar sin_primero(l). Entonces:
+  //   - tam(l') = tam(l) - 1
+  //   - iesimo(l', i) = iesimo(l, i+1)   si 0 <= i < tam(l')
+
+sin_ultimo(ENTSAL ListaInt l)
+  // pre: tam(l) > 0
+  // post: Sea l' cómo queda l luego de ejecutar sin_primero(l). Entonces:
+  //   - tam(l') = tam(l) - 1
+  //   - iesimo(l', i) = iesimo(l, i)   si 0 <= i < tam(l)
+
+agregarle(ENTSAL ListaInt l, ENT ListaInt l2)
+  // post: Sea l' cómo queda l luego de ejecutar agregarle(l, l2). Entonces:
+  //   - tam(l') = tam(l) + tam(l2)
+  //   - iesimo(l', i) = iesimo(l, i)           si 0 <= i < tam(l)
+  //   - iesimo(l', i) = iesimo(l2, tam(l) + i) si tam(l) <= i < tam(l')
+
+ListaInt copiar(ENT ListaInt l)
+  // post: Sea l' = copiar(l),
+  //   - tam(l') = tam(l)
+  //   - iesimo(l', i) = iesimo(l, i)  si 0 <= i < tam(l')
+
+bool iguales(ENT ListaInt l, ENT ListaInt l2)
+  // post: Devuelve "true" sii tam(l) = tam(l2) y para todo i tq
+  //       0 <= i < tam(l), iesimo(l, i) = iesimo(l2, i)
+
+Se pide implementar este tipo en C++, proveyendo todas las operaciones
+especificadas. Las operaciones deben cumplir los siguientes restricciones de
+eficiencia:
+
+- listaVacia():      O(1)
+- tam(l):            O(1)
+- iesimo(l, i):      O(n)
+- ag_adelante(l, x): O(1)
+- ag_atras(l,x):     O(1)
+- sin_primero(l):    O(1)
+- sin_ultimo(l):     O(1)
+- agregarle(l, l2):  O(m)
+- copiar(l):         O(n)
+- iguales(l, l2):    O(n + m)
+
+donde n = tam(l) y m = tam(l2)
+
+2) Considere la siguiente especificación de un TAD.
+
+TAD Diccionario
+
+Tipo clave es entero
+Tipo valor es entero
+
+Observadores
+------------
+
+bool contieneClave(ENT Diccionario d, clave k)
+  // pre: devuelve "true" sii el diccionario d tiene una entrada para k
+  
+valor buscarValor(ENT Diccionario d, clave k)
+  // pre: contieneClave(d, k)
+  // post: devuelve el valor asociado a la clave k en d
+
+Operaciones
+-----------
+
+Diccionario diccionarioVacio()
+  // post: contieneClave(diccionarioVacio(), k) = false, para todo k
+
+definir(ENTSAL Diccionario d, clave k, valor v)
+  // post: Sea d' cómo queda d luego de ejecutar definir(d, k, v):
+  //   - contieneClave(d', k) = true
+  //   - contieneClave(d', k') = contieneClave(d, k') si k' /= k
+  //   - buscarValor(d', k) = v
+  //   - buscarValor(d', k') = buscarValor(d, k')  si k' /= k y
+  //                                               contieneClave(d', k') = true
+
+indefinir(ENTSAL Diccionario d, clave k)
+  // post: Sea d' cómo queda d luego de ejecutar indefinir(d, k):
+  //   - contieneClave(d', k) = false
+  //   - contieneClave(d', k') = contieneClave(d, k') si k' /= k
+  //   - buscarValor(d', k') = buscarValor(d, k')  si k' /= k y
+  //                                               contieneClave(d', k') = true
+
+unirCon(ENTSAL Diccionario d, ENT Diccionario d2)
+  // post: Sea d' cómo queda d luego de ejecutar unirCon(d, d2):
+  //   - contieneClave(d', k) <-> (contieneClave(d,k) ó contieneClave(d2,k))
+  //        para todo k
+  //   - buscarValor(d', k) = buscarValor(d,k)  si contieneClave(d,k)
+  //   - buscarValor(d', k) = buscarValor(d2,k) si no contieneClave(d,k) y
+  //                                               contieneClave(d2,k)
+
+intersecarCon(ENTSAL Diccionario d, ENT Diccionario d2)
+  // post: Sea d' cómo queda d luego de ejecutar intersecarCon(d, d2):
+  //   - contieneClave(d', k) <-> (contieneClave(d,k) y contieneClave(d2,k))
+  //        para todo k
+  //   - buscarValor(d', k) = buscarValor(d,k)  si contieneClave(d,k) y
+  //                                               contieneClave(d2,k)
+
+entero cantClaves(ENT Diccionario d)
+  // post: devuelve #{ k | contieneClave(d, k)}
+
+ListaInt claves(ENT Diccionario d)
+  // Sea l el resultado de ejecutar claves(d):
+  //   - tam(l) = #{ k | contieneClave(d, k)}
+  //   - para todo k tq contieneClave(d, k), existe un i tq 0 <= i < tam(l) y
+  //     iesimo(l, i) = k
+
+ListaInt valores(ENT Diccionario d)
+  // Sea l el resultado de ejecutar valores(d):
+  //   - tam(l) = #{ k | contieneClave(d, k)}
+  //   - para todo v, #{k | contieneClave(d, k) y buscarValor(d, k) = v} =
+  //                  #{i | 0 <= i < tam(l) y iesimo(l, i) = v}
+
+Diccionario copiar(Diccionario d)
+  // Sea d' el resultado de copiar(d):
+  //   - contieneClave(d', k) <-> contieneClave(d,k)  para todo k
+  //   - buscarValor(d', k) = buscarValor(d,k) para todo k tq contieneClave(d,k)
+
+bool iguales(ENT Diccionario d, ENT Diccionario d2)
+  // Devuelve "true" sii para todo k, contieneClave(d,k) <-> cantClaves(d2, k)
+  // y contieneClave(d,k) -> buscarValor(d,k) = buscarValor(d2,k)
+
+Se pide implementar este tipo en C++, utilizando un árbol binario de búsqueda.
+Se deben cumplir las siguientes restricciones de eficiencia:
+
+- diccionarioVacio(): O(1)
+- cantClaves(d):      O(1)
+- claves(d):          O(n)
+- valores(d):         O(n)
+- copiar(d):          O(n)
+- iguales(d, d2):    O(n + m)
+
+donde n = tam(d) y m = tam(d2)
+
+
+3) Agregar a los TADs anteriores operaciones para mostrarlos en un ostream
+   (e.g. cout) y para leerlos desde un istream (e.g. cin). Estas operaciones
+   deben ser reversibles (i.e. se debe poder leer correctamente el resultado
+   de mostrar una instancia del tipo)
+
+Condiciones de la entrega:
+-------------------------
+
+- Fecha sugerida de entrega: Martes 17/6
+- Fecha límite de entrega: Viernes 20/6
+- La entrega es por mail
+- Además de los .h y los .cpp de cada TAD, se espera que entreguen el programa
+  que utilizaron para probar los tipos y un breve informe comentando la
+  complejidad de cada una de las operaciones

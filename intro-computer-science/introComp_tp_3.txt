@@ -1,0 +1,68 @@
+
+Trabajo práctico III
+====================
+
+Se pide:
+
+1) Corregir el TP II en base a las correcciones entregadas.
+2) Modificar el TP II de modo tal de convertirlo en un programa interactivo
+   que permita manejar varios registros de precipitaciones en simultáneo (hasta
+   un máximo de 100). La interfaz se describe a continuación.
+   
+ * El "menú principal" debe ofrecer:
+ 
+1- Agregar registro de precipitaciones
+2- Borrar registro de precipitaciones
+3- Elegir registro de precipitaciones
+4- Salir
+
+  * La opción 1 sólo se puede elegir si no se supera el límite de 100 registros.
+  * La opción 2 y 3 sólo se pueden elegir si existe al menos un registro
+    cargado.
+  
+  * En caso de elegirse la opción 1, se debe pedir al usuario que ingrese:
+    + Nombre del registro (e.g. "Lluvias BsAs 2007")
+    + Cantidad de entradas (e.g. "12")
+    + Los n valores (donde n es el valor anterior)
+    
+    Importante: NO SE DEBE ASUMIR QUE HAY UN LIMITE AL VALOR DE N (o sea, se
+    elimina el límite de 1000 precipitaciones por registro que había en los
+    TPs I y II)
+
+  * En caso de elegirse la opción 2, se debe mostrar el nombre de todos los
+    registros cargados e indicar, para cada uno de ellos, qué opción (numérica)
+    se debe ingresar para borrar cada registro. Por ejemplo, podría verse el
+    siguiente menú:
+    
+1- Borrar "Lluvias BsAs 2007"
+2- Borrar "Valle de la luna 12-ago-1938 a 23-jun-1987"
+3- Borrar "Tigre 2000-2004"
+4- Borrar "Lluvias Base Marambio Dic1999"
+5- Cancelar
+
+  * La opción 3 debe permitir elegir uno de los registros previamente cargados.
+    Por ejemplo:
+    
+1- Elegir "Lluvias BsAs 2007"
+2- Elegir "Valle de la luna 12-ago-1938 a 23-jun-1987"
+3- Elegir "Tigre 2000-2004"
+4- Elegir "Lluvias Base Marambio Dic1999"
+5- Cancelar
+
+    Una vez elegida una opción (excepto la de Cancelar, claro), debe ofrecer
+    las siguientes posibilidades:
+    
+1- Calcular media
+2- Calcular mediana
+3- Calcular moda
+4- Calcular maximo
+5- Calcular minimo
+6- Salir
+
+Condiciones de la entrega:
+- Fecha de entrega: Martes 27/4
+- La entrega será por mail.
+- Se debe entregar un archivo grupo_xx.zip que contenga:
+  * Todos los archivos necesarios para construir el ejecutable
+    (i.e. los .cpp y el .h)
+

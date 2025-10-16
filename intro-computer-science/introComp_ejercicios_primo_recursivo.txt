@@ -1,0 +1,16 @@
+	precondición: n entero positivo.
+	postcondición: verdadero si n es primo, falso si no.
+	
+	Correctitud:
+	
+		Terminación:
+			Sea n una instancia que cumple la precondición.
+			Si n = 1 o n = 2 es un caso base de la recursión. No se produce ninguna llamada recursiva y el algoritmo termina.
+			Si n > 2 vemos 2 casos:
+			
+				si n es par el algoritmo no produce ninguna llamada recursiva y termina.
+				si n es impar se produce una llamada recursiva con parámetro [raiz(n)].
+				Las relaciones (Para todo a>=1 real) 1<= [a] <= a y (para n entero > 2) raiz(n)>1 y
+				(para todo entero n > 2) raiz(n) < n implican que la llamada se produce con un parámetro entero mayor
+				o igual que 1 y estrictamente menor que n. Con lo cual en finitos pasos el parámetro de la llamada recursiva
+				será un caso base.

@@ -1,0 +1,23 @@
+listaInt& listaInt::operator=(const listaInt& l)
+{
+    (*this).borrar_Lista();
+
+    listaInt copia_al_reves;
+
+	NodoBi* indicador_ = l.primero;
+
+	while(indicador_ != NULL)
+	{
+		copia_al_reves.ag_adelante(indicador_ -> valor);
+		indicador_ = indicador_ -> siguiente;
+	}
+
+	NodoBi* indicador = copia_al_reves.primero;
+	while(indicador != NULL)
+	{
+		(*this).ag_adelante(indicador -> valor);
+		indicador = indicador -> siguiente;
+	}
+
+	return *this;
+}

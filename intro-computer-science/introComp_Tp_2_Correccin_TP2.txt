@@ -1,0 +1,228 @@
+﻿.:: Grupo 5 ::.
+corrigió daniel
+
+El TP está en general muy bien. Van algunos comentarios....
+
+-----------------
+
+- Esto no!
+
+#include "C:\Documents and Settings\Mateo\Mis documentos\Mateo\matema\intro a la computacion\estadistica\estadistica.h"
+
+  Nunca un path absoluto en un include. Debería ser
+  
+#include "estadistica.h"
+
+  podría llegar a ser algo así:
+  
+#include "estadistica/estadistica.h"
+
+  o
+  
+#include "../estadistica/estadistica.h"
+
+  si están metiendo esto en un directorio "estadistica". Si no, más usual
+  sería incluir el path al directorio que tiene el estadistica.h con el
+  parámetro -i del g++....
+  
+  
+- Traten de ser un poco más cuidadosos con la forma en que indentan el código.
+  Dos "reglas" se espera que cumplan:
+  
+  i) dos instrucciones que figuran en forma consecutiva empiezan en la misma
+     columna sii se ejecutan siempre una después de otra
+
+  ii) Instrucciones que forman parte de una instrucción más grande comienzan
+     levemente indentada con respecto a esta (e.g. el cuerpo de un while
+     respecto a un while, los casos del if respecto al if y al else, etc).
+     Idealmente, la cantidad que se indenta cada vez es una cantidad fija.
+     
+  Por ejemplo, donde pusieron:
+
+void sort(int desde,int hasta,int v[])
+{
+       int j=0;
+       for(int i=desde;i<hasta+1;i++)
+       {
+       j=posmax(desde,hasta-i,v);
+       int k = v[hasta-i];
+       v[hasta-i] = v[j];
+       v[j] = k;
+       }
+}
+
+
+   Según las "reglas" de más arriba debería ser algo así
+
+void sort(int desde,int hasta,int v[])
+{
+    int j=0;
+    for(int i=desde;i<hasta+1;i++)
+    {
+        j=posmax(desde,hasta-i,v);
+        int k = v[hasta-i];
+        v[hasta-i] = v[j];
+        v[j] = k;
+    }
+}
+
+- En posmax(), observen que la primera iteración del for es "redundante" porque
+  la guarda del if siempre va a dar Falso (v[desde] < v[desde] es siempre
+  falso). Conviene que i comience en desde+1...
+  
+- Cuál sería la especificación de su función sort()? En base a su declaración
+
+void sort(int desde,int hasta,int v[])
+
+  yo esperaría que ordenara v pero sólo entre las posiciones desde y hasta
+  (inclusives). Ahora bien, el código no hace esto; de hecho, sólo ordena
+  algo cuando desde == 0, que es el único caso en el que la usan... Veamos que
+  esto es efectivamente así:
+  
+  + Se puede ver fácilmente que vale el invariante: desde <= i <= hasta+1, pero
+    si se ejecuta el cuerpo del ciclo, por la guarda, se tiene
+    desde <= i <= hasta.
+  + Ahora, en la primera instrucción se llama a posMax(desde, hasta-i, v), pero
+    qué representa "hasta-i"? Del análisis anterior tenemos que
+    0 <= hasta - i <= hasta - desde. Es decir, hasta - i sería algo así como
+    "el tamaño del rango que todavía falta ordenar". Pero posMax espera que
+    su segundo argumento sea un índice del array y no una cantidad (salvo en el
+    caso en que desde == 0, en que ambas medio que coinciden). Observen que
+    en cuanto desde > hasta - i, posMax(desde, hasta-i, v) va a devolver siempre
+    desde....
+  + Yo esperaría que hayan querido hacer esto:
+
+void sort(int desde,int hasta,int v[])
+{
+    int largo=hasta - desde;
+    for(int i=0; i<largo;i++)
+    {
+        int ultimo = hasta - i;
+        int j=posmax(desde,ultimo,v);
+        int k = v[ultimo];
+        v[ultimo] = v[j];
+        v[j] = k;
+    }
+}
+
+     o, lo que es equivalente, esto:
+
+void sort(int desde,int hasta,int v[])
+{
+    for(int i=hasta; i > desde;i++)
+    {
+        int j=posmax(desde,i,v);
+        int k = v[i];
+        v[i] = v[j];
+        v[j] = k;
+    }
+}
+
+
+- mediana() tiene el efecto secundario de ordenar el array. esto sería una
+  "sorpresa" para el que usa la función y debería estar documentado (figurar
+  como parte de su poscondición). Idealmente, no debería modificar el array...
+  (idem con moda())
+
+- En moda(), miren el while anidado:
+
+  while (i < n)
+    while (v[i] == v[i+1] && i+1<n)
+        
+  tengan en cuenta que el operador && se resuelve "de izquierda a derecha";
+  esto quiere decir que primero se evalua "v[i] == v[i+1]" y recién si dio
+  verdadero se evalua "i+1 < n". Ahora bien, si i+1 >= n, entonces ni siquiera
+  deberían intentar evaluar "v[i] == v[i+1]", porque entonces están accediendo
+  a v fuera de rango!! Lo correcto sería que la guarda fuera:
+  i+1 < n && v[i] == v[i+1]...
+
+- También en moda(), es interesante ver qué pasa con k. Adentro del while
+  hay un if, cuando el if da verdadero se hace k = 1, pero incluso si el
+  if es falso, se hace k = 1, con lo cual, el de adentro del if se puede volar.
+  Nos quedaría:
+
+int moda(int n, int v[])
+{
+    int i = 0;
+    sort(0, n-1, v);
+    int moda = v[0];
+    int k = 1;
+    int r = 1;
+    while (i<n)
+    {
+        while (i+1<n && v[i] == v[i+1])
+        {
+            k = k+1;
+            i = i+1;
+        }
+        if (r<k)
+        {
+            moda = v[i];
+            r = k;
+        }
+        k = 1;
+        i = i+1;
+    }
+    return moda;
+}
+
+   Pero ahora observen que se puede probar el invariante k == 1 (invariante con
+   respecto al ciclo de más afuera), con lo cual podemos hacer, directamente:
+   
+int moda(int n, int v[])
+{
+    int i = 0;
+    sort(0, n-1, v);
+    int moda = v[0];
+    int r = 1;
+    while (i<n)
+    {
+        int k = 1;
+        while (i+1<n && v[i] == v[i+1])
+        {
+            k = k+1;
+            i = i+1;
+        }
+        if (r<k)
+        {
+            moda = v[i];
+            r = k;
+        }
+        i = i+1;
+    }
+    return moda;
+}
+
+
+  Eligiendo algunos nombres más "declarativos" podemos dejarla aun más legible:
+  
+int moda(int n, int v[])
+{
+    sort(0, n-1, v);
+    
+    int i = 0;
+    int moda = v[0], largo_moda = 1;
+    while (i<n)
+    {
+        int largo_actual = 1;
+        
+        while (i+1<n && v[i] == v[i+1])
+        {
+            largo_actual = largo_actual+1;
+            i = i+1;
+        }
+        
+        if (largo_moda < largo_actual)
+        {
+            moda = v[i];
+            largo_moda = largo_actual;
+        }
+        
+        i = i+1;
+    }
+    return moda;
+}
+
+
+- En la prueba de correctitud, les faltó como precondición que v esté definido
+  entre las posiciones 0 y n-1. Por lo demás, está muy bien.

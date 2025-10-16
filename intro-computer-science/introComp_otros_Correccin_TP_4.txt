@@ -1,0 +1,108 @@
+.:: Grupo 5 ::.
+corrigió daniel
+
+--
+
+TAD ListaInt
+************
+
+Errores
+=======
+
+- agregarle() e iguales() reciben el parámetro por copia, en lugar de referencia ***
+
+- En sin_primero() hicieron:  ***
+  
+        void listaInt::sin_primero()
+        {
+            NodoBi* segundo = this->primero->siguiente;
+            delete this->primero;
+            this->primero = segundo;
+            (this->cantidad)--;
+        }
+
+  Ahora, fíjense que si sacan el único elemento de la lista les queda:
+  
+    this -> cantidad == 0;
+    this -> primero  == NULL;
+    this -> ultumo   != NULL;
+    
+  O sea, están rompiendo el invariante de representación (el presunto, bah),
+  porque no lo hicieron explícito en ningún lado... Idem en sin_ultimo().
+
+- Faltan las funciones para mostrar() y leer listas()
+
+Estilo
+======
+
+- En iesimo() no hace falta preguntar si this->primero es NULL; entre    ***
+  la precondición, la función de abstracción y el invariante de representación
+  podés garanztizar que si está bien usada eso no puede pasar
+  
+- En ag_adelante() (idem ag_atras()) separaron en dos casos (si estaba vacía    ***
+  o no), pero ambos casos comparten un montón de código. Esta mejor factorizarlo
+  y dejar en los ifs sólo la parte en que se diferencian. Quedaría algo así:
+
+        void listaInt::ag_adelante(int x)
+        {
+            NodoBi* _n = new NodoBi;
+            _n->valor = x;
+            _n->anterior = NULL;
+            _n->siguiente = this->primero;
+
+            if(this->cantidad == 0)
+            {
+                this->ultimo = _n;
+            }        
+            else
+            {
+                (this->primero)->anterior = _n;
+            }
+
+            this->primero = _n;
+            (this->cantidad)++;
+
+        }
+
+- Una vez que hicieron el constructor por copia y el operator=, la función  ***
+  "copiar()" no tiene mucho sentido (o sea, los primeros cubren todos los
+  casos donde pueda interesar "copiar" una lista).
+
+- Cuando en clase hicimos el operator= de Pila tenía algo de sentido armar  ***
+  una pila dada vuelta y volver a invertirla porque sólo teníamos apilar()
+  a nuestra disposición. Pero en el TAD ListaInt tienen tanto ag_adelante()
+  como ag_atras() con lo que no hay ninguna razón para pasar dos veces!
+
+
+TAD Diccionario
+***************
+
+Errores
+=======
+
+- Faltó el destructor de diccionario ***
+
+- Faltan las operaciones para mostrar y leer
+
+Estilo
+======
+
+- En vez de usar ifs para devolver booleanos como acá:   ***
+
+    bool diccionario::iguales(diccionario& d)const
+    {
+        if( this->cantidad==d.cantidad)
+        {
+            if( this->claves().iguales(d.claves()) && this->valores().iguales(d.valores())) return true;
+        }
+        else return false;
+    }
+
+  es más legible usar directamente una expresión booleana:
+  
+    bool diccionario::iguales(diccionario& d)const
+    {
+        return ( this->cantidad==d.cantidad &&
+                 this->claves().iguales(d.claves()) &&
+                 this->valores().iguales(d.valores()) );
+    }

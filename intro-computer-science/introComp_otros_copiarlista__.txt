@@ -1,0 +1,5 @@
+listaInt listaInt::copiar()const
+{
+    listaInt l = *this;
+    return l;
+}

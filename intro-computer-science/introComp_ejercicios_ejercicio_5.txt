@@ -1,0 +1,55 @@
+entero cantAparic(ENT caracter cadena[], ENT caracter texto[])
+
+{
+
+entero lc = longitud(cadena);
+
+entero lt = longitud(texto);
+
+para (entero k = 1; k<= lt - lc + 1; k = k+1)
+
+{
+
+	entero r = 0;
+	
+	entero j = 0;	
+
+	entero i = k;
+
+	mientras (i <= lc + k - 1) 
+	
+	{
+		
+		si (texto[i] == cadena[i - k + 1])
+		
+		{	
+			j = j + 1;
+			
+		}
+
+		
+		i = i + 1;
+
+	}
+
+	si (j == lc)
+
+	{
+		r = r + 1;
+
+	}
+}
+
+retornar = r;
+
+}
+
+
+IDEA PARA LA VERSIÓN RECURSIVA:
+
+	¿Puede ser que ande algo así: ?
+
+		f(lc, lt, k) = # veces que aparece en texto[lt] la cadena[lc] entre los lugares 0 y k-1
+		f(lc, lt, k) = f(lc, lt, k-1) + h(k-lc), donde
+
+			h(n) = 1 sii cadena[lc] aparece en texto[lt] desde el lugar k-lc.

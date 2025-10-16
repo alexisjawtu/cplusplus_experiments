@@ -1,0 +1,55 @@
+
+Tad CONJUNTO<elem>
+
+constructores:
+
+	conjunto<elem> defVacio()
+
+	conjunto<elem> agregar(conjunto<elem> A, elem a)
+	
+observadores:
+
+	bool es_vacio(conjunto<elem> A)
+
+	bool pertenece(conjunto<elem> A, elem a)
+	
+operaciones:
+
+	conjunto<elem> union(conjunto<elem> A, conjunto<elem> B)
+
+	conjunto<elem> sustraccion(conjunto<elem> A, elem a)
+
+	conjunto<elem> diferencia(conjunto<elem> A, conjunto<elem> B)
+
+	CONJUNTO<CONJUNTO> Partes(Conjunto<elem> A);
+	
+Axiomas:
+
+	pertenece(defVacio(), a) == FALSE
+
+	pertenece(agregar (A, a), a) == TRUE
+	
+	pertenece(union(A, B), a) == pertenece(A, a) v pertenece(B, a);
+
+	pertenece(sustraccion(A, a), a) == FALSE;
+
+	pertenece(sustraccion(A, b), a) == ¬(igualdad_elem(a, b)) 
+
+	es_vacio(diferencia(A, A)) == TRUE
+
+	es_vacio(diferencia(agregar(A,a), A)) == FALSE	
+
+	Partes(defVacio()) == agregar(defVacio, defVacio);
+
+	pertenece(Partes(agregar(A,a)), C) == pertenece(Partes(A), sustraccion(C, a))   
+
+
+				/* 
+				   Se usa que:
+
+				   Si X es un conjunto no vacío, A contenido en X, a perteneciente a X entonces
+
+				   C pertenece a Partes(A u {a}) <==> C - {a} pertenece a Partes(A)
+
+				*/
+	

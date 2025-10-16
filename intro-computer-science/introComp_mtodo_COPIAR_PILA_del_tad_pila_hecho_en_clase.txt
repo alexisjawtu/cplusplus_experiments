@@ -1,0 +1,31 @@
+pilaEnt pilaEnt::copiarPila()const 
+{
+	pilaEnt copia_al_reves = pilaEnt();
+	
+	nodo* indicador_ = this -> primero;
+	
+	while(indicador != NULL)
+	{
+		copia_al_reves.apilar(indicador -> valor);
+		copia_al_reves.cantidad++;
+		indicador = indicador -> siguiente;
+	}
+	
+	nodo* indicador = copia_al_reves -> prim;
+	while(indicador != NULL)
+	{
+		copia.apilar(indicador -> valor);
+		copia.cantidad++;
+		indicador = indicador -> siguiente;
+	}
+
+	return copia;
+	
+}
+
+// ahora constructor por copia:
+
+pilaEnt::pilaEnt(const pilaEnt& p)
+{
+	*this = pilaEnt();
+	
